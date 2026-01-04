@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
+</head>
+<body>
+    <div class="lang-switcher">
+        <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" onclick="switchLang('fr')">FR</button>
+    </div>
+
+    <nav>
+        {{ if .IsHome }}
+        <a href="#projects" data-en="Projects" data-fr="Projets">PROJECTS</a>
+        <a href="{{ "/articles" | relURL }}" data-en="Articles" data-fr="Articles">ARTICLES</a>
+        <a href="#career" data-en="Career" data-fr="Parcours">CAREER</a>
+        <a href="#contact">CONTACT</a>
+        {{ else }}
+        <a href="{{ "/" | relURL }}">HOME</a>
+        <a href="{{ "/" | relURL }}#projects" data-en="Projects" data-fr="Projets">PROJECTS</a>
+        <a href="{{ "/articles" | relURL }}" data-en="Articles" data-fr="Articles">ARTICLES</a>
+        <a href="{{ "/" | relURL }}#career" data-en="Career" data-fr="Parcours">CAREER</a>
+        <a href="{{ "/" | relURL }}#contact">CONTACT</a>
+        {{ end }}
+    </nav>
+
+    {{ block "main" . }}{{ end }}
+
+    <footer>
+        <p>&copy; 2026 Abdoulaye Dabo. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ "/js/script.js" | relURL }}"></script>
+</body>
+</html>

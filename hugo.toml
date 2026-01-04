@@ -1,0 +1,20 @@
+baseURL = 'https://abdoulayedabo.github.io/'
+languageCode = 'en-us'
+title = 'Abdoulaye Dabo - AI Engineer'
+
+[params]
+  author = 'Abdoulaye Dabo'
+  description = 'AI & Big Data Engineering Student'
+
+[outputs]
+  home = ['HTML']
+  section = ['HTML']
+  page = ['HTML']
+
+[permalinks]
+  articles = '/articles/:slug/'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

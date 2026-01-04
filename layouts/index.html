@@ -1,0 +1,106 @@
+{{ define "main" }}
+<header>
+    <h1>Abdoulaye Dabo</h1>
+    <p class="tagline" data-en="AI & Big Data Engineering Student" data-fr="Élève Ingénieur en IA et Big Data">AI & Big Data Engineering Student</p>
+    
+    <div class="social-links">
+        <a href="https://linkedin.com/in/abdoulaye-dabo-39625023a" target="_blank">LinkedIn</a>
+        <a href="https://github.com/abdoulayedabo" target="_blank">GitHub</a>
+        <a href="mailto:abdoulayedabo@esp.sn">Email</a>
+        <a href="tel:+221777426690">+221 77 742 66 90</a>
+    </div>
+
+    <a href="#" class="download-cv-btn" onclick="downloadCV(event)" data-en="DOWNLOAD CV" data-fr="TÉLÉCHARGER CV">DOWNLOAD CV</a>
+</header>
+
+<section id="projects">
+    <h2 class="section-title" data-en="Selected Projects" data-fr="Projets Sélectionnés">Selected Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <div class="project-number">01</div>
+            <h3 data-en="FastAPI Backend Template" data-fr="Template Backend FastAPI">FastAPI Backend Template</h3>
+            <p data-en="Backend template to get started your project using FastAPI. It includes a lot of the initial set up, security, database and some API endpoints already done for you." data-fr="Template backend pour démarrer votre projet avec FastAPI. Il inclut beaucoup de configurations initiales, sécurité, base de données et quelques endpoints API déjà faits pour vous.">Backend template to get started your project using FastAPI. It includes a lot of the initial set up, security, database and some API endpoints already done for you.</p>
+            <div class="project-tags">
+                <span class="tag">PYTHON</span>
+                <span class="tag">FASTAPI</span>
+                <span class="tag">SQL</span>
+                <span class="tag">SECURITY</span>
+            </div>
+            <a href="https://github.com/abdoulayeDABO/fastapi-backend-template" target="_blank" class="project-link">View on GitHub </a>
+        </div>
+
+        <div class="project-card">
+            <div class="project-number">02</div>
+            <h3 data-en="Jetpack Compose Todo App" data-fr="Application Todo Jetpack Compose">Jetpack Compose Todo App</h3>
+            <p data-en="A todo app made with Jetpack Compose and Kotlin. Modern Android development with clean architecture and Material Design 3." data-fr="Une application todo créée avec Jetpack Compose et Kotlin. Développement Android moderne avec architecture propre et Material Design 3.">A todo app made with Jetpack Compose and Kotlin. Modern Android development with clean architecture and Material Design 3.</p>
+            <div class="project-tags">
+                <span class="tag">KOTLIN</span>
+                <span class="tag">JETPACK COMPOSE</span>
+                <span class="tag">ANDROID</span>
+            </div>
+            <a href="https://github.com/abdoulayeDABO/jetpack-compose-todo-app" target="_blank" class="project-link">View on GitHub </a>
+        </div>
+    </div>
+    <button class="view-more-btn" onclick="toggleProjects()" data-en="VIEW MORE" data-fr="VOIR PLUS">VIEW MORE</button>
+</section>
+
+<section id="career">
+    <h2 class="section-title" data-en="Academic Journey" data-fr="Parcours Académique">Academic Journey</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="year">2024 - <span data-en="PRESENT" data-fr="ACTUELLEMENT">PRESENT</span></div>
+            <div class="job-title" data-en="AI & Big Data Engineering Student" data-fr="Élève Ingénieur IA & Big Data">AI & Big Data Engineering Student</div>
+            <div class="company">École Supérieure Polytechnique | Dakar, Sénégal</div>
+            <p data-en="Advanced studies in Artificial Intelligence and Big Data with focus on machine learning, neural networks, data mining, and distributed computing systems." data-fr="Études avancées en Intelligence Artificielle et Big Data avec focus sur l'apprentissage automatique, réseaux neuronaux, exploration de données et systèmes informatiques distribués.">Advanced studies in Artificial Intelligence and Big Data with focus on machine learning, neural networks, data mining, and distributed computing systems.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="year">2023 - 2024</div>
+            <div class="job-title" data-en="Computer Science Degree (DST)" data-fr="Diplôme Informatique (DST)">Computer Science Degree (DST)</div>
+            <div class="company">École Supérieure Polytechnique | Dakar, Sénégal</div>
+            <p data-en="Comprehensive training in software development, database management, web technologies, and system administration on Linux and Windows platforms." data-fr="Formation complète en développement logiciel, gestion de bases de données, technologies web et administration système sur plateformes Linux et Windows.">Comprehensive training in software development, database management, web technologies, and system administration on Linux and Windows platforms.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="year">2020 - 2021</div>
+            <div class="job-title" data-en="Mathematics Degree" data-fr="Licence Mathématiques">Mathematics Degree</div>
+            <div class="company">Université Cheikh Anta Diop | Dakar, Sénégal</div>
+            <p data-en="Strong foundation in linear algebra, analysis, probability theory, and mathematical modeling essential for AI and data science applications." data-fr="Solide formation en algèbre linéaire, analyse, théorie des probabilités et modélisation mathématique essentielle pour les applications IA et data science.">Strong foundation in linear algebra, analysis, probability theory, and mathematical modeling essential for AI and data science applications.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="year">2017 - 2018</div>
+            <div class="job-title" data-en="Scientific Baccalaureate (S2)" data-fr="Baccalauréat Scientifique (S2)">Scientific Baccalaureate (S2)</div>
+            <div class="company">Lycée Saint Benoit | Kolda, Sénégal</div>
+            <p data-en="Specialized in mathematics and physical sciences, building a strong analytical and problem-solving foundation." data-fr="Spécialisé en mathématiques et sciences physiques, construisant une solide base analytique et de résolution de problèmes.">Specialized in mathematics and physical sciences, building a strong analytical and problem-solving foundation.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title" data-en="Get In Touch" data-fr="Me Contacter">Get In Touch</h2>
+    <div class="contact-methods">
+        <div class="contact-item">
+            <div class="contact-label">EMAIL</div>
+            <a href="mailto:abdoulayedabo@esp.sn">abdoulayedabo@esp.sn</a>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-label">PHONE</div>
+            <a href="tel:+221777426690">+221 77 742 66 90</a>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-label">LINKEDIN</div>
+            <a href="https://linkedin.com/in/abdoulaye-dabo-39625023a" target="_blank">abdoulaye-dabo</a>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-label">GITHUB</div>
+            <a href="https://github.com/abdoulayedabo" target="_blank">abdoulayedabo</a>
+        </div>
+    </div>
+</section>
+
+<button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+{{ end }}
