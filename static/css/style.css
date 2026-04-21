@@ -74,10 +74,11 @@ hr {
 }
 
 .avatar {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center top;
   flex-shrink: 0;
   border: 1px solid var(--border);
 }
@@ -180,7 +181,7 @@ hr {
   font-size: 0.73rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--brand);
   letter-spacing: 0.03em;
   margin: 0;
 }
@@ -194,18 +195,20 @@ hr {
   display: inline;
 }
 
-.edu-school-location {
-  display: flex;
-  gap: 0.3rem;
-  align-items: baseline;
-  flex-wrap: wrap;
-}
-
 .edu-location {
   font-family: var(--font-sans);
   font-size: 0.76rem;
   color: var(--muted);
   font-weight: 500;
+  display: inline;
+  margin-left: 0.6rem;
+}
+
+.edu-school-location {
+  display: flex;
+  gap: 0.3rem;
+  align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .edu-content {
@@ -392,7 +395,6 @@ footer {
   padding: 1.5rem 0 3rem;
   font-size: var(--step--1);
   color: var(--muted);
-  border-top: 1px solid var(--border);
   text-align: center;
 }
 footer p + p { margin-top: 0.3rem; }

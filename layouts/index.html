@@ -40,6 +40,7 @@
       <div class="edu-head">
         <time class="edu-year">{{ .year }}</time>
         {{ with .school }}<span class="edu-school">{{ . }}</span>{{ end }}
+        {{ if or .city .country }}<span class="edu-location">{{ if .city }}{{ .city }}{{ end }}{{ if and .city .country }}, {{ end }}{{ if .country }}{{ .country }}{{ end }}</span>{{ end }}
       </div>
       <div class="edu-text">
       {{ with .logo }}<img src="/img/logos/{{ . }}" alt="" class="tl-logo" />{{ end }}
@@ -99,7 +100,6 @@
     </a>
     {{ end }}
   </div>
-  <hr />
   {{ end }}
 
   {{/*
