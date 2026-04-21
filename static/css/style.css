@@ -127,7 +127,7 @@ hr {
   position: relative;
   display: flex;
   flex-direction: column;
-  row-gap: 0.9rem;
+  row-gap: 1rem;
   margin-top: 0.25rem;
 }
 
@@ -138,64 +138,80 @@ hr {
   bottom: 0;
   left: 5px;
   width: 1px;
-  background: color-mix(in srgb, var(--brand) 35%, var(--border));
+  background: color-mix(in srgb, var(--brand) 25%, var(--border));
 }
 
+/* Event Item */
 .edu-event {
   display: flex;
+  gap: 0.6rem;
   align-items: flex-start;
+  padding-bottom: 1.2rem;
 }
 
 .edu-marker {
   flex-shrink: 0;
   position: relative;
-  left: 0;
-  top: 0.22rem;
+  top: 0.26rem;
   color: var(--brand);
   fill: var(--brand-soft);
   width: 12px;
   height: 12px;
 }
 
-.edu-content {
-  margin-left: 0.85rem;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 0.68rem 0.82rem;
-  width: calc(100% - 1.7rem);
-  font-size: 0.88rem;
-  line-height: 1.62;
+/* Body wrapper - vertical layout for meta + content */
+.edu-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+/* Meta (date + school) - aligned with marker */
+.edu-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  flex-shrink: 0;
 }
 
 .edu-year {
-  display: block;
   font-family: var(--font-sans);
-  font-size: 0.76rem;
-  font-weight: 700;
-  color: var(--brand);
-  margin-bottom: 0.3rem;
-  line-height: 1.4;
-}
-
-.edu-head {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.42rem;
-  align-items: baseline;
-  margin-bottom: 0.3rem;
-}
-
-.edu-head .edu-year {
-  margin-bottom: 0;
+  font-size: 0.73rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+  margin: 0;
 }
 
 .edu-school {
   font-family: var(--font-sans);
-  font-size: 0.76rem;
-  font-weight: 700;
+  font-size: 0.82rem;
+  font-weight: 600;
   color: var(--brand);
-  line-height: 1.4;
+  margin: 0;
+  display: inline;
+}
+
+.edu-school-location {
+  display: flex;
+  gap: 0.3rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.edu-location {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.edu-content {
+  font-size: 0.88rem;
+  line-height: 1.62;
+  padding-top: 0.1rem;
 }
 
 .edu-text { min-width: 0; }
@@ -223,7 +239,12 @@ hr {
   text-transform: lowercase;
   letter-spacing: 0.08em;
   color: var(--brand);
+  margin-top: 1.8rem;
   margin-bottom: var(--space-3);
+}
+
+.section-label:first-of-type {
+  margin-top: 0;
 }
 
 /* ── PROJETS ── */
@@ -407,8 +428,7 @@ footer a:hover { color: var(--brand); }
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
-  box-shadow: 0 10px 24px rgba(140, 21, 21, 0.28);
+  transition: opacity 0.22s ease, transform 0.22s ease;
   z-index: 1000;
 }
 
@@ -422,7 +442,6 @@ footer a:hover { color: var(--brand); }
 
 .scroll-top:hover {
   background: var(--link-hover);
-  box-shadow: 0 12px 26px rgba(140, 21, 21, 0.34);
 }
 
 .scroll-top:focus-visible {
@@ -440,8 +459,9 @@ footer a:hover { color: var(--brand); }
   html { font-size: 16px; }
   .hero { flex-direction: column; gap: 1rem; }
   .avatar { width: 80px; height: 80px; }
-  .edu-content { width: calc(100% - 1.65rem); }
-  .edu-year { font-size: 0.72rem; }
+  .edu-meta { min-width: 80px; }
+  .edu-year { font-size: 0.68rem; }
+  .edu-school { font-size: 0.75rem; }
   .talks-grid { grid-template-columns: repeat(2, 1fr); }
   .writing-list li { align-items: flex-start; flex-direction: column; gap: 0.1rem; }
   .wr-date { min-width: 0; }
