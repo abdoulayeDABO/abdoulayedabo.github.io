@@ -1,0 +1,50 @@
+# Format :
+# - name: "Nom du projet"
+#   github: "https://github.com/..."
+#   demo: "https://..."          # optionnel
+#   image: "projet.jpg"          # optionnel — mettre dans static/img/projects/
+#   status: "en cours"           # optionnel
+#   desc: |
+#     Description en **Markdown**.
+#   tags: ["Python", "Linux"]
+
+- name: "Data Science Lab"
+  github: "https://github.com/abdoulayeDABO/data-science-lab"
+  desc: |
+    Laboratoire personnel orienté **Machine Learning** et expérimentation data.
+    Le projet regroupe des notebooks d'analyse, des mini-projets reproductibles et des notes techniques
+    pour progresser de manière structurée sur la modélisation et l'évaluation.
+  tags: ["Python", "Jupyter", "Machine Learning", "Data Analysis"]
+
+- name: "ML Fullstack Starter"
+  github: "https://github.com/abdoulayeDABO/ml-fullstack-starter"
+  status: "en cours"
+  desc: |
+    Base de travail fullstack pour prototyper rapidement des projets IA orientés produit.
+    Objectif: relier expérimentation **notebook**, API applicative et interface utilisateur dans un flux cohérent,
+    afin d'accélérer le passage de l'idée au démonstrateur fonctionnel.
+  tags: ["MLOps", "Jupyter", "API", "Prototype"]
+
+- name: "Flask Starter"
+  github: "https://github.com/abdoulayeDABO/flask-starter"
+  desc: |
+    Starter moderne basé sur **Flask + HTMX + Tailwind CSS + SQLAlchemy**.
+    Pensé pour démarrer vite des applications web propres avec une architecture lisible,
+    une base de données intégrée et un socle réutilisable pour des projets réels.
+  tags: ["Flask", "HTMX", "Tailwind", "SQLAlchemy", "Backend"]
+
+- name: "FastAPI Backend Template"
+  github: "https://github.com/abdoulayeDABO/fastapi-backend-template"
+  desc: |
+    Template backend orienté production avec **FastAPI**.
+    Inclut les briques essentielles: structure de projet, sécurité, configuration de base de données
+    et endpoints prêts à l'emploi pour poser des API robustes et évolutives.
+  tags: ["FastAPI", "Python", "API Design", "Backend"]
+
+- name: "Spark Streaming"
+  github: "https://github.com/abdoulayeDABO/spark-streaming"
+  desc: |
+    Projet d'initiation au traitement de flux en temps réel avec **Apache Spark**.
+    Il explore la logique de pipelines streaming, la gestion des transformations en continu
+    et les bases d'une architecture orientée données pour des cas d'usage Big Data.
+  tags: ["Java", "Apache Spark", "Streaming", "Big Data"]

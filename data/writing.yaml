@@ -1,0 +1,22 @@
+# Liste de tes articles, tutoriels, rapports
+# url: "" si pas encore publié
+
+- date: "Mar 2024"
+  title: "Déployer FreeIPA sur Rocky Linux : les pièges à éviter"
+  url: ""
+
+- date: "Mar 2024"
+  title: "Stack mail iRedMail + FreeIPA LDAP : résoudre les erreurs SASL et DKIM"
+  url: ""
+
+- date: "Fév 2024"
+  title: "Nginx reverse proxy + SSL offloading avec Apache backend"
+  url: ""
+
+- date: "Jan 2024"
+  title: "Concevoir une architecture de données robuste pour des applications locales"
+  url: ""
+
+- date: "Déc 2023"
+  title: "MQTT + Node-RED : construire un dashboard IoT complet"
+  url: ""

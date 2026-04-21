@@ -1,20 +1,13 @@
-baseURL = 'https://abdoulayedabo.github.io/'
-languageCode = 'en-us'
-title = 'Abdoulaye Dabo - AI Engineer'
+baseURL = "https://abdoulayedabo.github.io/"
+languageCode = "fr"
+title = "Abdoulaye DABO portfolio"
 
 [params]
-  author = 'Abdoulaye Dabo'
-  description = 'AI & Big Data Engineering Student'
-
-[outputs]
-  home = ['HTML']
-  section = ['HTML']
-  page = ['HTML']
-
-[permalinks]
-  articles = '/articles/:slug/'
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+  name      = "Abdoulaye DABO"
+  tagline   = "Élève ingénieur en IA & Big Data, je transforme des idées data en produits logiciels concrets et utiles."
+  bio_short = "Élève ingénieur en IA et Big Data à l'ESP/UCAD, orienté backend, data et open-source."
+  github    = "https://github.com/abdoulayeDABO"
+  linkedin  = "http://linkedin.com/in/abdoulaye-dabo-39625023a"
+  twitter   = ""
+  email     = "abdoulayedabo@esp.sn"
+  avatar    = "/img/avatar.jpg"

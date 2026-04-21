@@ -1,0 +1,45 @@
+# Format :
+# - year: "2024 - présent"
+#   logo: "esp.png"          # optionnel — mettre l'image dans static/img/logos/
+#   desc: |
+#     Texte en **Markdown** supporté.
+
+- year: "2024 - DATE"
+  school: "ECOLE SUPÉRIEURE POLYTECHNIQUE"
+  desc: |
+    **ÉLÈVE INGÉNIEUR EN INFORMATIQUE**
+
+    Dakar, Sénégal
+
+    J'ai appris à structurer des projets logiciels complets avec une démarche d'ingénierie claire, de l'analyse jusqu'au déploiement.
+    J'ai aussi renforcé mes compétences en IA et Big Data, notamment sur la modélisation des données et la conception de solutions robustes.
+
+- year: "2023 - 2024"
+  school: "ECOLE SUPÉRIEURE POLYTECHNIQUE"
+  desc: |
+    **DIPLÔME SUPÉRIEUR DE TECHNOLOGIE INFORMATIQUE**
+
+    Dakar, Sénégal
+
+    J'y ai consolidé les bases en développement backend, administration systèmes et réseaux.
+    J'ai appris à produire des applications fiables en appliquant de bonnes pratiques de code, de tests et de maintenance.
+
+- year: "2020 - 2021"
+  school: "UNIVERSITÉ CHEIKH ANTA DIOP"
+  desc: |
+    **LICENCE MATHÉMATIQUES**
+
+    Dakar, Sénégal
+
+    Cette formation m'a donné une base solide en raisonnement logique, en algèbre et en analyse.
+    J'ai développé une rigueur scientifique qui m'aide aujourd'hui à résoudre des problèmes complexes en informatique.
+
+- year: "2017 - 2018"
+  school: "LYCÉE SAINT BENOÎT"
+  desc: |
+    **BACCALAURÉAT SCIENTIFIQUE SÉRIE S2**
+
+    Kolda, Sénégal
+
+    J'y ai acquis les fondamentaux scientifiques qui ont orienté mon parcours vers l'informatique.
+    J'ai appris à travailler avec méthode, autonomie et discipline sur des objectifs académiques exigeants.

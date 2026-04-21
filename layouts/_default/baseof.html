@@ -1,39 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} | {{ .Site.Title }}</title>
-    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ .Site.Params.name }}</title>
+  <meta name="description" content="{{ .Site.Params.bio_short }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-    <div class="lang-switcher">
-        <button class="lang-btn active" onclick="switchLang('en')">EN</button>
-        <button class="lang-btn" onclick="switchLang('fr')">FR</button>
-    </div>
+  {{ block "main" . }}{{ end }}
+  <button id="scrollTopBtn" class="scroll-top" type="button" aria-label="Retour en haut">
+    <span>Retour en haut</span>
+  </button>
+  <footer>
+    <p>{{ .Site.Params.name }} · Dakar, Sénégal · <a href="{{ .Site.Params.github }}" target="_blank">GitHub</a></p>
+    <p class="footer-made-with">Fait avec Hugo</p>
+  </footer>
 
-    <nav>
-        {{ if .IsHome }}
-        <a href="#projects" data-en="Projects" data-fr="Projets">PROJECTS</a>
-        <a href="{{ "/articles" | relURL }}" data-en="Articles" data-fr="Articles">ARTICLES</a>
-        <a href="#career" data-en="Career" data-fr="Parcours">CAREER</a>
-        <a href="#contact">CONTACT</a>
-        {{ else }}
-        <a href="{{ "/" | relURL }}">HOME</a>
-        <a href="{{ "/" | relURL }}#projects" data-en="Projects" data-fr="Projets">PROJECTS</a>
-        <a href="{{ "/articles" | relURL }}" data-en="Articles" data-fr="Articles">ARTICLES</a>
-        <a href="{{ "/" | relURL }}#career" data-en="Career" data-fr="Parcours">CAREER</a>
-        <a href="{{ "/" | relURL }}#contact">CONTACT</a>
-        {{ end }}
-    </nav>
+  <script>
+    (function () {
+      var btn = document.getElementById("scrollTopBtn");
+      var lastScrollY = window.scrollY;
+      var isVisible = false;
 
-    {{ block "main" . }}{{ end }}
+      function toggleButton(show) {
+        if (!btn || isVisible === show) return;
+        isVisible = show;
+        btn.classList.toggle("is-visible", show);
+      }
 
-    <footer>
-        <p>&copy; 2026 Abdoulaye Dabo. All rights reserved.</p>
-    </footer>
+      function onScroll() {
+        var y = window.scrollY;
+        var scrollingUp = y < lastScrollY;
+        var pastThreshold = y > 280;
+        toggleButton(scrollingUp && pastThreshold);
+        lastScrollY = y;
+      }
 
-    <script src="{{ "/js/script.js" | relURL }}"></script>
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      if (btn) {
+        btn.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

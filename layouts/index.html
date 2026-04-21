@@ -1,119 +1,116 @@
 {{ define "main" }}
-<header>
-    <h1>Abdoulaye Dabo</h1>
-    <p class="tagline" data-en="AI & Big Data Engineering Student" data-fr="Élève Ingénieur en IA et Big Data">AI & Big Data Engineering Student</p>
-    
-    <div class="social-links">
-        <a href="https://linkedin.com/in/abdoulaye-dabo-39625023a" target="_blank">LinkedIn</a>
-        <a href="https://github.com/abdoulayedabo" target="_blank">GitHub</a>
-        <a href="mailto:abdoulayedabo@esp.sn">Email</a>
-        <a href="tel:+221777426690">+221 77 742 66 90</a>
+<div class="page">
+
+  <!-- ═══ HERO ═══ -->
+  <div class="hero">
+    <img src="{{ .Site.Params.avatar }}" alt="{{ .Site.Params.name }}" class="avatar" />
+    <div class="hero-text">
+      <h1>{{ .Site.Params.name }}</h1>
+      <h2>{{ .Site.Params.tagline }}</h2>
+      <div class="socials">
+        {{ with .Site.Params.twitter }}
+        <a href="{{ . }}" target="_blank" rel="noopener" title="Twitter/X">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        {{ end }}
+        <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:{{ .Site.Params.email }}" title="Email" class="email-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
     </div>
+  </div>
 
-    <a href="#" class="download-cv-btn" onclick="downloadCV(event)" data-en="DOWNLOAD CV" data-fr="TÉLÉCHARGER CV">DOWNLOAD CV</a>
-</header>
+  <hr />
 
-<section id="projects">
-    <h2 class="section-title" data-en="Selected Projects" data-fr="Projets Sélectionnés">Selected Projects</h2>
-    <div class="projects-grid">
-        <div class="project-card">
-            <div class="project-number">01</div>
-            <h3 data-en="FastAPI Backend Template" data-fr="Template Backend FastAPI">FastAPI Backend Template</h3>
-            <p data-en="Backend template to get started your project using FastAPI. It includes a lot of the initial set up, security, database and some API endpoints already done for you." data-fr="Template backend pour démarrer votre projet avec FastAPI. Il inclut beaucoup de configurations initiales, sécurité, base de données et quelques endpoints API déjà faits pour vous.">Backend template to get started your project using FastAPI. It includes a lot of the initial set up, security, database and some API endpoints already done for you.</p>
-            <div class="project-tags">
-                <span class="tag">PYTHON</span>
-                <span class="tag">FASTAPI</span>
-                <span class="tag">SQL</span>
-                <span class="tag">SECURITY</span>
-            </div>
-            <a href="https://github.com/abdoulayeDABO/fastapi-backend-template" target="_blank" class="project-link">View on GitHub </a>
-        </div>
-
-        <div class="project-card">
-            <div class="project-number">02</div>
-            <h3 data-en="Jetpack Compose Todo App" data-fr="Application Todo Jetpack Compose">Jetpack Compose Todo App</h3>
-            <p data-en="A todo app made with Jetpack Compose and Kotlin. Modern Android development with clean architecture and Material Design 3." data-fr="Une application todo créée avec Jetpack Compose et Kotlin. Développement Android moderne avec architecture propre et Material Design 3.">A todo app made with Jetpack Compose and Kotlin. Modern Android development with clean architecture and Material Design 3.</p>
-            <div class="project-tags">
-                <span class="tag">KOTLIN</span>
-                <span class="tag">JETPACK COMPOSE</span>
-                <span class="tag">ANDROID</span>
-            </div>
-            <a href="https://github.com/abdoulayeDABO/jetpack-compose-todo-app" target="_blank" class="project-link">View on GitHub </a>
-        </div>
-
-        <div class="project-card">
-            <div class="project-number">03</div>
-            <h3 data-en="Data Science Lab" data-fr="Laboratoire Data Science">Data Science Lab</h3>
-            <p data-en="Personal data science laboratory featuring ML projects, analysis notebooks, and hands-on tutorials for continuous learning and experimentation." data-fr="Laboratoire personnel de data science avec projets ML, notebooks d'analyse et tutoriels pratiques pour l'apprentissage et l'expérimentation continus.">Personal data science laboratory featuring ML projects, analysis notebooks, and hands-on tutorials for continuous learning and experimentation.</p>
-            <div class="project-tags">
-                <span class="tag">PYTHON</span>
-                <span class="tag">JUPYTER</span>
-                <span class="tag">MACHINE LEARNING</span>
-                <span class="tag">DATA SCIENCE</span>
-            </div>
-            <a href="https://github.com/abdoulayeDABO/data-science-lab" target="_blank" class="project-link">View on GitHub </a>
-        </div>
+  <!-- ═══ TIMELINE ═══ -->
+  <div class="section-label">formation</div>
+  <div class="edu-timeline">
+  {{ range .Site.Data.timeline }}
+  <article class="edu-event">
+    <svg class="edu-marker" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+      <circle cx="7" cy="7" r="6" />
+    </svg>
+    <div class="edu-content">
+      <div class="edu-head">
+        <time class="edu-year">{{ .year }}</time>
+        {{ with .school }}<span class="edu-school">{{ . }}</span>{{ end }}
+      </div>
+      <div class="edu-text">
+      {{ with .logo }}<img src="/img/logos/{{ . }}" alt="" class="tl-logo" />{{ end }}
+      {{ .desc | markdownify }}
+      </div>
     </div>
-    <a href="{{ "/projects" | relURL }}" class="view-more-btn" style="display: inline-block; text-align: center; text-decoration: none;" data-en="VIEW MORE" data-fr="VOIR PLUS">VIEW MORE</a>
-</section>
+  </article>
+  {{ end }}
+  </div>
 
-<section id="career">
-    <h2 class="section-title" data-en="Academic Journey" data-fr="Parcours Académique">Academic Journey</h2>
-    <div class="timeline">
-        <div class="timeline-item">
-            <div class="year">2024 - <span data-en="PRESENT" data-fr="ACTUELLEMENT">PRESENT</span></div>
-            <div class="job-title" data-en="AI & Big Data Engineering Student" data-fr="Élève Ingénieur IA & Big Data">AI & Big Data Engineering Student</div>
-            <div class="company">École Supérieure Polytechnique | Dakar, Sénégal</div>
-            <p data-en="Advanced studies in Artificial Intelligence and Big Data with focus on machine learning, neural networks, data mining, and distributed computing systems." data-fr="Études avancées en Intelligence Artificielle et Big Data avec focus sur l'apprentissage automatique, réseaux neuronaux, exploration de données et systèmes informatiques distribués.">Advanced studies in Artificial Intelligence and Big Data with focus on machine learning, neural networks, data mining, and distributed computing systems.</p>
-        </div>
+  <!-- ═══ BIO COURTE ═══ -->
+  <div class="section-label">bio</div>
+  <p class="bio-text">{{ .Site.Data.bio.text | markdownify }}</p>
 
-        <div class="timeline-item">
-            <div class="year">2023 - 2024</div>
-            <div class="job-title" data-en="Computer Science Degree (DST)" data-fr="Diplôme Informatique (DST)">Computer Science Degree (DST)</div>
-            <div class="company">École Supérieure Polytechnique | Dakar, Sénégal</div>
-            <p data-en="Comprehensive training in software development, database management, web technologies, and system administration on Linux and Windows platforms." data-fr="Formation complète en développement logiciel, gestion de bases de données, technologies web et administration système sur plateformes Linux et Windows.">Comprehensive training in software development, database management, web technologies, and system administration on Linux and Windows platforms.</p>
-        </div>
+  <hr />
 
-        <div class="timeline-item">
-            <div class="year">2020 - 2021</div>
-            <div class="job-title" data-en="Mathematics Degree" data-fr="Licence Mathématiques">Mathematics Degree</div>
-            <div class="company">Université Cheikh Anta Diop | Dakar, Sénégal</div>
-            <p data-en="Strong foundation in linear algebra, analysis, probability theory, and mathematical modeling essential for AI and data science applications." data-fr="Solide formation en algèbre linéaire, analyse, théorie des probabilités et modélisation mathématique essentielle pour les applications IA et data science.">Strong foundation in linear algebra, analysis, probability theory, and mathematical modeling essential for AI and data science applications.</p>
-        </div>
+  <!-- ═══ PROJETS ═══ -->
+  <div class="section-label">projets</div>
+  {{ range .Site.Data.projects }}
+  <div class="project-block">
+    {{ with .image }}<img src="/img/projects/{{ . }}" alt="{{ $.title }}" class="proj-img" />{{ end }}
+    <p>
+      <a href="{{ .github }}" target="_blank" rel="noopener"><strong>{{ .name }}</strong></a>
+      {{ if .demo }} · <a href="{{ .demo }}" target="_blank">démo</a>{{ end }}
+      {{ with .status }} · <em>{{ . }}</em>{{ end }}
+    </p>
+    <p>{{ .desc | markdownify }}</p>
+    <div class="tags">{{ range .tags }}<span class="tag">{{ . }}</span>{{ end }}</div>
+  </div>
+  {{ end }}
 
-        <div class="timeline-item">
-            <div class="year">2017 - 2018</div>
-            <div class="job-title" data-en="Scientific Baccalaureate (S2)" data-fr="Baccalauréat Scientifique (S2)">Scientific Baccalaureate (S2)</div>
-            <div class="company">Lycée Saint Benoit | Kolda, Sénégal</div>
-            <p data-en="Specialized in mathematics and physical sciences, building a strong analytical and problem-solving foundation." data-fr="Spécialisé en mathématiques et sciences physiques, construisant une solide base analytique et de résolution de problèmes.">Specialized in mathematics and physical sciences, building a strong analytical and problem-solving foundation.</p>
-        </div>
-    </div>
-</section>
+  {{/*
+  <hr />
 
-<section id="contact">
-    <h2 class="section-title" data-en="Get In Touch" data-fr="Me Contacter">Get In Touch</h2>
-    <div class="contact-methods">
-        <div class="contact-item">
-            <div class="contact-label">EMAIL</div>
-            <a href="mailto:abdoulayedabo@esp.sn">abdoulayedabo@esp.sn</a>
-        </div>
+  <!-- ═══ ÉCRITS ═══ -->
+  <div class="section-label">écrits</div>
+  <ul class="writing-list">
+    {{ range .Site.Data.writing }}
+    <li>
+      <span class="wr-date">{{ .date }}</span>
+      {{ if .url }}<a href="{{ .url }}" target="_blank">{{ .title }}</a>{{ else }}<span>{{ .title }}</span>{{ end }}
+    </li>
+    {{ end }}
+  </ul>
+  */}}
 
-        <div class="contact-item">
-            <div class="contact-label">PHONE</div>
-            <a href="tel:+221777426690">+221 77 742 66 90</a>
-        </div>
+  <hr />
 
-        <div class="contact-item">
-            <div class="contact-label">LINKEDIN</div>
-            <a href="https://linkedin.com/in/abdoulaye-dabo-39625023a" target="_blank">abdoulaye-dabo</a>
-        </div>
+  <!-- ═══ TALKS / PRÉSENTATIONS ═══ -->
+  {{ if .Site.Data.talks }}
+  <div class="section-label">présentations</div>
+  <div class="talks-grid">
+    {{ range .Site.Data.talks }}
+    <a href="{{ .url }}" target="_blank" rel="noopener" class="talk-card">
+      {{ with .image }}<img src="/img/talks/{{ . }}" alt="{{ $.title }}" />{{ end }}
+      <p>{{ .title }}</p>
+    </a>
+    {{ end }}
+  </div>
+  <hr />
+  {{ end }}
 
-        <div class="contact-item">
-            <div class="contact-label">GITHUB</div>
-            <a href="https://github.com/abdoulayedabo" target="_blank">abdoulayedabo</a>
-        </div>
-    </div>
-</section>
+  {{/*
+  <!-- ═══ DIVERS ═══ -->
+  <div class="section-label">divers</div>
+  <ul class="misc-list">
+    {{ range .Site.Data.misc }}
+    <li>{{ .text | markdownify }}</li>
+    {{ end }}
+  </ul>
+  */}}
 
-<button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+</div>
 {{ end }}
