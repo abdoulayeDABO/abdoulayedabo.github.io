@@ -237,9 +237,10 @@ hr {
 /* ── SECTION LABEL ── */
 .section-label {
   font-family: var(--font-sans);
-  font-size: var(--step--1);
+  line-height: 1;
+  font-size: calc(var(--step-1) + 0.04rem);
   font-weight: 600;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
   letter-spacing: 0.08em;
   color: var(--brand);
   margin-top: 1.8rem;
@@ -255,8 +256,23 @@ hr {
   margin-bottom: 2rem;
 }
 
+.proj-name {
+  color: var(--brand);
+  text-decoration-color: color-mix(in srgb, var(--brand) 45%, transparent);
+  text-underline-offset: 0.12em;
+  font-size: calc(var(--step-0) - 0.09rem); 
+  font-weight: 600;
+  transition: color 0.15s, text-decoration 0.15s;
+}
+
+.proj-name:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
 .project-block p {
   margin-bottom: 0.55rem;
+  font-size: 0.82rem; 
 }
 
 .proj-img {
@@ -359,7 +375,10 @@ hr {
 .bio-text {
   font-style: normal;
   color: var(--muted);
-  font-size: var(--step-0);
+}
+.bio-text p {
+  font-size: 0.82rem;
+  margin-bottom: 0.55rem;
 }
 
 /* ── MISC ── */
@@ -451,10 +470,10 @@ footer a:hover { color: var(--brand); }
   outline-offset: 3px;
 }
 
-@keyframes bob {
+/* @keyframes bob {
   0%, 100% { transform: translate(-50%, 0); }
   50% { transform: translate(-50%, -3px); }
-}
+} */
 
 /* ── RESPONSIVE ── */
 @media (max-width: 520px) {

@@ -29,7 +29,7 @@
   <hr />
 
   <!-- ═══ TIMELINE ═══ -->
-  <div class="section-label">formation</div>
+  <div class="section-label">Formation</div>
   <div class="edu-timeline">
   {{ range .Site.Data.timeline }}
   <article class="edu-event">
@@ -52,18 +52,18 @@
   </div>
 
   <!-- ═══ BIO COURTE ═══ -->
-  <div class="section-label">bio</div>
-  <p class="bio-text">{{ .Site.Data.bio.text | markdownify }}</p>
+  <div class="section-label">Bio</div>
+  <div class="bio-text">{{ .Site.Data.bio.text | markdownify }}</div>
 
   <hr />
 
   <!-- ═══ PROJETS ═══ -->
-  <div class="section-label">projets</div>
+  <div class="section-label">Projets</div>
   {{ range .Site.Data.projects }}
   <div class="project-block">
     {{ with .image }}<img src="/img/projects/{{ . }}" alt="{{ $.title }}" class="proj-img" />{{ end }}
     <p>
-      <a href="{{ .github }}" target="_blank" rel="noopener"><strong>{{ .name }}</strong></a>
+      <a href="{{ .github }}" target="_blank" rel="noopener" class="proj-name"><strong>{{ .name }}</strong></a>
       {{ if .demo }} · <a href="{{ .demo }}" target="_blank">démo</a>{{ end }}
       {{ with .status }} · <em>{{ . }}</em>{{ end }}
     </p>
@@ -76,7 +76,7 @@
   <hr />
 
   <!-- ═══ ÉCRITS ═══ -->
-  <div class="section-label">écrits</div>
+  <div class="section-label">Écrits</div>
   <ul class="writing-list">
     {{ range .Site.Data.writing }}
     <li>
@@ -91,7 +91,7 @@
 
   <!-- ═══ TALKS / PRÉSENTATIONS ═══ -->
   {{ if .Site.Data.talks }}
-  <div class="section-label">présentations</div>
+  <div class="section-label">Présentations</div>
   <div class="talks-grid">
     {{ range .Site.Data.talks }}
     <a href="{{ .url }}" target="_blank" rel="noopener" class="talk-card">
@@ -104,7 +104,7 @@
 
   {{/*
   <!-- ═══ DIVERS ═══ -->
-  <div class="section-label">divers</div>
+  <div class="section-label">Divers</div>
   <ul class="misc-list">
     {{ range .Site.Data.misc }}
     <li>{{ .text | markdownify }}</li>
