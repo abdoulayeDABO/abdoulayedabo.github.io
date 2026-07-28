@@ -8,15 +8,15 @@
 :root {
   --brand:      #8c1515;
   --brand-soft: #fbcbcc;
-  --text:       #333;
-  --muted:      #5f4e4e;
+  --text:       #111;
+  --muted:      #444;
   --link:       #8c1515;
   --link-hover: #6f1010;
   --border:     #e8d6d6;
   --bg:         #fffdfd;
   --surface:    #fff6f6;
   --tag-bg:     #fde6e7;
-  --max-w:      680px;
+  --max-w:      720px;
   --font-serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
   --font-sans: "Source Sans 3", "Avenir Next", "Segoe UI", sans-serif;
   --step--1:    0.94rem;
@@ -30,7 +30,7 @@
   --space-4:    1.9rem;
 }
 
-html { font-size: 17px; }
+html { font-size: 19px; }
 
 body {
   font-family: var(--font-serif);
@@ -58,7 +58,7 @@ body {
 hr {
   border: none;
   border-top: 1px solid var(--border);
-  margin: 2.5rem 0;
+  margin: 0.8rem 0;
 }
 
 /* ── HERO ── */
@@ -123,6 +123,26 @@ hr {
 }
 .socials svg { width: 22px; height: 22px; }
 
+.hero-cv-btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--brand);
+  border: 1px solid var(--brand);
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  text-decoration: none;
+  margin-top: 0.6rem;
+  transition: background 0.15s, color 0.15s;
+}
+
+.hero-cv-btn:hover {
+  background: var(--brand);
+  color: #fff;
+  text-decoration: none;
+}
+
 /* ── TIMELINE ── */
 .edu-timeline {
   position: relative;
@@ -178,7 +198,7 @@ hr {
 
 .edu-year {
   font-family: var(--font-sans);
-  font-size: 0.73rem;
+  font-size: 0.82rem;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--brand);
@@ -197,7 +217,7 @@ hr {
 
 .edu-location {
   font-family: var(--font-sans);
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   color: var(--muted);
   font-weight: 500;
   display: inline;
@@ -212,7 +232,7 @@ hr {
 }
 
 .edu-content {
-  font-size: 0.88rem;
+  font-size: 1rem;
   line-height: 1.62;
   padding-top: 0.1rem;
 }
@@ -252,29 +272,6 @@ hr {
 }
 
 /* ── PROJETS ── */
-.project-block {
-  margin-bottom: 2rem;
-}
-
-.proj-name {
-  color: var(--brand);
-  text-decoration-color: color-mix(in srgb, var(--brand) 45%, transparent);
-  text-underline-offset: 0.12em;
-  font-size: calc(var(--step-0) - 0.09rem); 
-  font-weight: 600;
-  transition: color 0.15s, text-decoration 0.15s;
-}
-
-.proj-name:hover {
-  color: var(--link-hover);
-  text-decoration: underline;
-}
-
-.project-block p {
-  margin-bottom: 0.55rem;
-  font-size: 0.82rem; 
-}
-
 .proj-img {
   width: 100%;
   max-height: 200px;
@@ -285,26 +282,72 @@ hr {
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-.project-block:hover .proj-img {
+.proj-img:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(140, 21, 21, 0.12);
 }
 
-.tags {
+/* ── NAV BAR ── */
+.nav-bar {
   display: flex;
+  gap: 0.4rem;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 0.35rem;
-  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-family: var(--font-sans);
+  font-size: var(--step-0);
 }
 
-.tag {
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  background: var(--tag-bg);
+.nav-bar a {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+
+.nav-bar a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.nav-sep {
+  color: var(--muted);
+  font-weight: 300;
+}
+
+/* ── PROJECTS INTRO ── */
+.projects-intro {
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.projects-list {
+  padding-left: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.projects-list li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
   color: var(--text);
-  padding: 0.16rem 0.56rem;
-  border-radius: 999px;
-  border: 1px solid var(--border);
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  line-height: 1.62;
+}
+
+.projects-list li strong a {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+.projects-list li strong a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
 }
 
 /* ── ÉCRITS ── */
@@ -374,11 +417,15 @@ hr {
 /* ── BIO ── */
 .bio-text {
   font-style: normal;
-  color: var(--muted);
+  color: var(--text);
+  margin-bottom: 1.5rem;
 }
 .bio-text p {
-  font-size: 0.82rem;
+  font-size: 1rem;
   margin-bottom: 0.55rem;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 /* ── MISC ── */
@@ -474,6 +521,103 @@ footer a:hover { color: var(--brand); }
   0%, 100% { transform: translate(-50%, 0); }
   50% { transform: translate(-50%, -3px); }
 } */
+
+/* ── ABOUT CONTENT ── */
+.about-content {
+  margin-bottom: 2.5rem;
+}
+
+.about-content p {
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 0;
+  line-height: 1.62;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.about-links {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.about-links a {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--brand);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.about-links a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* ── SINGLE PAGE ── */
+.page-title {
+  font-family: var(--font-sans);
+  font-size: var(--step-1);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: var(--space-1);
+  line-height: 1.2;
+}
+
+.page-content h1 {
+  font-family: var(--font-sans);
+  font-size: var(--step-2);
+  font-weight: 600;
+  color: var(--brand);
+  margin-bottom: var(--space-3);
+  line-height: 1.2;
+}
+
+.page-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.62;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.page-content p a {
+  font-weight: 500;
+}
+
+.page-content h2 {
+  font-family: var(--font-sans);
+  font-size: var(--step-1);
+  font-weight: 600;
+  color: var(--brand);
+  margin-top: var(--space-3);
+  margin-bottom: 0.5rem;
+}
+
+.page-content ul {
+  padding-left: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.page-content li a {
+  font-weight: 600;
+}
+
+.page-content li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--text);
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
 
 /* ── RESPONSIVE ── */
 @media (max-width: 520px) {

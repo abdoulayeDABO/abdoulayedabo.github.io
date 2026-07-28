@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="page">
+
+  {{ partial "hero.html" . }}
+
+  <h1 class="page-title">{{ .Title }}</h1>
+  <div class="page-content">
+    {{ .Content }}
+  </div>
+
+  <div class="section-label">À propos</div>
+  <div class="bio-text">{{ .Site.Data.bio.text | markdownify }}</div>
+
+</div>
+{{ end }}

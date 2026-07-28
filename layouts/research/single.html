@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="page">
+
+  {{ partial "hero.html" . }}
+
+  <h1 class="page-title">{{ .Title }}</h1>
+  <div class="page-content">
+    {{ .Content }}
+  </div>
+
+  {{ if .Site.Data.talks }}
+  <div class="section-label">Présentations</div>
+  <div class="talks-grid">
+    {{ range .Site.Data.talks }}
+    <a href="{{ .url }}" target="_blank" rel="noopener" class="talk-card">
+      {{ with .image }}<img src="/img/talks/{{ . }}" alt="{{ $.title }}" />{{ end }}
+      <p>{{ .title }}</p>
+    </a>
+    {{ end }}
+  </div>
+  {{ end }}
+
+</div>
+{{ end }}

@@ -10,20 +10,22 @@
 
 - name: "Data Science Lab"
   github: "https://github.com/abdoulayeDABO/data-science-lab"
+  links:
+    - url: "https://github.com/abdoulayeDABO/data-science-lab/tree/main/notebooks"
+      text: "Notebooks"
+      desc: "Notebooks d'expérimentation et d'analyse"
+    - url: "https://github.com/abdoulayeDABO/data-science-lab/issues"
+      text: "Issues"
+      desc: "Problèmes, discussions et notes techniques"
+    - url: "https://github.com/abdoulayeDABO/data-science-lab/discussions"
+      text: "Articles & Livres"
+      desc: "Notes de lecture, articles et livres qui m'ont inspiré"
   desc: |
     Laboratoire personnel orienté **Machine Learning** et expérimentation data.
     Le projet regroupe des notebooks d'analyse, des mini-projets reproductibles et des notes techniques
     pour progresser de manière structurée sur la modélisation et l'évaluation.
   tags: ["Python", "Jupyter", "Machine Learning", "Data Analysis"]
 
-- name: "ML Fullstack Starter"
-  github: "https://github.com/abdoulayeDABO/ml-fullstack-starter"
-  status: "en cours"
-  desc: |
-    Base de travail fullstack pour prototyper rapidement des projets IA orientés produit.
-    Objectif: relier expérimentation **notebook**, API applicative et interface utilisateur dans un flux cohérent,
-    afin d'accélérer le passage de l'idée au démonstrateur fonctionnel.
-  tags: ["MLOps", "Jupyter", "API", "Prototype"]
 
 - name: "Flask Starter"
   github: "https://github.com/abdoulayeDABO/flask-starter"
