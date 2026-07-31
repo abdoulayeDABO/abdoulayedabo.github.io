@@ -8,23 +8,6 @@
 #     Description en **Markdown**.
 #   tags: ["Python", "Linux"]
 
-- name: "Data Science Lab"
-  github: "https://github.com/abdoulayeDABO/data-science-lab"
-  links:
-    - url: "https://github.com/abdoulayeDABO/data-science-lab/tree/main/notebooks"
-      text: "Notebooks"
-      desc: "Notebooks d'expérimentation et d'analyse"
-    - url: "https://github.com/abdoulayeDABO/data-science-lab/issues"
-      text: "Issues"
-      desc: "Problèmes, discussions et notes techniques"
-    - url: "https://github.com/abdoulayeDABO/data-science-lab/discussions"
-      text: "Articles & Livres"
-      desc: "Notes de lecture, articles et livres qui m'ont inspiré"
-  desc: |
-    Laboratoire personnel orienté **Machine Learning** et expérimentation data.
-    Le projet regroupe des notebooks d'analyse, des mini-projets reproductibles et des notes techniques
-    pour progresser de manière structurée sur la modélisation et l'évaluation.
-  tags: ["Python", "Jupyter", "Machine Learning", "Data Analysis"]
 
 
 - name: "Flask Starter"
@@ -35,18 +18,23 @@
     une base de données intégrée et un socle réutilisable pour des projets réels.
   tags: ["Flask", "HTMX", "Tailwind", "SQLAlchemy", "Backend"]
 
-- name: "FastAPI Backend Template"
-  github: "https://github.com/abdoulayeDABO/fastapi-backend-template"
+- name: "Todo App"
+  github: "https://github.com/abdoulayeDABO/todo-app"
   desc: |
-    Template backend orienté production avec **FastAPI**.
-    Inclut les briques essentielles: structure de projet, sécurité, configuration de base de données
-    et endpoints prêts à l'emploi pour poser des API robustes et évolutives.
-  tags: ["FastAPI", "Python", "API Design", "Backend"]
+    Application mobile de gestion de tâches (todo list) réalisée avec **React Native**.
+    Ajout, suppression et suppression multiple de tâches.
+  tags: ["React Native", "Mobile", "Expo"]
 
-- name: "Spark Streaming"
-  github: "https://github.com/abdoulayeDABO/spark-streaming"
+- name: "House Price Prediction"
+  github: "https://github.com/abdoulayeDABO/house_price_prediction"
   desc: |
-    Projet d'initiation au traitement de flux en temps réel avec **Apache Spark**.
-    Il explore la logique de pipelines streaming, la gestion des transformations en continu
-    et les bases d'une architecture orientée données pour des cas d'usage Big Data.
-  tags: ["Java", "Apache Spark", "Streaming", "Big Data"]
+    Prédiction des prix immobiliers en Californie avec **Random Forest Regressor**
+    (dataset California Housing) et interface **Streamlit**.
+  tags: ["Python", "Scikit-learn", "Machine Learning", "Streamlit"]
+
+- name: "Superstore Sales BI"
+  github: "https://github.com/abdoulayeDABO/superstore-sales-bi"
+  desc: |
+    Pipeline **ETL** et dashboard interactif (**Streamlit + Plotly**) pour analyser
+    les ventes et profits du dataset Superstore (Kaggle).
+  tags: ["Python", "Pandas", "Streamlit", "Plotly", "BI"]

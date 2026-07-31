@@ -10,9 +10,9 @@
   {{ range .Site.Data.projects }}
     <li>
       <strong><a href="{{ .github }}" target="_blank" rel="noopener">{{ .name }}</a></strong>
-      {{ if .demo }} · <a href="{{ .demo }}" target="_blank">démo</a>{{ end }}
+      {{ if .demo }} · <a href="{{ .demo }}" target="_blank">démo</a>{{ end }}:
       {{ with .status }} · <em>{{ . }}</em>{{ end }}
-      — {{ .desc | markdownify }}
+      {{ .desc | markdownify }}
     </li>
   {{ end }}
   </ul>
