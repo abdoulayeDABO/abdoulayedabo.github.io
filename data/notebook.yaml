@@ -1,0 +1,4 @@
+- date: "Juil. 2026"
+  title: "RAG serverless avec DuckDB"
+  url: "https://colab.research.google.com/drive/1JWhYVpQdWyLILekPxp7x_YNaeCgmnGHr"
+  desc: "Notebook qui charge des documents, les découpe en chunks, génère leurs embeddings BGE-M3 et les stocke dans une base vectorielle DuckDB."

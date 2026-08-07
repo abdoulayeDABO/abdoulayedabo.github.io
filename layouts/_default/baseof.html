@@ -1,54 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>{{ .Site.Params.name }}</title>
-  <meta name="description" content="{{ .Site.Params.bio_short }}" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/style.css" />
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <meta property="og:description" content="{{ .Site.Params.description }}" />
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&family=Vollkorn+SC:wght@400;600;700&family=Inter:wght@400..700&display=swap">
+  {{ if .Site.Params.favicon }}<link rel="icon" type="image/png" href="{{ .Site.Params.favicon }}">{{ end }}
 </head>
-<body>
-  {{ block "main" . }}{{ end }}
-  <button id="scrollTopBtn" class="scroll-top" type="button" aria-label="Retour en haut">
-    <span>Retour en haut</span>
-  </button>
-  <footer>
-    <p>{{ .Site.Params.name }} · Dakar, Sénégal · <a href="{{ .Site.Params.github }}" target="_blank">GitHub</a></p>
-    <p class="footer-made-with">Fait avec Hugo</p>
-  </footer>
 
-  <script>
-    (function () {
-      var btn = document.getElementById("scrollTopBtn");
-      var lastScrollY = window.scrollY;
-      var isVisible = false;
 
-      function toggleButton(show) {
-        if (!btn || isVisible === show) return;
-        isVisible = show;
-        btn.classList.toggle("is-visible", show);
-      }
+  <body>
 
-      function onScroll() {
-        var y = window.scrollY;
-        var scrollingUp = y < lastScrollY;
-        var pastThreshold = y > 280;
-        toggleButton(scrollingUp && pastThreshold);
-        lastScrollY = y;
-      }
+    <div class="paper-container">
+      <header class="site-header" role="banner">
 
-      window.addEventListener("scroll", onScroll, { passive: true });
-      onScroll();
+  <div class="wrapper">
+    <div class="site-identity">
+      <a href="/"><img src="{{ .Site.Params.avatar }}" alt="{{ .Site.Params.name }}"></a>
+      <div class="site-identity-text">
+        <a class="site-title" href="/">{{ .Site.Params.name }}</a>
+        <p>{{ .Site.Params.tagline }}</p>
+        <p class="site-email"><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+        <nav class="site-nav">
+          <a class="page-link" href="/about/">À propos</a> &middot;
+          <a class="page-link" href="/research/">Recherche</a> &middot;
+          <a class="page-link" href="/projects/">Projets</a> &middot;
+          <a class="page-link" href="/notebook/">Notebook</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
 
-      if (btn) {
-        btn.addEventListener("click", function () {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-      }
-    })();
-  </script>
-</body>
+
+      <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+          {{ block "main" . }}{{ end }}
+        </div>
+      </main>
+
+      <footer class="site-footer">
+
+  <div class="wrapper">
+    <hr>
+    <p class="footer-copyright">Copyright &copy; 2024&ndash;{{ now.Format "2006" }} {{ .Site.Params.copyright_name }}<br>
+    Fait avec Hugo &mdash; thème inspiré de <a href="https://ljvmiranda921.github.io/" target="_blank" rel="noopener">Lj V. Miranda</a></p>
+  </div>
+
+</footer>
+
+    </div>
+
+  </body>
+
 </html>

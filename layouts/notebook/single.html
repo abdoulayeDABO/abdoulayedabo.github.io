@@ -1,12 +1,12 @@
 {{ define "main" }}
-<div class="page">
-
-  {{ partial "hero.html" . }}
-
   <h1 class="page-title">{{ .Title }}</h1>
-  <div class="page-content">
-    {{ .Content }}
-  </div>
-
-</div>
+  <ul class="entry-list">
+  {{ range .Site.Data.notebook }}
+    <li>
+      <span class="entry-date">{{ .date }}</span> &raquo;
+      <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+      {{ if .desc }}<p class="entry-desc">{{ .desc | markdownify }}</p>{{ end }}
+    </li>
+  {{ end }}
+  </ul>
 {{ end }}

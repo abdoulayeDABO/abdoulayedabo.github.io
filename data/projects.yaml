@@ -1,40 +1,107 @@
+# Projets non-forkés depuis https://github.com/abdoulayeDABO?tab=repositories
+# featured: true => apparaît aussi sur la page d'accueil ("Projets récents")
 # Format :
 # - name: "Nom du projet"
 #   github: "https://github.com/..."
+#   date: "Mois Année"          # optionnel
 #   demo: "https://..."          # optionnel
-#   image: "projet.jpg"          # optionnel — mettre dans static/img/projects/
+#   featured: true               # optionnel
 #   status: "en cours"           # optionnel
 #   desc: |
 #     Description en **Markdown**.
 #   tags: ["Python", "Linux"]
 
 
-
-- name: "Flask Starter"
-  github: "https://github.com/abdoulayeDABO/flask-starter"
+- name: "serveless_rag_with_DuckDB"
+  github: "https://github.com/abdoulayeDABO/serveless_rag_with_DuckDB"
+  date: "Juil. 2026"
   desc: |
-    Starter moderne basé sur **Flask + HTMX + Tailwind CSS + SQLAlchemy**.
-    Pensé pour démarrer vite des applications web propres avec une architecture lisible,
-    une base de données intégrée et un socle réutilisable pour des projets réels.
-  tags: ["Flask", "HTMX", "Tailwind", "SQLAlchemy", "Backend"]
+    Pipeline **RAG serverless avec DuckDB** : chargement de documents, découpage en chunks,
+    embeddings (BGE-M3) et recherche vectorielle sans serveur.
+  tags: ["RAG", "DuckDB", "LLM", "Python"]
 
-- name: "Todo App"
-  github: "https://github.com/abdoulayeDABO/todo-app"
+- name: "superstore-sales-bi"
+  github: "https://github.com/abdoulayeDABO/superstore-sales-bi"
+  date: "Juin 2026"
+  featured: true
   desc: |
-    Application mobile de gestion de tâches (todo list) réalisée avec **React Native**.
-    Ajout, suppression et suppression multiple de tâches.
-  tags: ["React Native", "Mobile", "Expo"]
+    Pipeline **ETL** et dashboard interactif (**Streamlit + Plotly**) pour analyser
+    les ventes et profits du dataset Superstore (Kaggle).
+  tags: ["Python", "Pandas", "Streamlit", "Plotly", "BI"]
 
-- name: "House Price Prediction"
+- name: "house_price_prediction"
   github: "https://github.com/abdoulayeDABO/house_price_prediction"
+  date: "Juin 2026"
   desc: |
     Prédiction des prix immobiliers en Californie avec **Random Forest Regressor**
     (dataset California Housing) et interface **Streamlit**.
   tags: ["Python", "Scikit-learn", "Machine Learning", "Streamlit"]
 
-- name: "Superstore Sales BI"
-  github: "https://github.com/abdoulayeDABO/superstore-sales-bi"
+# - name: "data-science-lab"
+#   github: "https://github.com/abdoulayeDABO/data-science-lab"
+#   date: "Avr. 2026"
+#   desc: |
+#     Laboratoire personnel de data science : projets ML, notebooks d'analyse et tutoriels
+#     pour apprendre et expérimenter en continu.
+#   tags: ["Python", "Jupyter", "Data Science"]
+
+# - name: "vuejs-starter"
+#   github: "https://github.com/abdoulayeDABO/vuejs-starter"
+#   date: "Avr. 2026"
+#   desc: |
+#     Starter de frontend avec **Vue.js** et **Nuxt UI** pour démarrer des applications web rapidement.
+#   tags: ["Vue.js", "Nuxt", "TypeScript"]
+
+- name: "fastAPI-backend-starter"
+  github: "https://github.com/abdoulayeDABO/fastAPI-backend-starter"
+  date: "Août 2026"
+  featured: true
   desc: |
-    Pipeline **ETL** et dashboard interactif (**Streamlit + Plotly**) pour analyser
-    les ventes et profits du dataset Superstore (Kaggle).
-  tags: ["Python", "Pandas", "Streamlit", "Plotly", "BI"]
+    Boilerplate pour démarrer un backend avec **FastAPI** : structure claire, config simple et socle réutilisable.
+  tags: ["FastAPI", "Python", "Backend"]
+
+- name: "flask-starter"
+  github: "https://github.com/abdoulayeDABO/flask-starter"
+  date: "Mars 2026"
+  featured: true
+  desc: |
+    Starter moderne basé sur **Flask + HTMX + Tailwind CSS + SQLAlchemy** :
+    démarrage rapide d'applications web propres avec une architecture lisible.
+  tags: ["Flask", "HTMX", "Tailwind", "SQLAlchemy", "Backend"]
+
+
+# - name: "jetpack-compose-todo-app"
+#   github: "https://github.com/abdoulayeDABO/jetpack-compose-todo-app"
+#   date: "Août 2025"
+#   desc: |
+#     Application de gestion de tâches réalisée avec **Jetpack Compose** et **Kotlin**.
+#   tags: ["Kotlin", "Jetpack Compose", "Android"]
+
+# - name: "Unit-converter-app"
+#   github: "https://github.com/abdoulayeDABO/Unit-converter-app"
+#   date: "Août 2025"
+#   desc: |
+#     Application de conversion d'unités réalisée avec **Kotlin**.
+#   tags: ["Kotlin", "Android"]
+
+- name: "linked-list-c"
+  github: "https://github.com/abdoulayeDABO/linked-list-c"
+  date: "Juin 2025"
+  desc: |
+    Implémentation d'algorithmes sur les **listes chaînées** en **C**.
+  tags: ["C", "Structures de données"]
+
+# - name: "todo-app"
+#   github: "https://github.com/abdoulayeDABO/todo-app"
+#   date: "Mai 2025"
+#   desc: |
+#     Application mobile de gestion de tâches (todo list) réalisée avec **React Native**.
+#     Ajout, suppression et suppression multiple de tâches.
+#   tags: ["React Native", "Mobile", "Expo"]
+
+# - name: "scripts"
+#   github: "https://github.com/abdoulayeDABO/scripts"
+#   date: "Déc. 2025"
+#   desc: |
+#     Quelques **scripts bash** pour automatiser les tâches répétitives.
+#   tags: ["Shell", "Linux", "Automatisation"]

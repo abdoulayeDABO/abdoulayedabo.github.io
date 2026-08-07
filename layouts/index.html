@@ -1,52 +1,48 @@
 {{ define "main" }}
-<div class="page">
+<div class="home">
 
-  {{ partial "hero.html" . }}
-
-  <h1 class="page-title">À propos</h1>
-
-  <div class="about-content">
-    <p>
-      Je m'appelle <strong>Abdoulaye DABO</strong>, et bienvenue sur mon site !
-      <br/>
-      Je suis élève ingénieur en <strong></strong>Intelligence Artificielle & Big Data</strong> à l'École Supérieure Polytechnique (UCAD) de Dakar.
-      Passionné par la <strong>data science</strong>, le <strong>machine learning</strong> et le <strong>développement backend</strong>, 
-      je m'intéresse particulièrement à la manière de construire des solutions logicielles orientées données — du prototype jusqu'à l'application exploitable. 
-      J'aime combiner traitement de données, modèles de ML et architectures modernes pour transformer des idées en produits concrets.
-      <br/>
-      Avant l'IA, j'ai suivi une formation en mathématiques qui m'a donné une base solide en raisonnement logique et en rigueur scientifique.
-      Aujourd'hui, je continue à progresser à travers des projets personnels, des notebooks d'expérimentation et des contributions open-source, 
-      avec un fort attrait pour l'automatisation et les outils Python.
-      <br/>
-      <br/>
-      Merci de votre visite ! 
-    </p>
-    <div class="about-links">
-      <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener">GitHub</a>
-      <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:{{ .Site.Params.email }}">Email</a>
-    </div>
+  <div class="home-intro">
+    <p>{{ .Site.Data.bio_home.paragraph1 | markdownify }}</p>
+    <p>{{ .Site.Data.bio_home.paragraph2 | markdownify }}</p>
   </div>
 
-  <div class="edu-timeline">
-  {{ range .Site.Data.timeline }}
-  <article class="edu-event">
-    <svg class="edu-marker" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-      <circle cx="7" cy="7" r="6" />
-    </svg>
-    <div class="edu-content">
-      <div class="edu-head">
-        <time class="edu-year">{{ .year }}</time>
-        {{ with .school }}<span class="edu-school">{{ . }}</span>{{ end }}
-        {{ if or .city .country }}<span class="edu-location">{{ if .city }}{{ .city }}{{ end }}{{ if and .city .country }}, {{ end }}{{ if .country }}{{ .country }}{{ end }}</span>{{ end }}
-      </div>
-      <div class="edu-text">
-      {{ with .logo }}<img src="/img/logos/{{ . }}" alt="" class="tl-logo" />{{ end }}
-      {{ .desc | markdownify }}
+  <p class="home-social">
+    {{ if .Site.Params.github }}<a href="{{ .Site.Params.github }}"><i class="fab fa-github"></i><span>GitHub</span></a>{{ end }}
+    {{ if .Site.Params.linkedin }}<a href="{{ .Site.Params.linkedin }}"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>{{ end }}
+    {{ if .Site.Params.twitter }}<a href="{{ .Site.Params.twitter }}"><i class="fab fa-x-twitter"></i><span>X</span></a>{{ end }}
+    <a href="mailto:{{ .Site.Params.email }}"><i class="fas fa-envelope"></i><span>Email</span></a>
+    {{ if .Site.Params.cv }}<a href="{{ .Site.Params.cv }}"><i class="fas fa-file-pdf"></i><span>CV</span></a>{{ end }}
+  </p>
+
+  <hr>
+
+  <div class="home-sections">
+    <div class="column">
+      <h2 class="column-title">Projets récents</h2>
+      <ul class="post-list">
+        {{ range .Site.Data.projects}}
+          {{ if .featured }}
+          <li>
+            <span class="post-meta">{{ with .date }}{{ . }}{{ end }}</span>
+            <a class="post-link" href="{{ .github }}" target="_blank" rel="noopener">{{ .name }}</a>
+            {{ with .status }}<span class="post-status">{{ . }}</span>{{ end }}
+            <p>{{ .desc | markdownify }}</p>
+          </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="column">
+      <h2 class="column-title">Quoi de neuf ?</h2>
+      <div class="news-list">
+        {{ range .Site.Data.news }}
+        <div class="news-item">
+          <p><span class="date"><strong>{{ .date }}</strong></span>: {{ .text | markdownify }}</p>
+        </div>
+        {{ end }}
       </div>
     </div>
-  </article>
-  {{ end }}
   </div>
 
 </div>

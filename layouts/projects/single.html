@@ -1,21 +1,13 @@
 {{ define "main" }}
-<div class="page">
-
-  {{ partial "hero.html" . }}
-
   <h1 class="page-title">{{ .Title }}</h1>
-  <div class="projects-intro">{{ .Content }}</div>
-
-  <ul class="projects-list">
+  <ul class="entry-list">
   {{ range .Site.Data.projects }}
     <li>
-      <strong><a href="{{ .github }}" target="_blank" rel="noopener">{{ .name }}</a></strong>
-      {{ if .demo }} · <a href="{{ .demo }}" target="_blank">démo</a>{{ end }}:
-      {{ with .status }} · <em>{{ . }}</em>{{ end }}
-      {{ .desc | markdownify }}
+      <span class="entry-date">{{ .date }}</span> &raquo;
+      <a href="{{ .github }}" target="_blank" rel="noopener">{{ .name }}</a>
+      {{ if .demo }} · <a href="{{ .demo }}" target="_blank">démo</a>{{ end }}
+      {{ if .desc }}<p class="entry-desc">{{ .desc | markdownify }}</p>{{ end }}
     </li>
   {{ end }}
   </ul>
-
-</div>
 {{ end }}

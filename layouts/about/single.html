@@ -1,15 +1,26 @@
 {{ define "main" }}
-<div class="page">
-
-  {{ partial "hero.html" . }}
-
   <h1 class="page-title">{{ .Title }}</h1>
   <div class="page-content">
     {{ .Content }}
   </div>
 
-  <div class="section-label">À propos</div>
-  <div class="bio-text">{{ .Site.Data.bio.text | markdownify }}</div>
-
-</div>
+  <div class="section-label">Parcours</div>
+  <div class="edu-timeline">
+  {{ range .Site.Data.timeline }}
+  <article class="edu-event">
+    <svg class="edu-marker" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+      <circle cx="7" cy="7" r="6" />
+    </svg>
+    <div class="edu-body">
+      <div class="edu-meta">
+        <span class="edu-year">{{ .year }}</span>
+        &middot;
+        <span class="edu-school">{{ .school }}</span>
+        {{ if or .city .country }}<span class="edu-location">{{ if .city }}{{ .city }}{{ end }}{{ if and .city .country }}, {{ end }}{{ if .country }}{{ .country }}{{ end }}</span>{{ end }}
+      </div>
+      {{ with .diploma }}<span class="edu-diploma">{{ . }}</span>{{ end }}
+    </div>
+  </article>
+  {{ end }}
+  </div>
 {{ end }}

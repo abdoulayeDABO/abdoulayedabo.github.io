@@ -2,12 +2,16 @@ baseURL = "https://abdoulayedabo.github.io/"
 languageCode = "fr"
 title = "Abdoulaye DABO portfolio"
 
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
 [params]
   name      = "Abdoulaye DABO"
-  tagline   = "Élève ingénieur en IA & Big Data à l' Ecole Supérieure Polytechnique de Dakar (ESP/UCAD)."
-  bio_short = "Élève ingénieur en IA et Big Data à l'ESP/UCAD, orienté backend, data et open-source."
+  tagline   = "Élève ingénieur à l'École Supérieure Polytechnique"
+  description = "Élève ingénieur en IA et Big Data, orienté backend, data et open-source."
+  copyright_name = "Abdoulaye DABO"
   github    = "https://github.com/abdoulayeDABO"
   linkedin  = "http://linkedin.com/in/abdoulaye-dabo-39625023a"
   twitter   = ""
   email     = "abdoulayedabo@esp.sn"
   avatar    = "/img/avatar.jpg"
+  cv        = "/cv.pdf"
