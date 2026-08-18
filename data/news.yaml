@@ -6,7 +6,7 @@
   text: "Expérimentation [RAG serverless avec DuckDB](https://github.com/abdoulayeDABO/serveless_rag_with_DuckDB) : pipeline de Retrieval-Augmented Generation sans serveur."
 - date: "Juin 2026"
   text: "Analyse et dashboard des ventes Superstore ([ETL + Streamlit + Plotly](https://github.com/abdoulayeDABO/superstore-sales-bi))."
-- date: "Avr. 2026"
+# - date: "Avr. 2026"
 #   text: "Ouverture du laboratoire [data-science-lab](https://github.com/abdoulayeDABO/data-science-lab) : projets ML, notebooks et tutoriels."
 # - date: "Mars 2026"
   # text: "Publication du [flask-starter](https://github.com/abdoulayeDABO/flask-starter) : Flask + HTMX + Tailwind CSS + SQLAlchemy."
