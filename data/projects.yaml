@@ -50,27 +50,28 @@
     (dataset California Housing) et interface **Streamlit**.
   tags: ["Python", "Scikit-learn", "Machine Learning", "Streamlit"]
 
-- name: "fastAPI-backend-starter"
-  github: "https://github.com/abdoulayeDABO/fastAPI-backend-starter"
-  date: "Août 2026"
-  featured: true
-  desc: |
-    Boilerplate pour démarrer un backend avec **FastAPI** : structure claire, config simple et socle réutilisable.
-  tags: ["FastAPI", "Python", "Backend"]
+# - name: "fastAPI-backend-starter"
+#   github: "https://github.com/abdoulayeDABO/fastAPI-backend-starter"
+#   date: "Août 2026"
+#   featured: true
+#   desc: |
+#     Boilerplate pour démarrer un backend avec **FastAPI** : structure claire, config simple et socle réutilisable.
+#   tags: ["FastAPI", "Python", "Backend"]
 
-- name: "flask-starter"
-  github: "https://github.com/abdoulayeDABO/flask-starter"
-  date: "Mars 2026"
-  featured: true
-  desc: |
-    Starter moderne basé sur **Flask + HTMX + Tailwind CSS + SQLAlchemy** :
-    démarrage rapide d'applications web propres avec une architecture lisible.
-  tags: ["Flask", "HTMX", "Tailwind", "SQLAlchemy", "Backend"]
+# - name: "flask-starter"
+#   github: "https://github.com/abdoulayeDABO/flask-starter"
+#   date: "Mars 2026"
+#   featured: true
+#   desc: |
+#     Starter moderne basé sur **Flask + HTMX + Tailwind CSS + SQLAlchemy** :
+#     démarrage rapide d'applications web propres avec une architecture lisible.
+#   tags: ["Flask", "HTMX", "Tailwind", "SQLAlchemy", "Backend"]
 
 
 - name: "jetpack-compose-todo-app"
   github: "https://github.com/abdoulayeDABO/jetpack-compose-todo-app"
   date: "Août 2025"
+  featured: true
   desc: |
     Application de gestion de tâches réalisée avec **Jetpack Compose** et **Kotlin**.
   tags: ["Kotlin", "Jetpack Compose", "Android"]
@@ -78,6 +79,7 @@
 - name: "Unit-converter-app"
   github: "https://github.com/abdoulayeDABO/Unit-converter-app"
   date: "Août 2025"
+  featured: true
   desc: |
     Application de conversion d'unités réalisée avec **Kotlin**.
   tags: ["Kotlin", "Android"]
@@ -85,6 +87,7 @@
 - name: "linked-list-c"
   github: "https://github.com/abdoulayeDABO/linked-list-c"
   date: "Juin 2025"
+  featured: true
   desc: |
     Implémentation d'algorithmes sur les **listes chaînées** en **C**.
   tags: ["C", "Structures de données"]
@@ -92,6 +95,7 @@
 - name: "todo-app"
   github: "https://github.com/abdoulayeDABO/todo-app"
   date: "Mai 2025"
+  featured: true
   desc: |
     Application mobile de gestion de tâches (todo list) réalisée avec **React Native**.
     Ajout, suppression et suppression multiple de tâches.
