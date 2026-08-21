@@ -16,14 +16,21 @@
 #   github:
 #   date:
 #   desc: |
-#   ags: []
+#   tags: []
+
+- name: demographie_sn
+  github: https://abdoulayedabo.shinyapps.io/demographie_sn/
+  date: "Juin 2026"
+  desc: |
+    Tableau de bord interactif pour visualiser les données démographiques du Sénégal (population) par année de recensement (1988-2023).
+  tags: ["R", "Shiny", "Data Visualization"]
 
 - name: covid-19-data-analytics
   github: https://github.com/abdoulayeDABO/covid-19-data-analytics.git
   date: "Août 2026"
   desc: |
     Pipeline analytique end-to-end du jeu de données COVID-19 (Kaggle) : DuckDB comme entrepôt de données, dbt pour les transformations, Metabase pour la visualisation.
-  ags: ["DBT", "DuckDB", "Metabase"]
+  tags: ["DBT", "DuckDB", "Metabase"]
 
 - name: "serveless_rag_with_DuckDB"
   github: "https://github.com/abdoulayeDABO/serveless_rag_with_DuckDB"
