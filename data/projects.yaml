@@ -18,7 +18,7 @@
 #   desc: |
 #   tags: []
 
-- name: Tableau de bord RPGH Sénégal
+- name: Tableau de bord RGPH Sénégal
   github: https://abdoulayedabo.shinyapps.io/demographie_sn/
   date: "Septembre 2026"
   desc: |
