@@ -18,11 +18,11 @@
 #   desc: |
 #   tags: []
 
-- name: demographie_sn
+- name: Tableau de bord RPGH Sénégal
   github: https://abdoulayedabo.shinyapps.io/demographie_sn/
-  date: "Juin 2026"
+  date: "Septembre 2026"
   desc: |
-    Tableau de bord interactif pour visualiser les données démographiques du Sénégal (population) par année de recensement (1988-2023).
+    Tableau de bord interactif pour visualiser les données démographiques du Sénégal (population) par année de recensement (1976-2023).
   tags: ["R", "Shiny", "Data Visualization"]
 
 - name: covid-19-data-analytics
