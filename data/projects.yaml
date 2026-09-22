@@ -12,11 +12,13 @@
 #   tags: ["Python", "Linux"]
 
 
-# - name:
-#   github:
-#   date:
-#   desc: |
-#   tags: []
+- name: DocSim
+  github: https://github.com/abdoulayeDABO/DocSim
+  date: "Septembre 2026"
+  # demo: "https://..."   
+  desc: |
+    Web-based tool to compare and detect similarities between documents (text, PDF, DOCX) using NLP/text-matching algorithms.Web-based tool to compare and detect similarities between documents (text, PDF, MD, DOCX) using NLP/text-matching algorithms.
+  tags: []
 
 - name: Tableau de bord RGPH Sénégal
   github: https://abdoulayedabo.shinyapps.io/demographie_sn/
