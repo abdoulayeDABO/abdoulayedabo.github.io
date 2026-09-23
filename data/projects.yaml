@@ -15,7 +15,7 @@
 - name: DocSim
   github: https://github.com/abdoulayeDABO/DocSim
   date: "Septembre 2026"
-  # demo: "https://..."   
+  demo: "https://docsim.onrender.com/"   
   desc: |
     Web-based tool to compare and detect similarities between documents (text, PDF, DOCX) using NLP/text-matching algorithms.Web-based tool to compare and detect similarities between documents (text, PDF, MD, DOCX) using NLP/text-matching algorithms.
   tags: []
