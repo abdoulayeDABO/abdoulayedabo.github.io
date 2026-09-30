@@ -11,14 +11,26 @@
 #     Description en **Markdown**.
 #   tags: ["Python", "Linux"]
 
+- name: "NYC Taxi Analytics - Janvier 2025"
+  github: "https://github.com/abdoulayeDABO/nyc-taxi-analytics-jan-2025"
+  date: "Septembre 2026"
+  featured: true
+  desc: |
+    Analyse des courses des **Taxis Jaunes de New York** de janvier 2025, à partir des données officielles de la TLC.
+
+    - Traitement des données avec **Apache Spark**
+    - Stockage dans **PostgreSQL**
+    - Dashboards interactifs avec **Apache Superset**
+    - Environnement entièrement orchestré avec **Docker Compose**
+  tags: ["Spark", "Superset", "PostgreSQL", "Docker", "Data Engineering"]
 
 - name: DocSim
   github: https://github.com/abdoulayeDABO/DocSim
   date: "Septembre 2026"
   demo: "https://docsim.onrender.com/"   
   desc: |
-    Web-based tool to compare and detect similarities between documents (text, PDF, DOCX) using NLP/text-matching algorithms.Web-based tool to compare and detect similarities between documents (text, PDF, MD, DOCX) using NLP/text-matching algorithms.
-  tags: []
+    Outil web de **comparaison de documents** (texte, PDF, MD, DOCX) permettant de détecter les similarités grâce à des algorithmes de NLP et de correspondance de texte.
+  tags: ["NLP", "Python", "Web"]
 
 - name: Tableau de bord RGPH Sénégal
   github: https://abdoulayedabo.shinyapps.io/demographie_sn/
