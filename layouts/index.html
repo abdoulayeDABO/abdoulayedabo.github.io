@@ -2,8 +2,8 @@
 <div class="home">
 
   <div class="home-intro">
-    <p>{{ .Site.Data.bio_home.paragraph1 | markdownify }}</p>
-    <p>{{ .Site.Data.bio_home.paragraph2 | markdownify }}</p>
+    <p>{{ .Site.Data.bio.paragraph1 | markdownify }}</p>
+    <p>{{ .Site.Data.bio.paragraph2 | markdownify }}</p>
   </div>
 
   <p class="home-social">
@@ -33,7 +33,7 @@
       </ul>
     </div>
 
-    <div class="column">
+    <!-- <div class="column">
       <h2 class="column-title">Quoi de neuf ?</h2>
       <div class="news-list">
         {{ range .Site.Data.news }}
@@ -42,7 +42,7 @@
         </div>
         {{ end }}
       </div>
-    </div>
+    </div> -->
   </div>
 
 </div>

@@ -2,8 +2,6 @@
   text: "[Tableau de bord RGPH Sénégal](https://abdoulayedabo.shinyapps.io/demographie_sn/): Tableau de bord interactif pour visualiser les données démographiques du Sénégal (population) par année de recensement (1976-2023)."
 - date: "Août 2026"
   text: "[covid-19-data-analytics](https://github.com/abdoulayeDABO/covid-19-data-analytics.git): Pipeline analytique end-to-end du jeu de données COVID-19 (Kaggle) utilisant DuckDB comme entrepôt de données, dbt pour les transformations, Metabase pour la visualisation."
-# - date: "Août 2026"
-#   text: "Publication du starter backend [fastAPI-backend-starter](https://github.com/abdoulayeDABO/fastAPI-backend-starter), un boilerplate FastAPI pour démarrer vite des projets backend."
 - date: "Juil. 2026"
   text: "Expérimentation [RAG serverless avec DuckDB](https://github.com/abdoulayeDABO/serveless_rag_with_DuckDB) : pipeline de Retrieval-Augmented Generation sans serveur."
 - date: "Juin 2026"

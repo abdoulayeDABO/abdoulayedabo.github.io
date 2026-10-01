@@ -380,6 +380,7 @@ hr::after {
 .post-link {
   display: block;
   font-size: 20px;
+  font-weight: 700;
   line-height: 1.3;
   color: #111;
 }
@@ -495,21 +496,21 @@ hr::after {
   flex-wrap: wrap;
 }
 .edu-year {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  /* font-weight: 700; */
   color: #111;
 }
 .edu-school {
-  font-weight: 600;
+  /* font-weight: 600; */
   color: #111;
-  font-size: 18px;
+  font-size: 16px;
 }
 .edu-location {
   color: #111;
   font-size: 16px;
 }
 .edu-diploma {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: #a00000;
 }

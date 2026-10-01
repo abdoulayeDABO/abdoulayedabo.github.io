@@ -16,17 +16,13 @@
   date: "Septembre 2026"
   featured: true
   desc: |
-    Analyse des courses des **Taxis Jaunes de New York** de janvier 2025, à partir des données officielles de la TLC.
-
-    - Traitement des données avec **Apache Spark**
-    - Stockage dans **PostgreSQL**
-    - Dashboards interactifs avec **Apache Superset**
-    - Environnement entièrement orchestré avec **Docker Compose**
+    Ce projet analyse les courses des taxis jaunes de New York de janvier 2025, à partir des données officielles de la TLC, en les traitant avec Apache Spark, en les stockant dans PostgreSQL, en les visualisant via des dashboards interactifs Apache Superset, le tout orchestré par Docker Compose
   tags: ["Spark", "Superset", "PostgreSQL", "Docker", "Data Engineering"]
 
 - name: DocSim
   github: https://github.com/abdoulayeDABO/DocSim
   date: "Septembre 2026"
+  featured: true
   demo: "https://docsim.onrender.com/"   
   desc: |
     Outil web de **comparaison de documents** (texte, PDF, MD, DOCX) permettant de détecter les similarités grâce à des algorithmes de NLP et de correspondance de texte.
@@ -57,7 +53,6 @@
 - name: "superstore-sales-bi"
   github: "https://github.com/abdoulayeDABO/superstore-sales-bi"
   date: "Juin 2026"
-  featured: true
   desc: |
     Pipeline **ETL** et dashboard interactif (**Streamlit + Plotly**) pour analyser
     les ventes et profits du dataset Superstore (Kaggle).
@@ -92,7 +87,6 @@
 - name: "jetpack-compose-todo-app"
   github: "https://github.com/abdoulayeDABO/jetpack-compose-todo-app"
   date: "Août 2025"
-  featured: true
   desc: |
     Application de gestion de tâches réalisée avec **Jetpack Compose** et **Kotlin**.
   tags: ["Kotlin", "Jetpack Compose", "Android"]
@@ -100,7 +94,6 @@
 - name: "Unit-converter-app"
   github: "https://github.com/abdoulayeDABO/Unit-converter-app"
   date: "Août 2025"
-  featured: true
   desc: |
     Application de conversion d'unités réalisée avec **Kotlin**.
   tags: ["Kotlin", "Android"]
@@ -108,7 +101,6 @@
 - name: "linked-list-c"
   github: "https://github.com/abdoulayeDABO/linked-list-c"
   date: "Juin 2025"
-  featured: true
   desc: |
     Implémentation d'algorithmes sur les **listes chaînées** en **C**.
   tags: ["C", "Structures de données"]
@@ -116,7 +108,6 @@
 - name: "todo-app"
   github: "https://github.com/abdoulayeDABO/todo-app"
   date: "Mai 2025"
-  featured: true
   desc: |
     Application mobile de gestion de tâches (todo list) réalisée avec **React Native**.
     Ajout, suppression et suppression multiple de tâches.
