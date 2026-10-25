@@ -1,12 +1,38 @@
 {{ define "main" }}
+{{ $isEnglish := eq .Site.Language.Lang "en" }}
   <h1 class="page-title">{{ .Title }}</h1>
-  <ul class="entry-list">
-  {{ range .Site.Data.projects }}
+  <div class="page-intro">{{ .Content }}</div>
+  <ul class="entry-list project-list">
+  {{ range hugo.Data.projects }}
+    {{ $project := . }}
+    {{ $name := .name }}
+    {{ $date := .date }}
+    {{ $description := .desc }}
+    {{ if $isEnglish }}
+      {{ $name = .name_en }}
+      {{ $date = .date_en }}
+      {{ $description = .desc_en }}
+    {{ end }}
     <li>
-      <span class="entry-date">{{ .date }}</span> &raquo;
-      <a href="{{ .github }}" target="_blank" rel="noopener">{{ .name }}</a>
-      {{ if .demo }} · <a href="{{ .demo }}" target="_blank">démo</a>{{ end }}
-      {{ if .desc }}<p class="entry-desc">{{ .desc | markdownify }}</p>{{ end }}
+      <span class="entry-date">{{ $date }}</span>
+      <h2 class="entry-title">{{ $name }}</h2>
+      {{ if $description }}<div class="entry-desc">{{ $description | markdownify }}</div>{{ end }}
+      {{ with .tags }}
+      <div class="project-tags" aria-label="{{ T "technologies" }}">
+        {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+      </div>
+      {{ end }}
+      <div class="project-actions">
+        {{ with .url }}
+        <a class="project-link" href="{{ . }}" target="_blank" rel="noopener">
+          {{ if eq $project.url_label "Colab" }}<i class="fas fa-flask" aria-hidden="true"></i>{{ else }}<i class="fab fa-github" aria-hidden="true"></i>{{ end }}
+          <span>{{ $project.url_label | default (T "project") }}</span>
+        </a>
+        {{ end }}
+        {{ with .demo }}
+        <a class="project-link secondary" href="{{ . }}" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i><span>{{ T "demo" }}</span></a>
+        {{ end }}
+      </div>
     </li>
   {{ end }}
   </ul>

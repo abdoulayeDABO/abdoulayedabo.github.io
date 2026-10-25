@@ -2,5 +2,10 @@
 title: "À propos"
 ---
 
-J'ai obtenu mon baccalauréat S2 avec la mention Assez Bien en 2018 au Lycée Saint Benoît de Kolda. Orienté à l'Université Cheikh Anta Diop de Dakar (UCAD), à la Faculté des Sciences et Techniques (FST), j'y ai effectué trois années d'études en mathématiques, qui m'ont permis d'obtenir ma licence et de développer une solide base en raisonnement logique et en rigueur analytique.
-Je me suis ensuite tourné vers l'informatique en intégrant l'École Supérieure Polytechnique (ESP) de Dakar pour une formation de deux ans, sanctionnée par un Diplôme Supérieur de Technologie (DST) en informatique. Mes bons résultats m'ont valu d'être sélectionné pour intégrer le cycle ingénieur, où j'ai suivi une année de tronc commun avant de me spécialiser, pendant deux ans, en Intelligence Artificielle et Big Data.
+Je suis actuellement en cycle ingénieur en Intelligence Artificielle et Big Data à l'École Supérieure Polytechnique (ESP) de Dakar. La formation associe une année de tronc commun à une spécialisation orientée apprentissage automatique, systèmes de Big Data et développement logiciel.
+
+Avant d'intégrer le cycle ingénieur, j'ai suivi une formation de deux ans en informatique à l'ESP, après avoir obtenu une licence en mathématiques à l'Université Cheikh Anta Diop. Ce parcours m'a permis de développer une solide base en raisonnement logique et en rigueur analytique.
+
+En parallèle de mes études, je travaille sur des projets concrets en intelligence artificielle, en ingénierie de données et en développement web : un pipeline de détection de fraude en temps réel, un réseau de neurones à feedforward implémenté avec NumPy, une application de comparaison de documents et des pipelines analytiques à grande échelle.
+
+Ma curiosité pour l'informatique vient de ma volonté de comprendre le fonctionnement des systèmes numériques. Elle m'a conduit à explorer à la fois le logiciel et les données, puis à me spécialiser en Intelligence Artificielle et Big Data. Mon objectif à long terme est de développer des systèmes intelligents utiles, fiables et accessibles, avec une forte motivation pour la recherche, la science et l'apprentissage continu.

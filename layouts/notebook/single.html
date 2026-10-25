@@ -1,11 +1,25 @@
 {{ define "main" }}
+{{ $isEnglish := eq .Site.Language.Lang "en" }}
   <h1 class="page-title">{{ .Title }}</h1>
+  <div class="page-intro">{{ .Content }}</div>
   <ul class="entry-list">
-  {{ range .Site.Data.notebook }}
+  {{ range hugo.Data.notebook }}
+    {{ $notebook := . }}
+    {{ $title := .title }}
+    {{ $date := .date }}
+    {{ $description := .desc }}
+    {{ if $isEnglish }}
+      {{ $title = .title_en }}
+      {{ $date = .date_en }}
+      {{ $description = .desc_en }}
+    {{ end }}
     <li>
-      <span class="entry-date">{{ .date }}</span> &raquo;
-      <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
-      {{ if .desc }}<p class="entry-desc">{{ .desc | markdownify }}</p>{{ end }}
+      <span class="entry-date">{{ $date }}</span>
+      <a href="{{ .url }}" target="_blank" rel="noopener">{{ $title }}</a>
+      {{ if $description }}<div class="entry-desc">{{ $description | markdownify }}</div>{{ end }}
+      <div class="project-actions">
+        <a class="project-link" href="{{ .url }}" target="_blank" rel="noopener"><i class="fas fa-flask" aria-hidden="true"></i><span>{{ $notebook.url_label | default "Colab" }}</span></a>
+      </div>
     </li>
   {{ end }}
   </ul>

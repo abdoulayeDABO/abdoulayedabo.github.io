@@ -1,4 +1,10 @@
-- date: "Juil. 2026"
+- date: "Juillet 2026"
+  date_en: "July 2026"
   title: "RAG serverless avec DuckDB"
+  title_en: "Serverless RAG with DuckDB"
   url: "https://colab.research.google.com/drive/1JWhYVpQdWyLILekPxp7x_YNaeCgmnGHr"
-  desc: "Notebook qui charge des documents, les découpe en chunks, génère leurs embeddings BGE-M3 et les stocke dans une base vectorielle DuckDB."
+  url_label: "Colab"
+  desc: |
+    Notebook qui charge des documents, les découpe en fragments, génère leurs embeddings BGE-M3 et les stocke dans une base vectorielle DuckDB.
+  desc_en: |
+    A notebook that loads documents, splits them into chunks, generates BGE-M3 embeddings, and stores them in a DuckDB vector database.

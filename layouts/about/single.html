@@ -1,24 +1,38 @@
 {{ define "main" }}
+{{ $isEnglish := eq .Site.Language.Lang "en" }}
   <h1 class="page-title">{{ .Title }}</h1>
-  <div class="page-content">
+  <div class="page-intro">
     {{ .Content }}
   </div>
 
-  <div class="section-label">Parcours</div>
+  <div class="section-label">{{ T "education_path" }}</div>
   <div class="edu-timeline">
-  {{ range .Site.Data.timeline }}
+  {{ range hugo.Data.timeline }}
+  {{ $event := . }}
+  {{ $year := .year }}
+  {{ $school := .school }}
+  {{ $city := .city }}
+  {{ $country := .country }}
+  {{ $diploma := .diploma }}
+  {{ if $isEnglish }}
+    {{ $year = .year_en }}
+    {{ $school = .school_en }}
+    {{ $city = .city_en }}
+    {{ $country = .country_en }}
+    {{ $diploma = .diploma_en }}
+  {{ end }}
   <article class="edu-event">
     <svg class="edu-marker" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
       <circle cx="7" cy="7" r="6" />
     </svg>
     <div class="edu-body">
       <div class="edu-meta">
-        <span class="edu-year">{{ .year }}</span>
+        <span class="edu-year">{{ $year }}</span>
         &middot;
-        <span class="edu-school">{{ .school }}</span>
-        {{ if or .city .country }}<span class="edu-location">{{ if .city }}{{ .city }}{{ end }}{{ if and .city .country }}, {{ end }}{{ if .country }}{{ .country }}{{ end }}</span>{{ end }}
+        <span class="edu-school">{{ $school }}</span>
+        {{ if or $city $country }}<span class="edu-location">{{ if $city }}{{ $city }}{{ end }}{{ if and $city $country }}, {{ end }}{{ if $country }}{{ $country }}{{ end }}</span>{{ end }}
       </div>
-      {{ with .diploma }}<span class="edu-diploma">{{ . }}</span>{{ end }}
+      {{ with $diploma }}<span class="edu-diploma">{{ . }}</span>{{ end }}
     </div>
   </article>
   {{ end }}

@@ -1,69 +1,73 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ site.Language.Locale }}">
 
   <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{{ .Site.Params.name }}</title>
-  <meta name="description" content="{{ .Site.Params.description }}">
-  <meta property="og:description" content="{{ .Site.Params.description }}" />
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&family=Vollkorn+SC:wght@400;600;700&family=Inter:wght@400..700&display=swap">
-  {{ if .Site.Params.favicon }}<link rel="icon" type="image/png" href="{{ .Site.Params.favicon }}">{{ end }}
-</head>
-
+    <title>{{ if .IsHome }}{{ .Site.Params.name }} — {{ T "portfolio" }}{{ else }}{{ .Title }} — {{ .Site.Params.name }}{{ end }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Params.name }} — {{ T "portfolio" }}{{ else }}{{ .Title }} — {{ .Site.Params.name }}{{ end }}">
+    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta name="theme-color" id="theme-color" content="#fffff8">
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&family=Vollkorn+SC:wght@400;600;700&family=Inter:wght@400..700&display=swap">
+    <script src="{{ "js/theme.js" | relURL }}"></script>
+    {{ if .Site.Params.favicon }}<link rel="icon" type="image/png" href="{{ .Site.Params.favicon }}">{{ end }}
+  </head>
 
   <body>
-
     <div class="paper-container">
       <header class="site-header" role="banner">
+        <div class="wrapper">
+          <div class="site-identity">
+            <a href="{{ site.Home.RelPermalink }}"><img src="{{ .Site.Params.avatar | relURL }}" alt="{{ .Site.Params.name }}"></a>
+            <div class="site-identity-text">
+              <a class="site-title" href="{{ site.Home.RelPermalink }}">{{ .Site.Params.name }}</a>
+              <p>{{ .Site.Params.tagline }}</p>
+              <p class="site-email"><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+              <div class="site-nav-row">
+                <nav class="site-nav" aria-label="{{ T "primary_navigation" }}">
+                  <a class="page-link" href="{{ relLangURL "/" }}"{{ if .IsHome }} aria-current="page"{{ end }}>{{ T "nav_home" }}</a>
+                  <a class="page-link{{ if eq .Section "about" }} active{{ end }}" href="{{ relLangURL "/about/" }}"{{ if eq .Section "about" }} aria-current="page"{{ end }}>{{ T "nav_about" }}</a>
+                  <a class="page-link{{ if eq .Section "projects" }} active{{ end }}" href="{{ relLangURL "/projects/" }}"{{ if eq .Section "projects" }} aria-current="page"{{ end }}>{{ T "nav_projects" }}</a>
+                  <a class="page-link{{ if eq .Section "notebook" }} active{{ end }}" href="{{ relLangURL "/notebook/" }}"{{ if eq .Section "notebook" }} aria-current="page"{{ end }}>{{ T "nav_notebook" }}</a>
+                </nav>
+                <div class="site-actions">
+                  {{ range .Translations }}
+                  <a class="language-switch" href="{{ .RelPermalink }}" hreflang="{{ .Language.Locale }}" lang="{{ .Language.Locale }}">{{ .Language.Label }}</a>
+                  {{ end }}
+                  <button class="theme-toggle" type="button" aria-label="{{ T "toggle_theme" }}" title="{{ T "toggle_theme" }}" aria-pressed="false" data-dark-label="{{ T "switch_to_dark" }}" data-light-label="{{ T "switch_to_light" }}">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
 
-  <div class="wrapper">
-    <div class="site-identity">
-      <a href="/"><img src="{{ .Site.Params.avatar }}" alt="{{ .Site.Params.name }}"></a>
-      <div class="site-identity-text">
-        <a class="site-title" href="/">{{ .Site.Params.name }}</a>
-        <p>{{ .Site.Params.tagline }}</p>
-        <p class="site-email"><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
-        <nav class="site-nav">
-          <a class="page-link" href="/about/">À propos</a> &middot;
-          <a class="page-link" href="/research/">Recherche</a> &middot;
-          <a class="page-link" href="/projects/">Projets</a> &middot;
-          <a class="page-link" href="/notebook/">Notebook</a>
-        </nav>
-      </div>
-    </div>
-  </div>
-</header>
-
-
-      <main class="page-content" aria-label="Content">
+      <main class="page-content" aria-label="{{ T "main_content" }}">
         <div class="wrapper">
           {{ block "main" . }}{{ end }}
         </div>
       </main>
 
       <footer class="site-footer">
-
-  <div class="wrapper">
-    <hr>
-    <p class="footer-copyright">
-      Copyright &copy; 2024&ndash;{{ now.Format "2006" }} {{ .Site.Params.copyright_name }}
-      <br>
-      Fait avec Hugo
-    </p>
-    <!-- <a href="https://ljvmiranda921.github.io/" target="_blank" rel="noopener">Lj V. Miranda</a> -->
-  </div>
-
-</footer>
-
+        <div class="wrapper">
+          <hr>
+          <p class="footer-copyright">
+            Copyright &copy; 2024&ndash;{{ now.Format "2006" }} {{ .Site.Params.copyright_name }}
+            <br>
+            {{ T "built_with_hugo" }}
+          </p>
+        </div>
+      </footer>
     </div>
-
   </body>
 
 </html>

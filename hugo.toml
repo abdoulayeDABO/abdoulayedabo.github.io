@@ -1,17 +1,37 @@
 baseURL = "https://abdoulayedabo.github.io/"
-languageCode = "fr"
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
 title = "Abdoulaye DABO portfolio"
+
+[languages]
+  [languages.fr]
+    label = "Français"
+    locale = "fr-FR"
+    weight = 1
+    [languages.fr.params]
+      tagline = "Élève ingénieur en Intelligence Artificielle & Big Data"
+      description = "Élève ingénieur en IA et Big Data, orienté data, backend et open source."
+  [languages.en]
+    label = "English"
+    locale = "en-US"
+    weight = 2
+    [languages.en.params]
+      tagline = "AI & Big Data Engineering Student"
+      description = "AI and Big Data engineering student focused on data, backend, and open-source development."
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
+[outputs]
+  home = ["HTML", "RSS"]
+  taxonomy = ["RSS"]
+
 [params]
   name      = "Abdoulaye DABO"
-  tagline   = "Élève ingénieur à l'École Supérieure Polytechnique"
-  description = "Élève ingénieur en IA et Big Data, orienté backend, data et open-source."
   copyright_name = "Abdoulaye DABO"
   github    = "https://github.com/abdoulayeDABO"
-  linkedin  = "http://linkedin.com/in/abdoulaye-dabo-39625023a"
+  linkedin  = "https://www.linkedin.com/in/abdoulaye-dabo-39625023a"
   twitter   = ""
+  scholar   = ""
   email     = "abdoulayedabo@esp.sn"
   avatar    = "/img/avatar.jpg"
   cv        = "/cv.pdf"

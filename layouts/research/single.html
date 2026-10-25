@@ -4,10 +4,10 @@
     {{ .Content }}
   </div>
 
-  {{ if .Site.Data.talks }}
-  <div class="section-label">Présentations</div>
+  {{ if hugo.Data.talks }}
+  <div class="section-label">{{ T "talks" }}</div>
   <div class="talks-grid">
-    {{ range .Site.Data.talks }}
+    {{ range hugo.Data.talks }}
     <a href="{{ .url }}" target="_blank" rel="noopener" class="talk-card">
       {{ with .image }}<img src="/img/talks/{{ . }}" alt="{{ $.title }}" />{{ end }}
       <p>{{ .title }}</p>

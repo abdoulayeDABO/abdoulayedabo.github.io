@@ -1,114 +1,113 @@
-# Projets non-forkés depuis https://github.com/abdoulayeDABO?tab=repositories
-# featured: true => apparaît aussi sur la page d'accueil ("Projets récents")
-# Format :
-# - name: "Nom du projet"
-#   github: "https://github.com/..."
-#   date: "Mois Année"          # optionnel
-#   demo: "https://..."          # optionnel
-#   featured: true               # optionnel
-#   status: "en cours"           # optionnel
-#   desc: |
-#     Description en **Markdown**.
-#   tags: ["Python", "Linux"]
-
-- name: "NYC Taxi Analytics - Janvier 2025"
-  github: "https://github.com/abdoulayeDABO/nyc-taxi-analytics-jan-2025"
-  date: "Septembre 2026"
+- name: "Pipeline de détection de fraude en temps réel"
+  name_en: "Real-Time Fraud Detection Pipeline"
+  url: "https://github.com/abdoulayeDABO/realtime-fraud-detection-pipeline"
+  url_label: "GitHub"
+  date: "Octobre 2026"
+  date_en: "October 2026"
   featured: true
   desc: |
-    Ce projet analyse les courses des taxis jaunes de New York de janvier 2025, à partir des données officielles de la TLC, en les traitant avec Apache Spark, en les stockant dans PostgreSQL, en les visualisant via des dashboards interactifs Apache Superset, le tout orchestré par Docker Compose
+    Pipeline de streaming qui analyse les transactions bancaires en temps réel, prédit les transactions frauduleuses avec un modèle de machine learning, stocke les résultats dans PostgreSQL, les affiche dans Grafana et déclenche des alertes par e-mail.
+  desc_en: |
+    A streaming pipeline that analyzes banking transactions in real time, predicts fraudulent transactions with a machine-learning model, stores the results in PostgreSQL, displays them in Grafana, and triggers automated email alerts.
+  tags: ["Kafka", "Spark Streaming", "XGBoost", "PostgreSQL", "Grafana", "Docker Compose"]
+
+- name: "Réseau de neurones à feedforward"
+  name_en: "Feedforward Neural Network"
+  url: "https://colab.research.google.com/drive/1nQG1k1LyWxwSyr8B2UxhrUqTgzc4gKIq?usp=sharing"
+  url_label: "Colab"
+  date: "Octobre 2026"
+  date_en: "October 2026"
+  featured: true
+  desc: |
+    Implémentation simple d'un réseau de neurones à feedforward en Python avec NumPy. Le réseau peut résoudre différents problèmes de classification et de prédiction, avec **plus de 80 % de précision** sur le jeu de données MNIST.
+  desc_en: |
+    A simple implementation of a feedforward neural network using Python and NumPy. The network can solve multiple classification and prediction problems, achieving **over 80% accuracy** on the MNIST dataset.
+  tags: ["Python", "NumPy", "Neural Networks", "MNIST"]
+
+- name: "Analyse des courses de taxis à New York"
+  name_en: "NYC Taxi Analytics"
+  url: "https://github.com/abdoulayeDABO/nyc-taxi-analytics-jan-2025"
+  url_label: "GitHub"
+  date: "Septembre 2026"
+  date_en: "September 2026"
+  featured: true
+  desc: |
+    Analyse des courses des taxis jaunes de New York en janvier 2025 à partir des données officielles de la TLC, avec Apache Spark, PostgreSQL, des tableaux de bord interactifs Apache Superset et Docker Compose.
+  desc_en: |
+    Analysis of New York yellow taxi trips from January 2025 using official TLC data, with Apache Spark, PostgreSQL, interactive Apache Superset dashboards, and Docker Compose.
   tags: ["Spark", "Superset", "PostgreSQL", "Docker", "Data Engineering"]
 
-- name: DocSim
-  github: https://github.com/abdoulayeDABO/DocSim
+- name: "DocSim"
+  name_en: "DocSim"
+  url: "https://github.com/abdoulayeDABO/DocSim"
+  url_label: "GitHub"
+  demo: "https://docsim.onrender.com/"
   date: "Septembre 2026"
+  date_en: "September 2026"
   featured: true
-  demo: "https://docsim.onrender.com/"   
   desc: |
-    Outil web de **comparaison de documents** (texte, PDF, MD, DOCX) permettant de détecter les similarités grâce à des algorithmes de NLP et de correspondance de texte.
+    Outil web de **comparaison de documents** (texte, PDF, Markdown et DOCX) permettant de détecter les similarités grâce à des algorithmes de NLP et de correspondance de texte.
+  desc_en: |
+    A web-based **document comparison** tool for text, PDF, Markdown, and DOCX files that detects similarities with NLP and text-matching algorithms.
   tags: ["NLP", "Python", "Web"]
 
-- name: Tableau de bord RGPH Sénégal
-  github: https://abdoulayedabo.shinyapps.io/demographie_sn/
+- name: "Tableau de bord RGPH Sénégal"
+  name_en: "Senegal RGPH Dashboard"
+  url: "https://github.com/abdoulayeDABO/rgph-senegal-dashboard"
+  url_label: "GitHub"
+  demo: "https://abdoulayedabo.shinyapps.io/demographie_sn/"
   date: "Septembre 2026"
+  date_en: "September 2026"
   desc: |
-    Tableau de bord interactif pour visualiser les données démographiques du Sénégal (population) par année de recensement (1976-2023).
+    Tableau de bord interactif pour visualiser les données démographiques du Sénégal par année de recensement, de 1976 à 2023.
+  desc_en: |
+    An interactive dashboard for exploring Senegal's demographic data by census year, from 1976 to 2023.
   tags: ["R", "Shiny", "Data Visualization"]
 
-- name: covid-19-data-analytics
-  github: https://github.com/abdoulayeDABO/covid-19-data-analytics.git
+- name: "Analyse des données COVID-19"
+  name_en: "COVID-19 Data Analytics"
+  url: "https://github.com/abdoulayeDABO/covid-19-data-analytics"
+  url_label: "GitHub"
   date: "Août 2026"
+  date_en: "August 2026"
   desc: |
-    Pipeline analytique end-to-end du jeu de données COVID-19 (Kaggle) : DuckDB comme entrepôt de données, dbt pour les transformations, Metabase pour la visualisation.
-  tags: ["DBT", "DuckDB", "Metabase"]
+    Pipeline analytique de bout en bout pour le jeu de données COVID-19 de Kaggle : DuckDB comme entrepôt de données, dbt pour les transformations et Metabase pour la visualisation.
+  desc_en: |
+    An end-to-end analytics pipeline for the Kaggle COVID-19 dataset: DuckDB as the data warehouse, dbt for transformations, and Metabase for visualization.
+  tags: ["dbt", "DuckDB", "Metabase", "Data Engineering"]
 
-- name: "serveless_rag_with_DuckDB"
-  github: "https://github.com/abdoulayeDABO/serveless_rag_with_DuckDB"
-  date: "Juil. 2026"
+- name: "RAG serverless avec DuckDB"
+  name_en: "Serverless RAG with DuckDB"
+  url: "https://github.com/abdoulayeDABO/serveless_rag_with_DuckDB"
+  url_label: "GitHub"
+  date: "Juillet 2026"
+  date_en: "July 2026"
   desc: |
-    Pipeline **RAG serverless avec DuckDB** : chargement de documents, découpage en chunks,
-    embeddings (BGE-M3) et recherche vectorielle sans serveur.
+    Pipeline **RAG serverless avec DuckDB** : chargement de documents, découpage en fragments, génération d'embeddings BGE-M3 et recherche vectorielle sans serveur.
+  desc_en: |
+    A **serverless RAG pipeline with DuckDB**: document loading, chunking, BGE-M3 embeddings, and serverless vector search.
   tags: ["RAG", "DuckDB", "LLM", "Python"]
 
-- name: "superstore-sales-bi"
-  github: "https://github.com/abdoulayeDABO/superstore-sales-bi"
+- name: "Analyse des ventes Superstore"
+  name_en: "Superstore Sales Analytics"
+  url: "https://github.com/abdoulayeDABO/superstore-sales-bi"
+  url_label: "GitHub"
   date: "Juin 2026"
+  date_en: "June 2026"
   desc: |
-    Pipeline **ETL** et dashboard interactif (**Streamlit + Plotly**) pour analyser
-    les ventes et profits du dataset Superstore (Kaggle).
+    Pipeline **ETL** et tableau de bord interactif (**Streamlit + Plotly**) pour analyser les ventes et les bénéfices du jeu de données Superstore.
+  desc_en: |
+    An **ETL pipeline** and interactive dashboard (**Streamlit + Plotly**) for analyzing sales and profit across the Superstore dataset.
   tags: ["Python", "Pandas", "Streamlit", "Plotly", "BI"]
 
-- name: "house_price_prediction"
-  github: "https://github.com/abdoulayeDABO/house_price_prediction"
+- name: "Prédiction des prix immobiliers"
+  name_en: "House Price Prediction"
+  url: "https://github.com/abdoulayeDABO/house_price_prediction"
+  url_label: "GitHub"
   date: "Juin 2026"
+  date_en: "June 2026"
   desc: |
-    Prédiction des prix immobiliers en Californie avec **Random Forest Regressor**
-    (dataset California Housing) et interface **Streamlit**.
+    Prédiction des prix immobiliers en Californie avec un **Random Forest Regressor** sur le jeu de données California Housing et une interface **Streamlit**.
+  desc_en: |
+    House-price prediction in California with a **Random Forest Regressor** trained on the California Housing dataset and a **Streamlit** interface.
   tags: ["Python", "Scikit-learn", "Machine Learning", "Streamlit"]
-
-# - name: "fastAPI-backend-starter"
-#   github: "https://github.com/abdoulayeDABO/fastAPI-backend-starter"
-#   date: "Août 2026"
-#   featured: true
-#   desc: |
-#     Boilerplate pour démarrer un backend avec **FastAPI** : structure claire, config simple et socle réutilisable.
-#   tags: ["FastAPI", "Python", "Backend"]
-
-# - name: "flask-starter"
-#   github: "https://github.com/abdoulayeDABO/flask-starter"
-#   date: "Mars 2026"
-#   featured: true
-#   desc: |
-#     Starter moderne basé sur **Flask + HTMX + Tailwind CSS + SQLAlchemy** :
-#     démarrage rapide d'applications web propres avec une architecture lisible.
-#   tags: ["Flask", "HTMX", "Tailwind", "SQLAlchemy", "Backend"]
-
-
-- name: "jetpack-compose-todo-app"
-  github: "https://github.com/abdoulayeDABO/jetpack-compose-todo-app"
-  date: "Août 2025"
-  desc: |
-    Application de gestion de tâches réalisée avec **Jetpack Compose** et **Kotlin**.
-  tags: ["Kotlin", "Jetpack Compose", "Android"]
-
-- name: "Unit-converter-app"
-  github: "https://github.com/abdoulayeDABO/Unit-converter-app"
-  date: "Août 2025"
-  desc: |
-    Application de conversion d'unités réalisée avec **Kotlin**.
-  tags: ["Kotlin", "Android"]
-
-- name: "linked-list-c"
-  github: "https://github.com/abdoulayeDABO/linked-list-c"
-  date: "Juin 2025"
-  desc: |
-    Implémentation d'algorithmes sur les **listes chaînées** en **C**.
-  tags: ["C", "Structures de données"]
-
-- name: "todo-app"
-  github: "https://github.com/abdoulayeDABO/todo-app"
-  date: "Mai 2025"
-  desc: |
-    Application mobile de gestion de tâches (todo list) réalisée avec **React Native**.
-    Ajout, suppression et suppression multiple de tâches.
-  tags: ["React Native", "Mobile", "Expo"]

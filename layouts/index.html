@@ -1,48 +1,68 @@
 {{ define "main" }}
+{{ $isEnglish := eq .Site.Language.Lang "en" }}
 <div class="home">
 
   <div class="home-intro">
-    <p>{{ .Site.Data.bio.paragraph1 | markdownify }}</p>
-    <p>{{ .Site.Data.bio.paragraph2 | markdownify }}</p>
+    <h1 class="home-greeting">{{ T "home_greeting" }}</h1>
+    <div class="home-copy">
+      {{ if $isEnglish }}
+      <p>{{ hugo.Data.bio.paragraph1_en }}</p>
+      <p>{{ hugo.Data.bio.paragraph2_en }}</p>
+      <p>{{ hugo.Data.bio.paragraph3_en }}</p>
+      {{ else }}
+      <p>{{ hugo.Data.bio.paragraph1 }}</p>
+      <p>{{ hugo.Data.bio.paragraph2 }}</p>
+      <p>{{ hugo.Data.bio.paragraph3 }}</p>
+      {{ end }}
+    </div>
   </div>
 
-  <p class="home-social">
-    {{ if .Site.Params.github }}<a href="{{ .Site.Params.github }}"><i class="fab fa-github"></i><span>GitHub</span></a>{{ end }}
-    {{ if .Site.Params.linkedin }}<a href="{{ .Site.Params.linkedin }}"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>{{ end }}
-    {{ if .Site.Params.twitter }}<a href="{{ .Site.Params.twitter }}"><i class="fab fa-x-twitter"></i><span>X</span></a>{{ end }}
-    <a href="mailto:{{ .Site.Params.email }}"><i class="fas fa-envelope"></i><span>Email</span></a>
-    {{ if .Site.Params.cv }}<a href="{{ .Site.Params.cv }}"><i class="fas fa-file-pdf"></i><span>CV</span></a>{{ end }}
-  </p>
+  <div class="home-social">
+    <a href="mailto:{{ .Site.Params.email }}"><i class="fas fa-envelope" aria-hidden="true"></i><span>{{ T "email" }}</span></a>
+    {{ if .Site.Params.scholar }}<a href="{{ .Site.Params.scholar }}" target="_blank" rel="noopener"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>{{ T "google_scholar" }}</span></a>{{ end }}
+    {{ if .Site.Params.github }}<a href="{{ .Site.Params.github }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><span>{{ T "github" }}</span></a>{{ end }}
+    {{ if .Site.Params.linkedin }}<a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i><span>{{ T "linkedin" }}</span></a>{{ end }}
+    {{ if .Site.Params.cv }}<a href="{{ .Site.Params.cv | relURL }}"><i class="fas fa-file-pdf" aria-hidden="true"></i><span>{{ T "cv" }}</span></a>{{ end }}
+  </div>
 
   <hr>
 
   <div class="home-sections">
     <div class="column">
-      <h2 class="column-title">Projets récents</h2>
-      <ul class="post-list">
-        {{ range .Site.Data.projects}}
+      <h2 class="column-title">{{ T "featured_projects" }}</h2>
+      <div class="post-list">
+        {{ range hugo.Data.projects }}
           {{ if .featured }}
-          <li>
-            <span class="post-meta">{{ with .date }}{{ . }}{{ end }}</span>
-            <a class="post-link" href="{{ .github }}" target="_blank" rel="noopener">{{ .name }}</a>
+          {{ $project := . }}
+          {{ $name := .name }}
+          {{ $date := .date }}
+          {{ $description := .desc }}
+          {{ if $isEnglish }}
+            {{ $name = .name_en }}
+            {{ $date = .date_en }}
+            {{ $description = .desc_en }}
+          {{ end }}
+          <article class="project-card">
+            <p class="post-meta">{{ $date }}</p>
+            <h3 class="post-link">{{ $name }}</h3>
             {{ with .status }}<span class="post-status">{{ . }}</span>{{ end }}
-            <p>{{ .desc | markdownify }}</p>
-          </li>
+            <div class="project-description">{{ $description | markdownify }}</div>
+            <div class="project-tags" aria-label="{{ T "technologies" }}">
+              {{ range .tags }}<span class="tag">{{ . }}</span>{{ end }}
+            </div>
+            {{ with .url }}
+            <div class="project-actions">
+              <a class="project-link" href="{{ . }}" target="_blank" rel="noopener">
+                {{ if eq $project.url_label "Colab" }}<i class="fas fa-flask" aria-hidden="true"></i>{{ else }}<i class="fab fa-github" aria-hidden="true"></i>{{ end }}
+                <span>{{ $project.url_label | default (T "project") }}</span>
+              </a>
+            </div>
+            {{ end }}
+          </article>
           {{ end }}
         {{ end }}
-      </ul>
-    </div>
-
-    <!-- <div class="column">
-      <h2 class="column-title">Quoi de neuf ?</h2>
-      <div class="news-list">
-        {{ range .Site.Data.news }}
-        <div class="news-item">
-          <p><span class="date"><strong>{{ .date }}</strong></span>: {{ .text | markdownify }}</p>
-        </div>
-        {{ end }}
       </div>
-    </div> -->
+    </div>
   </div>
 
 </div>
