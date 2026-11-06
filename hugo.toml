@@ -9,7 +9,7 @@ title = "Abdoulaye DABO portfolio"
     locale = "fr-FR"
     weight = 1
     [languages.fr.params]
-      tagline = "Élève ingénieur en Intelligence Artificielle & Big Data"
+      tagline = "Élève ingénieur en IA & Big Data"
       description = "Élève ingénieur en IA et Big Data, orienté data, backend et open source."
   [languages.en]
     label = "English"
