@@ -797,9 +797,6 @@ a:focus-visible {
 }
 
 .edu-event {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
   padding-bottom: 26px;
 }
 
@@ -807,13 +804,11 @@ a:focus-visible {
   padding-bottom: 0;
 }
 
-.edu-marker {
-  flex-shrink: 0;
-  position: relative;
-  top: 0.3em;
-  width: 12px;
-  height: 12px;
-  fill: var(--accent);
+.edu-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 10px;
 }
 
 .edu-body {
@@ -832,22 +827,27 @@ a:focus-visible {
 
 .edu-year {
   font-family: "Inter", system-ui, sans-serif;
-  font-size: 13px;
+  font-size: 15.5px;
   font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--accent);
+  color: var(--text-strong);
   white-space: nowrap;
 }
 
 .edu-school {
-  font-size: 16.5px;
-  font-weight: 600;
-  color: var(--text-strong);
+  margin-top: 3px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--text-muted);
 }
 
 .edu-location {
   font-size: 14px;
   color: var(--text-muted);
+}
+
+.edu-body {
+  flex: 1;
 }
 
 .edu-diploma {
@@ -859,7 +859,7 @@ a:focus-visible {
 }
 
 .edu-learned {
-  margin-top: 6px;
+  margin-top: 8px;
   font-family: "Inter", system-ui, sans-serif;
   font-size: 15px;
   font-weight: 400;

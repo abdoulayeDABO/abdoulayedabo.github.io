@@ -7,7 +7,6 @@
 
   <div class="edu-timeline">
   {{ range hugo.Data.timeline }}
-  {{ $event := . }}
   {{ $year := .year }}
   {{ $school := .school }}
   {{ $city := .city }}
@@ -23,19 +22,12 @@
     {{ $learned = .learned_en }}
   {{ end }}
   <article class="edu-event">
-    <svg class="edu-marker" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-      <circle cx="7" cy="7" r="6" />
-    </svg>
-    <div class="edu-body">
-      <div class="edu-meta">
-        <span class="edu-year">{{ $year }}</span>
-        &middot;
-        <span class="edu-school">{{ $school }}</span>
-        {{ if or $city $country }}<span class="edu-location">{{ if $city }}{{ $city }}{{ end }}{{ if and $city $country }}, {{ end }}{{ if $country }}{{ $country }}{{ end }}</span>{{ end }}
-      </div>
+    <div class="edu-head">
+      <span class="edu-year">{{ $year }}</span>
       {{ with $diploma }}<span class="edu-diploma">{{ . }}</span>{{ end }}
-      {{ with $learned }}<p class="edu-learned">{{ . }}</p>{{ end }}
     </div>
+    <p class="edu-school">{{ $school }}{{ if or $city $country }}{{ if $city }}, {{ $city }}{{ end }}{{ if and $city $country }}, {{ end }}{{ if $country }}{{ $country }}{{ end }}{{ end }}</p>
+    {{ with $learned }}<p class="edu-learned">{{ . }}</p>{{ end }}
   </article>
   {{ end }}
   </div>
