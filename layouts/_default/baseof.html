@@ -16,7 +16,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&family=Vollkorn+SC:wght@400;600;700&family=Inter:wght@400..700&display=swap">
-    <script src="{{ "js/theme.js" | relURL }}"></script>
     {{ if .Site.Params.favicon }}<link rel="icon" type="image/png" href="{{ .Site.Params.favicon }}">{{ end }}
   </head>
 
@@ -47,9 +46,6 @@
                   {{ range .Translations }}
                   <a class="language-switch" href="{{ .RelPermalink }}" hreflang="{{ .Language.Locale }}" lang="{{ .Language.Locale }}">{{ .Language.Label }}</a>
                   {{ end }}
-                  <button class="theme-toggle" type="button" aria-label="{{ T "toggle_theme" }}" title="{{ T "toggle_theme" }}" aria-pressed="false" data-dark-label="{{ T "switch_to_dark" }}" data-light-label="{{ T "switch_to_light" }}">
-                    <i class="fas fa-moon" aria-hidden="true"></i>
-                  </button>
                 </div>
               </div>
             </div>
