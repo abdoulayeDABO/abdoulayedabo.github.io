@@ -498,6 +498,56 @@ a:focus-visible {
   text-align: center;
 }
 
+.project-card {
+  position: relative;
+}
+
+.project-go {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text-strong);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+  transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.project-go:hover,
+.project-go:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.project-card .post-link {
+  padding-right: 44px;
+}
+
+.see-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 14px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.see-all:hover,
+.see-all:focus-visible {
+  color: var(--text-strong);
+}
+
 .home-sections {
   display: flex;
   gap: 30px;

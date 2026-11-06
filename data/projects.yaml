@@ -5,6 +5,8 @@
   date: "Novembre 2026"
   date_en: "November 2026"
   featured: true
+  short: "Modèle Scikit-learn sur le dataset Telco, seuil décisionnel économique, explications SHAP et une application Gradio interactive."
+  short_en: "A Scikit-learn model on the Telco dataset with an economic decision threshold, SHAP explanations, and an interactive Gradio app."
   desc: |
     Projet ML `production-ready` : modèle de prédiction du churn sur le dataset Telco, seuil de décision économique, explications locales et globales avec **SHAP**, scoring de masse par CSV, tests **pytest**, Docker et application interactive **Gradio**.
   desc_en: |
@@ -18,6 +20,8 @@
   date: "Octobre 2026"
   date_en: "October 2026"
   featured: true
+  short: "Pipeline Kafka/Spark qui prédit les transactions frauduleuses en temps réel, les stocke dans PostgreSQL et déclenche des alertes Grafana et e-mail."
+  short_en: "A Kafka/Spark pipeline that predicts fraudulent bank transactions in real time, stores results in PostgreSQL, and triggers Grafana and email alerts."
   desc: |
     Pipeline de streaming qui analyse les transactions bancaires en temps réel, prédit les transactions frauduleuses avec un modèle de machine learning, stocke les résultats dans PostgreSQL, les affiche dans Grafana et déclenche des alertes par e-mail.
   desc_en: |
@@ -31,6 +35,8 @@
   date: "Octobre 2026"
   date_en: "October 2026"
   featured: true
+  short: "Réseau de neurones NumPy atteignant plus de 80 % de précision sur MNIST."
+  short_en: "A NumPy feedforward neural network achieving over 80% accuracy on MNIST."
   desc: |
     Implémentation simple d'un réseau de neurones à feedforward en Python avec NumPy. Le réseau peut résoudre différents problèmes de classification et de prédiction, avec **plus de 80 % de précision** sur le jeu de données MNIST.
   desc_en: |
@@ -44,6 +50,8 @@
   date: "Septembre 2026"
   date_en: "September 2026"
   featured: true
+  short: "Analyse Spark/PostgreSQL des courses de taxis jaunes de New York en janvier 2025, avec des tableaux de bord Apache Superset."
+  short_en: "Spark/PostgreSQL analysis of New York yellow taxi trips from January 2025, with interactive Apache Superset dashboards."
   desc: |
     Analyse des courses des taxis jaunes de New York en janvier 2025 à partir des données officielles de la TLC, avec Apache Spark, PostgreSQL, des tableaux de bord interactifs Apache Superset et Docker Compose.
   desc_en: |
@@ -58,6 +66,8 @@
   date: "Septembre 2026"
   date_en: "September 2026"
   featured: true
+  short: "Outil web qui détecte les similarités entre documents (texte, PDF, Markdown, DOCX) grâce au NLP."
+  short_en: "A web tool that detects similarities between documents (text, PDF, Markdown, DOCX) using NLP."
   desc: |
     Outil web de **comparaison de documents** (texte, PDF, Markdown et DOCX) permettant de détecter les similarités grâce à des algorithmes de NLP et de correspondance de texte.
   desc_en: |

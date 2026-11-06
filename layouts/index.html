@@ -31,33 +31,22 @@
           {{ if .featured }}
           {{ $project := . }}
           {{ $name := .name }}
-          {{ $date := .date }}
-          {{ $description := .desc }}
+          {{ $description := .short }}
           {{ if $isEnglish }}
             {{ $name = .name_en }}
-            {{ $date = .date_en }}
-            {{ $description = .desc_en }}
+            {{ $description = .short_en | default .desc_en }}
           {{ end }}
           <article class="project-card">
-            <p class="post-meta">{{ $date }}</p>
-            <h3 class="post-link">{{ $name }}</h3>
-            {{ with .status }}<span class="post-status">{{ . }}</span>{{ end }}
-            <div class="project-description">{{ $description | markdownify }}</div>
-            <div class="project-tags" aria-label="{{ T "technologies" }}">
-              {{ range .tags }}<span class="tag">{{ . }}</span>{{ end }}
-            </div>
             {{ with .url }}
-            <div class="project-actions">
-              <a class="project-link" href="{{ . }}" target="_blank" rel="noopener">
-                {{ if eq $project.url_label "Colab" }}<i class="fas fa-flask" aria-hidden="true"></i>{{ else }}<i class="fab fa-github" aria-hidden="true"></i>{{ end }}
-                <span>{{ $project.url_label | default (T "project") }}</span>
-              </a>
-            </div>
+            <a class="project-go" href="{{ . }}" target="_blank" rel="noopener" aria-label="{{ T "see_project" }} : {{ $name }}">&#8599;&#xFE0E;</a>
             {{ end }}
+            <h3 class="post-link">{{ $name }}</h3>
+            <div class="project-description">{{ $description }}</div>
           </article>
           {{ end }}
         {{ end }}
       </div>
+      <a class="see-all" href="{{ relLangURL "/projects/" }}">{{ T "see_all_projects" }} <span aria-hidden="true">&#8594;</span></a>
     </div>
   </div>
 
