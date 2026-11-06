@@ -13,12 +13,14 @@
   {{ $city := .city }}
   {{ $country := .country }}
   {{ $diploma := .diploma }}
+  {{ $courses := .courses }}
   {{ if $isEnglish }}
     {{ $year = .year_en }}
     {{ $school = .school_en }}
     {{ $city = .city_en }}
     {{ $country = .country_en }}
     {{ $diploma = .diploma_en }}
+    {{ $courses = .courses_en }}
   {{ end }}
   <article class="edu-event">
     <svg class="edu-marker" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
@@ -32,6 +34,7 @@
         {{ if or $city $country }}<span class="edu-location">{{ if $city }}{{ $city }}{{ end }}{{ if and $city $country }}, {{ end }}{{ if $country }}{{ $country }}{{ end }}</span>{{ end }}
       </div>
       {{ with $diploma }}<span class="edu-diploma">{{ . }}</span>{{ end }}
+      {{ with $courses }}<div class="edu-courses">{{ range . }}<span class="tag">{{ . }}</span>{{ end }}</div>{{ end }}
     </div>
   </article>
   {{ end }}

@@ -7,7 +7,25 @@
   country: "Sénégal"
   country_en: "Senegal"
   diploma: "Élève ingénieur en informatique, spécialité Intelligence Artificielle et Big Data"
-  diploma_en: "Computer Science Engineering Student, specializing in Artificial Intelligence and Big Data"
+  diploma_en: "Computer Science Engineering Student, Artificial Intelligence & Big Data track"
+  courses:
+    - Machine Learning
+    - Deep Learning
+    - Big Data (Spark)
+    - Bases de données
+    - Probabilités & statistiques
+    - Algorithmique
+    - Génie logiciel
+    - Docker & Cloud
+  courses_en:
+    - Machine Learning
+    - Deep Learning
+    - Big Data (Spark)
+    - Databases
+    - Probability & Statistics
+    - Algorithms
+    - Software Engineering
+    - Docker & Cloud
 
 - year: "2024"
   year_en: "2024"
@@ -18,7 +36,23 @@
   country: "Sénégal"
   country_en: "Senegal"
   diploma: "Diplôme Supérieur de Technologie en informatique"
-  diploma_en: "Higher Technology Degree in Computer Science"
+  diploma_en: "Higher Technician Diploma in Computer Science"
+  courses:
+    - Algorithmique & structures de données
+    - Programmation (Python, C, Java)
+    - Bases de données (SQL)
+    - Systèmes d'exploitation
+    - Réseaux
+    - Génie logiciel
+    - Mathématiques discrètes
+  courses_en:
+    - Algorithms & Data Structures
+    - Programming (Python, C, Java)
+    - Databases (SQL)
+    - Operating Systems
+    - Networks
+    - Software Engineering
+    - Discrete Mathematics
 
 - year: "2021"
   year_en: "2021"
@@ -30,6 +64,22 @@
   country_en: "Senegal"
   diploma: "Licence en mathématiques"
   diploma_en: "Bachelor's Degree in Mathematics"
+  courses:
+    - Analyse & dérivation
+    - Algèbre linéaire
+    - Probabilités & statistiques
+    - Équations différentielles
+    - Analyse numérique
+    - Topologie
+    - Logique & ensembles
+  courses_en:
+    - Analysis & Differentiation
+    - Linear Algebra
+    - Probability & Statistics
+    - Differential Equations
+    - Numerical Analysis
+    - Topology
+    - Logic & Set Theory
 
 - year: "2018"
   year_en: "2018"
@@ -40,4 +90,18 @@
   country: "Sénégal"
   country_en: "Senegal"
   diploma: "Baccalauréat scientifique, série S2"
-  diploma_en: "High School Science Diploma, S2 track"
+  diploma_en: "Scientific Baccalaureate, S2 series"
+  courses:
+    - Mathématiques
+    - Physique-Chimie
+    - Sciences de la vie et de la Terre
+    - Philosophie
+    - Français
+    - Anglais
+  courses_en:
+    - Mathematics
+    - Physics & Chemistry
+    - Life & Earth Sciences
+    - Philosophy
+    - French
+    - English
