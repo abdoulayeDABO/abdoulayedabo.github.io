@@ -2,7 +2,8 @@
 {{ $isEnglish := eq .Site.Language.Lang "en" }}
   <h1 class="page-title">{{ .Title }}</h1>
   <div class="page-intro">{{ .Content }}</div>
-  <ul class="entry-list project-list">
+
+  <div class="project-entries">
   {{ range hugo.Data.projects }}
     {{ $project := . }}
     {{ $name := .name }}
@@ -13,27 +14,28 @@
       {{ $date = .date_en }}
       {{ $description = .desc_en }}
     {{ end }}
-    <li>
-      <span class="entry-date">{{ $date }}</span>
-      <h2 class="entry-title">{{ $name }}</h2>
-      {{ if $description }}<div class="entry-desc">{{ $description | markdownify }}</div>{{ end }}
+    <article class="project-entry">
+      <div class="project-entry-head">
+        <span class="project-row-date">{{ $date }}</span>
+        <span class="project-row-title">
+          <a href="{{ with .url }}{{ . }}{{ else }}{{ relLangURL "/projects/" }}{{ end }}" target="_blank" rel="noopener">{{ $name }}</a>
+        </span>
+        <span class="project-entry-links">
+          {{ with .url }}
+          <a href="{{ . }}" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+          {{ end }}
+          {{ with .demo }}
+          <a href="{{ . }}" target="_blank" rel="noopener" aria-label="{{ T "demo" }}"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          {{ end }}
+        </span>
+      </div>
+      <div class="project-entry-desc">{{ $description | markdownify }}</div>
       {{ with .tags }}
-      <div class="project-tags" aria-label="{{ T "technologies" }}">
+      <div class="project-tags">
         {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
       </div>
       {{ end }}
-      <div class="project-actions">
-        {{ with .url }}
-        <a class="project-link" href="{{ . }}" target="_blank" rel="noopener">
-          {{ if eq $project.url_label "Colab" }}<i class="fas fa-flask" aria-hidden="true"></i>{{ else }}<i class="fab fa-github" aria-hidden="true"></i>{{ end }}
-          <span>{{ $project.url_label | default (T "project") }}</span>
-        </a>
-        {{ end }}
-        {{ with .demo }}
-        <a class="project-link secondary" href="{{ . }}" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i><span>{{ T "demo" }}</span></a>
-        {{ end }}
-      </div>
-    </li>
+    </article>
   {{ end }}
-  </ul>
+  </div>
 {{ end }}

@@ -49,7 +49,7 @@
   url_label: "GitHub"
   date: "Septembre 2026"
   date_en: "September 2026"
-  featured: true
+  featured: false
   short: "Analyse Spark/PostgreSQL des courses de taxis jaunes de New York en janvier 2025, avec des tableaux de bord Apache Superset."
   short_en: "Spark/PostgreSQL analysis of New York yellow taxi trips from January 2025, with interactive Apache Superset dashboards."
   desc: |
@@ -65,7 +65,7 @@
   demo: "https://docsim.onrender.com/"
   date: "Septembre 2026"
   date_en: "September 2026"
-  featured: true
+  featured: false
   short: "Outil web qui détecte les similarités entre documents (texte, PDF, Markdown, DOCX) grâce au NLP."
   short_en: "A web tool that detects similarities between documents (text, PDF, Markdown, DOCX) using NLP."
   desc: |

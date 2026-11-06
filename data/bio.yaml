@@ -1,5 +1,5 @@
-# Bio courte pour la page d'accueil.
+# Bio courte pour la page d'accueil, style profil etudiant IA.
 paragraph1: |
-  Étudiant ingénieur en Intelligence Artificielle &amp; Big Data à l'École Supérieure Polytechnique (ESP) de Dakar. Licence en mathématiques (UCAD).
+  Étudiant ingénieur en Intelligence Artificielle et Big Data à l'École Supérieure Polytechnique (ESP), à Dakar. Titulaire d'une licence en mathématiques à l'Université Cheikh Anta Diop (UCAD). Je construis en Python des systèmes d'IA appliqués et des backends web avec FastAPI et Django, de la détection de fraude en temps réel au RAG serverless. Je m'intéresse surtout aux applications concrètes de l'IA et des LLM : santé, finance, data engineering et outils du quotidien. J'aime travailler avec des personnes motivées, en industrie comme en recherche. Pour une opportunité ou une collaboration, écrivez-moi.
 paragraph1_en: |
-  AI &amp; Big Data engineering student at École Supérieure Polytechnique (ESP), Dakar. Mathematics graduate (UCAD).
+  AI and Big Data engineering student at École Supérieure Polytechnique (ESP), Dakar. I hold a bachelor's degree in Mathematics from Cheikh Anta Diop University (UCAD). I build in Python: applied AI systems and web backends with FastAPI and Django, from real-time fraud detection to serverless RAG. My focus is on real-world applications of AI and LLMs — healthcare, finance, data engineering and everyday tools. I enjoy working with motivated people across industry and research. If you'd like to collaborate, feel free to reach out.

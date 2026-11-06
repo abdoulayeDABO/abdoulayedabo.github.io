@@ -16,33 +16,24 @@
   <div class="home-sections">
     <div class="column">
       <h2 class="column-title">{{ T "featured_projects" }}</h2>
-      <div class="project-list">
+      <div class="project-rows">
         {{ range hugo.Data.projects }}
           {{ if .featured }}
-          {{ $project := . }}
           {{ $name := .name }}
           {{ $date := .date }}
           {{ $description := .short }}
-          {{ $tags := .tags }}
           {{ if $isEnglish }}
             {{ $name = .name_en }}
             {{ $date = .date_en }}
             {{ $description = .short_en | default .desc_en }}
           {{ end }}
-          <article class="project-card">
-            <div class="project-head">
-              <h3 class="project-name">
-                <a href="{{ with .url }}{{ . }}{{ else }}{{ relLangURL "/projects/" }}{{ end }}" target="_blank" rel="noopener">{{ $name }}</a>
-              </h3>
-              <span class="project-date">{{ $date }}</span>
-            </div>
-            <p class="project-desc">{{ $description }}</p>
-            {{ with $tags }}
-            <div class="project-tags">
-              {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
-            </div>
-            {{ end }}
-          </article>
+          <div class="project-row">
+            <span class="project-row-date">{{ $date }}</span>
+            <span class="project-row-title">
+              <a href="{{ with .url }}{{ . }}{{ else }}{{ relLangURL "/projects/" }}{{ end }}" target="_blank" rel="noopener">{{ $name }}</a>
+            </span>
+            <span class="project-row-desc">{{ $description }}</span>
+          </div>
           {{ end }}
         {{ end }}
       </div>

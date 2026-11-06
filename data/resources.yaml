@@ -1,0 +1,71 @@
+- kind: book
+  title: "Fluent Python"
+  author: "Luciano Ramalho"
+  note: "Python idiomatique et performant : structures de données, descripteurs, asyncio et concurrence."
+  url: "https://www.oreilly.com/library/view/fluent-python-2nd/9781492056358/"
+
+- kind: book
+  title: "High Performance Python"
+  author: "Michał Gołąbiowski, Tomasz Wania"
+  note: "Optimiser un code Python : profiling, vectorisation, parallélisme et Cython."
+  url: "https://www.oreilly.com/library/view/high-performance-python/9781491949807/"
+
+- kind: book
+  title: "Deep Learning with PyTorch"
+  author: "Elvezio Sulzer, Alexander Waibel"
+  note: "Les fondamentaux du deep learning avec PyTorch, des tenseurs à la vision par ordinateur."
+  url: "https://www.oreilly.com/library/view/deep-learning-with-pytorch/9780138130206/"
+
+- kind: book
+  title: "Machine Learning with Python Cookbook"
+  author: "Gavin Hackeling"
+  note: "Recettes pratiques : prétraitement, modèles, évaluation et mise en production."
+  url: "https://www.packtpub.com/product/machine-learning-with-python-cookbook"
+
+- kind: book
+  title: "Designing Machine Learning Systems"
+  author: "Chip Huyen"
+  note: "Concevoir des systèmes de ML en production : données, entraînement, déploiement et surveillance."
+  url: "https://www.oreilly.com/library/view/designing-machine-learning-systems/9781098107954/"
+
+- kind: course
+  title: "Dive into Deep Learning"
+  author: "Mu Li et al."
+  note: "Cours interactif gratuit (notebooks Python) sur les réseaux de neurones et le deep learning."
+  url: "https://d2l.ai"
+
+- kind: course
+  title: "The Elements of Statistical Learning"
+  author: "Hastie, Tibshirani, Friedman"
+  note: "Référence classique gratuite en PDF : statistiques, apprentissage automatique et interprétabilité."
+  url: "https://hastie.su.domains/ElemStatLearn/"
+
+- kind: course
+  title: "Documentation FastAPI"
+  author: "FastAPI"
+  note: "Le framework que j'utilise pour exposer mes modèles et APIs Python."
+  url: "https://fastapi.tiangolo.com"
+
+- kind: course
+  title: "Documentation Django"
+  author: "Django Software Foundation"
+  note: "Pour le développement web : models, ORM, admin et sécurité."
+  url: "https://docs.djangoproject.com"
+
+- kind: course
+  title: "Guide utilisateur scikit-learn"
+  author: "scikit-learn"
+  note: "La référence pour le pré-traitement, les modèles et les pipelines."
+  url: "https://scikit-learn.org/stable/user_guide.html"
+
+- kind: course
+  title: "Tutoriels PyTorch"
+  author: "PyTorch"
+  note: "Exemples officiels pour construire et entraîner des modèles."
+  url: "https://pytorch.org/tutorials"
+
+- kind: course
+  title: "Kaggle Learn"
+  author: "Kaggle"
+  note: "Micro-cours gratuits sur le machine learning, le deep learning et l'ingénierie des données."
+  url: "https://www.kaggle.com/learn"
