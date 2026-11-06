@@ -614,6 +614,9 @@ a:focus-visible {
   display: flex;
   gap: 30px;
   width: 100%;
+  margin-top: 52px;
+  padding-top: 34px;
+  border-top: 1px solid var(--border);
 }
 
 .home-sections .column {
@@ -795,9 +798,13 @@ a:focus-visible {
 
 .edu-event {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   align-items: flex-start;
-  padding-bottom: 18px;
+  padding-bottom: 26px;
+}
+
+.edu-event:last-child {
+  padding-bottom: 0;
 }
 
 .edu-marker {
@@ -823,17 +830,31 @@ a:focus-visible {
   flex-wrap: wrap;
 }
 
-.edu-year,
-.edu-school,
+.edu-year {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.edu-school {
+  font-size: 16.5px;
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
 .edu-location {
-  font-size: 16px;
-  color: var(--text);
+  font-size: 14px;
+  color: var(--text-muted);
 }
 
 .edu-diploma {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--accent);
+  font-size: 15.5px;
+  font-weight: 400;
+  color: var(--text-soft);
+  line-height: 1.45;
 }
 
 .talks-grid {
