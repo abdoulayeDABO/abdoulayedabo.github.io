@@ -68,6 +68,30 @@
         </div>
       </footer>
     </div>
+
+    <button class="back-to-top" type="button" aria-label="{{ T "back_to_top" }}" title="{{ T "back_to_top" }}">
+      <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <script>
+      (function () {
+        var btn = document.querySelector(".back-to-top");
+        if (!btn) return;
+        btn.classList.add("hidden");
+        btn.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+        var update = function () {
+          if (window.scrollY > 260) {
+            btn.classList.remove("hidden");
+          } else {
+            btn.classList.add("hidden");
+          }
+        };
+        update();
+        window.addEventListener("scroll", update, { passive: true });
+      })();
+    </script>
   </body>
 
 </html>
