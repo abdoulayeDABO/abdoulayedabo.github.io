@@ -29,8 +29,8 @@
             <div class="site-identity-text">
               <a class="site-title" href="{{ site.Home.RelPermalink }}">{{ .Site.Params.name }}</a>
               <p>{{ .Site.Params.tagline }}</p>
-              <p class="site-email"><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
               <div class="site-social">
+                <a href="mailto:{{ .Site.Params.email }}"><i class="fas fa-envelope" aria-hidden="true"></i><span>{{ T "email" }}</span></a>
                 {{ if .Site.Params.github }}<a href="{{ .Site.Params.github }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><span>{{ T "github" }}</span></a>{{ end }}
                 {{ if .Site.Params.linkedin }}<a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i><span>{{ T "linkedin" }}</span></a>{{ end }}
                 {{ if .Site.Params.scholar }}<a href="{{ .Site.Params.scholar }}" target="_blank" rel="noopener"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>{{ T "google_scholar" }}</span></a>{{ end }}

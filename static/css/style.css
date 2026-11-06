@@ -533,34 +533,34 @@ a:focus-visible {
   position: relative;
 }
 
-.project-go {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: inline-grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  background: var(--surface);
-  color: var(--text-strong);
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 16px;
-  line-height: 1;
+.project-name {
+  color: var(--accent);
   text-decoration: none;
-  transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
 
-.project-go:hover,
-.project-go:focus-visible {
-  border-color: var(--accent);
-  color: var(--accent);
-  transform: translateY(-2px);
+.project-name:hover,
+.project-name:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.project-name:hover {
+  color: var(--text-strong);
+}
+
+.project-line-sep {
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.project-line-desc {
+  color: var(--text-soft);
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .project-card .post-link {
-  padding-right: 44px;
+  padding-right: 0;
 }
 
 .see-all {

@@ -29,11 +29,10 @@
             {{ $description = .short_en | default .desc_en }}
           {{ end }}
           <article class="project-card">
-            {{ with .url }}
-            <a class="project-go" href="{{ . }}" target="_blank" rel="noopener" aria-label="{{ T "see_project" }} : {{ $name }}">&#8599;&#xFE0E;</a>
-            {{ end }}
-            <h3 class="post-link">{{ $name }}</h3>
-            <div class="project-description">{{ $description }}</div>
+            <h3 class="post-link project-line">
+              <a class="project-name" href="{{ with .url }}{{ . }}{{ else }}{{ relLangURL "/projects/" }}{{ end }}" target="_blank" rel="noopener">{{ $name }}</a><span class="project-line-sep">&nbsp;:</span>
+              <span class="project-line-desc">{{ $description }}</span>
+            </h3>
           </article>
           {{ end }}
         {{ end }}
