@@ -8,24 +8,8 @@
   country_en: "Senegal"
   diploma: "Élève ingénieur en informatique, spécialité Intelligence Artificielle et Big Data"
   diploma_en: "Computer Science Engineering Student, Artificial Intelligence & Big Data track"
-  courses:
-    - Machine Learning
-    - Deep Learning
-    - Big Data (Spark)
-    - Bases de données
-    - Probabilités & statistiques
-    - Algorithmique
-    - Génie logiciel
-    - Docker & Cloud
-  courses_en:
-    - Machine Learning
-    - Deep Learning
-    - Big Data (Spark)
-    - Databases
-    - Probability & Statistics
-    - Algorithms
-    - Software Engineering
-    - Docker & Cloud
+  learned: "J'y ai appris le machine learning, le deep learning, le Big Data avec Spark, les bases de données, les probabilités et statistiques, l'algorithmique, le génie logiciel, ainsi que Docker et le cloud."
+  learned_en: "There I learned machine learning, deep learning, Big Data with Spark, databases, probability and statistics, algorithms, software engineering, plus Docker and cloud."
 
 - year: "2024"
   year_en: "2024"
@@ -37,22 +21,8 @@
   country_en: "Senegal"
   diploma: "Diplôme Supérieur de Technologie en informatique"
   diploma_en: "Higher Technician Diploma in Computer Science"
-  courses:
-    - Algorithmique & structures de données
-    - Programmation (Python, C, Java)
-    - Bases de données (SQL)
-    - Systèmes d'exploitation
-    - Réseaux
-    - Génie logiciel
-    - Mathématiques discrètes
-  courses_en:
-    - Algorithms & Data Structures
-    - Programming (Python, C, Java)
-    - Databases (SQL)
-    - Operating Systems
-    - Networks
-    - Software Engineering
-    - Discrete Mathematics
+  learned: "J'y ai appris l'algorithmique et les structures de données, la programmation en Python, C et Java, les bases de données SQL, les systèmes d'exploitation, les réseaux, le génie logiciel et les mathématiques discrètes."
+  learned_en: "There I learned algorithms and data structures, programming in Python, C and Java, SQL databases, operating systems, networks, software engineering, and discrete mathematics."
 
 - year: "2021"
   year_en: "2021"
@@ -64,22 +34,8 @@
   country_en: "Senegal"
   diploma: "Licence en mathématiques"
   diploma_en: "Bachelor's Degree in Mathematics"
-  courses:
-    - Analyse & dérivation
-    - Algèbre linéaire
-    - Probabilités & statistiques
-    - Équations différentielles
-    - Analyse numérique
-    - Topologie
-    - Logique & ensembles
-  courses_en:
-    - Analysis & Differentiation
-    - Linear Algebra
-    - Probability & Statistics
-    - Differential Equations
-    - Numerical Analysis
-    - Topology
-    - Logic & Set Theory
+  learned: "J'y ai appris l'analyse et la dérivation, l'algèbre linéaire, les probabilités et statistiques, les équations différentielles, l'analyse numérique, la topologie et la logique."
+  learned_en: "There I learned analysis and differentiation, linear algebra, probability and statistics, differential equations, numerical analysis, topology, and logic."
 
 - year: "2018"
   year_en: "2018"
@@ -91,17 +47,5 @@
   country_en: "Senegal"
   diploma: "Baccalauréat scientifique, série S2"
   diploma_en: "Scientific Baccalaureate, S2 series"
-  courses:
-    - Mathématiques
-    - Physique-Chimie
-    - Sciences de la vie et de la Terre
-    - Philosophie
-    - Français
-    - Anglais
-  courses_en:
-    - Mathematics
-    - Physics & Chemistry
-    - Life & Earth Sciences
-    - Philosophy
-    - French
-    - English
+  learned: "J'y ai étudié les mathématiques, la physique-chimie, les sciences de la vie et de la Terre, la philosophie, le français et l'anglais."
+  learned_en: "There I studied mathematics, physics and chemistry, life and earth sciences, philosophy, French, and English."
