@@ -1,9 +1,15 @@
 ---
-title: "About"
+title: "Education"
 ---
 
-I am currently pursuing an engineering degree in Artificial Intelligence and Big Data at École Supérieure Polytechnique (ESP) in Dakar. The program combines a common-core year with a specialization focused on machine learning, big-data systems, and software engineering.
+**Engineering degree in Artificial Intelligence & Big Data** — École Supérieure Polytechnique (ESP), Dakar.
 
-Before joining the engineering cycle, I completed a two-year Computer Science program at ESP, after earning a bachelor's degree in Mathematics at Cheikh Anta Diop University. This academic path gave me a strong foundation in logical reasoning and analytical rigor.
+A common-core year followed by a specialization in machine learning, big-data systems, and software engineering.
 
-Alongside my studies, I work on practical projects in artificial intelligence, data engineering, and web development. These include a real-time fraud-detection pipeline, a feedforward neural network implemented with NumPy, a document-comparison application, and large-scale analytics pipelines.
+**Bachelor's degree in Mathematics** — Cheikh Anta Diop University (UCAD), Dakar.
+
+A strong foundation in logical reasoning and analytical rigor, now applied to machine-learning problems.
+
+**Computer Science program (2 years)** — École Supérieure Polytechnique (ESP), Dakar.
+
+First immersion in software engineering, databases, and systems, before the engineering cycle.

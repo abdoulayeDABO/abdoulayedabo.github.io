@@ -524,38 +524,74 @@ a:focus-visible {
   text-align: center;
 }
 
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .project-card {
-  position: relative;
+  padding: 16px 18px;
+  margin-bottom: 2px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 1px 2px var(--shadow);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 14px var(--shadow);
+  transform: translateY(-1px);
+}
+
+.project-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
 }
 
 .project-name {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.project-name a {
   color: var(--accent);
   text-decoration: none;
 }
 
-.project-name:hover,
-.project-name:focus-visible {
+.project-name a:hover,
+.project-name a:focus-visible {
+  color: var(--text-strong);
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
-.project-name:hover {
-  color: var(--text-strong);
+.project-date {
+  flex-shrink: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
 }
 
-.project-line-sep {
-  font-weight: 700;
-  margin-left: 2px;
-}
-
-.project-line-desc {
+.project-desc {
+  margin-top: 6px;
+  font-size: 15.5px;
+  line-height: 1.5;
   color: var(--text-soft);
-  font-size: 16.5px;
-  font-weight: 400;
+  max-width: 72ch;
 }
 
-.project-card .post-link {
-  padding-right: 0;
+.project-card .project-tags {
+  margin-top: 10px;
 }
 
 .see-all {
@@ -598,15 +634,8 @@ a:focus-visible {
   list-style: none;
 }
 
-.project-card {
-  padding-bottom: 14px;
-  margin-bottom: 14px;
-}
-
 .project-card:last-child {
   margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: 0;
 }
 
 .post-meta {
@@ -1007,8 +1036,15 @@ a:focus-visible {
   }
 
   .project-card {
-    padding-bottom: 12px;
-    margin-bottom: 12px;
+    padding: 13px 14px;
+  }
+
+  .project-name {
+    font-size: 15.5px;
+  }
+
+  .project-date {
+    font-size: 11.5px;
   }
 
   .post-link {

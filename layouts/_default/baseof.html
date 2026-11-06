@@ -38,9 +38,8 @@
               <div class="site-nav-row">
                 <nav class="site-nav" aria-label="{{ T "primary_navigation" }}">
                   <a class="page-link" href="{{ relLangURL "/" }}"{{ if .IsHome }} aria-current="page"{{ end }}>{{ T "nav_home" }}</a>
-                  <a class="page-link{{ if eq .Section "about" }} active{{ end }}" href="{{ relLangURL "/about/" }}"{{ if eq .Section "about" }} aria-current="page"{{ end }}>{{ T "nav_about" }}</a>
+                  <a class="page-link{{ if eq .Section "about" }} active{{ end }}" href="{{ relLangURL "/about/" }}"{{ if eq .Section "about" }} aria-current="page"{{ end }}>{{ T "education_path" }}</a>
                   <a class="page-link{{ if eq .Section "projects" }} active{{ end }}" href="{{ relLangURL "/projects/" }}"{{ if eq .Section "projects" }} aria-current="page"{{ end }}>{{ T "nav_projects" }}</a>
-                  <a class="page-link{{ if eq .Section "notebook" }} active{{ end }}" href="{{ relLangURL "/notebook/" }}"{{ if eq .Section "notebook" }} aria-current="page"{{ end }}>{{ T "nav_notebook" }}</a>
                 </nav>
                 <div class="site-actions">
                   {{ range .Translations }}
