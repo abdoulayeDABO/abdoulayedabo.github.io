@@ -920,6 +920,7 @@ a:focus-visible {
   .site-identity img {
     width: 100%;
     height: auto;
+    border: none;
   }
 
   .site-identity-text {
