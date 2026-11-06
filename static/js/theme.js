@@ -29,7 +29,7 @@
   function updateThemeColor(isDark) {
     var meta = document.querySelector('meta[name="theme-color"]');
     if (meta) {
-      meta.setAttribute("content", isDark ? "#101214" : "#fffff8");
+      meta.setAttribute("content", isDark ? "#0d0d0d" : "#ffffff");
     }
   }
 
