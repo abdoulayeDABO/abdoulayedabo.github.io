@@ -230,12 +230,8 @@ hr::after {
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
   background-color: var(--bg);
   padding: 0;
-  box-shadow: 0 1px 0 var(--border);
 }
 
 .site-identity {
@@ -468,6 +464,41 @@ a:focus-visible {
   flex-wrap: wrap;
   gap: 10px;
   margin: 0 0 24px;
+}
+
+.site-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.site-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 32px;
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-strong);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.site-social a:hover,
+.site-social a:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.site-social i {
+  width: 14px;
+  text-align: center;
+  font-size: 13px;
 }
 
 .home-social a {
@@ -872,10 +903,6 @@ a:focus-visible {
 
   .site-header .wrapper {
     padding-top: 20px;
-  }
-
-  .site-header {
-    position: relative;
   }
 
   .site-footer .wrapper {
