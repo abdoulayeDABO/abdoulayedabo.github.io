@@ -453,10 +453,43 @@ a:focus-visible {
 }
 
 .home-greeting {
-  font-size: clamp(30px, 6vw, 42px);
-  line-height: 1.12;
-  letter-spacing: -0.035em;
-  margin-bottom: 18px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: clamp(19px, 3vw, 23px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+
+.home-education {
+  margin-top: 22px;
+}
+
+.education-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 72ch;
+}
+
+.education-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 7px;
+  font-size: 16.5px;
+  line-height: 1.5;
+  color: var(--text-soft);
+}
+
+.education-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 
 .home-social {
@@ -973,8 +1006,12 @@ a:focus-visible {
   }
 
   .home-greeting {
-    font-size: clamp(26px, 8vw, 34px);
-    margin-bottom: 14px;
+    font-size: clamp(17px, 4.6vw, 20px);
+    margin-bottom: 10px;
+  }
+
+  .education-list li {
+    font-size: 15px;
   }
 
   .home-copy {

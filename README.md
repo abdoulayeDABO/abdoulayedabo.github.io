@@ -98,3 +98,5 @@ portfolio/
         ├── projects/
         └── talks/
 ```
+
+opencode -s ses_e4f01dc18ffeLPjgBAsTlFRlTP
