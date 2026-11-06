@@ -1,3 +1,16 @@
+- name: "Prédiction du churn client expliquée par SHAP"
+  name_en: "Customer Churn Prediction with SHAP"
+  url: "https://github.com/abdoulayeDABO/customer-churn-prediction"
+  url_label: "GitHub"
+  date: "Novembre 2026"
+  date_en: "November 2026"
+  featured: true
+  desc: |
+    Projet ML `production-ready` : modèle de prédiction du churn sur le dataset Telco, seuil de décision économique, explications locales et globales avec **SHAP**, scoring de masse par CSV, tests **pytest**, Docker et application interactive **Gradio**.
+  desc_en: |
+    A `production-ready` ML project: customer churn prediction on the Telco dataset, an economic decision threshold, local and global explanations with **SHAP**, batch scoring from CSV, **pytest** tests, Docker, and an interactive **Gradio** app.
+  tags: ["Scikit-learn", "SHAP", "Gradio", "Docker", "pytest", "uv"]
+
 - name: "Pipeline de détection de fraude en temps réel"
   name_en: "Real-Time Fraud Detection Pipeline"
   url: "https://github.com/abdoulayeDABO/realtime-fraud-detection-pipeline"

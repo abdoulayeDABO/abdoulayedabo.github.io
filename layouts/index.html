@@ -7,22 +7,10 @@
     <div class="home-copy">
       {{ if $isEnglish }}
       <p>{{ hugo.Data.bio.paragraph1_en }}</p>
-      <p>{{ hugo.Data.bio.paragraph2_en }}</p>
-      <p>{{ hugo.Data.bio.paragraph3_en }}</p>
       {{ else }}
       <p>{{ hugo.Data.bio.paragraph1 }}</p>
-      <p>{{ hugo.Data.bio.paragraph2 }}</p>
-      <p>{{ hugo.Data.bio.paragraph3 }}</p>
       {{ end }}
     </div>
-  </div>
-
-  <div class="home-social">
-    <a href="mailto:{{ .Site.Params.email }}"><i class="fas fa-envelope" aria-hidden="true"></i><span>{{ T "email" }}</span></a>
-    {{ if .Site.Params.scholar }}<a href="{{ .Site.Params.scholar }}" target="_blank" rel="noopener"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>{{ T "google_scholar" }}</span></a>{{ end }}
-    {{ if .Site.Params.github }}<a href="{{ .Site.Params.github }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><span>{{ T "github" }}</span></a>{{ end }}
-    {{ if .Site.Params.linkedin }}<a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i><span>{{ T "linkedin" }}</span></a>{{ end }}
-    {{ if .Site.Params.cv }}<a href="{{ .Site.Params.cv | relURL }}"><i class="fas fa-file-pdf" aria-hidden="true"></i><span>{{ T "cv" }}</span></a>{{ end }}
   </div>
 
   <hr>
@@ -63,6 +51,14 @@
         {{ end }}
       </div>
     </div>
+  </div>
+
+  <div class="home-social">
+    <a href="mailto:{{ .Site.Params.email }}"><i class="fas fa-envelope" aria-hidden="true"></i><span>{{ T "email" }}</span></a>
+    {{ if .Site.Params.scholar }}<a href="{{ .Site.Params.scholar }}" target="_blank" rel="noopener"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>{{ T "google_scholar" }}</span></a>{{ end }}
+    {{ if .Site.Params.github }}<a href="{{ .Site.Params.github }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><span>{{ T "github" }}</span></a>{{ end }}
+    {{ if .Site.Params.linkedin }}<a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i><span>{{ T "linkedin" }}</span></a>{{ end }}
+    {{ if .Site.Params.cv }}<a href="{{ .Site.Params.cv | relURL }}"><i class="fas fa-file-pdf" aria-hidden="true"></i><span>{{ T "cv" }}</span></a>{{ end }}
   </div>
 
 </div>

@@ -1,12 +1,5 @@
+# Bio courte pour la page d'accueil (conseil : moins de texte avant les projets).
 paragraph1: |
-  J'étudie l'Intelligence Artificielle et le Big Data à Dakar et travaille à améliorer l'interaction entre les personnes et les données grâce à l'apprentissage automatique, à l'IA appliquée et au développement logiciel.
-paragraph2: |
-  Je suis actuellement en cycle ingénieur à l'École Supérieure Polytechnique (ESP). À travers l'apprentissage autonome, ma formation et des projets concrets, j'ai développé mon expérience en intelligence artificielle, ingénierie de données, développement web et analyse appliquée. Mes projets comprennent la détection de fraude en temps réel, des réseaux de neurones, la comparaison de documents et des pipelines de données à grande échelle.
-paragraph3: |
-  Ma curiosité pour l'informatique vient de ma volonté de comprendre le fonctionnement des systèmes numériques, ce qui m'a conduit à explorer à la fois le logiciel et les données. Mon objectif à long terme est de concevoir des systèmes d'IA utiles, fiables et accessibles, tout en continuant à progresser comme chercheur et ingénieur.
+  Élève ingénieur en Intelligence Artificielle &amp; Big Data à l'École Supérieure Polytechnique (ESP) de Dakar. Je construis des systèmes d'IA utiles et fiables — machine learning, ingénierie de données et applications déployées, de la détection de fraude en temps réel au scoring client expliqué par SHAP.
 paragraph1_en: |
-  I study Artificial Intelligence and Big Data in Dakar and work on improving how people interact with data through machine learning, practical AI systems, and software engineering.
-paragraph2_en: |
-  I am currently pursuing an engineering degree at École Supérieure Polytechnique (ESP). Through self-learning, formal education, and hands-on projects, I have built experience across artificial intelligence, data engineering, web development, and applied analytics. My work includes real-time fraud detection, feedforward neural networks, document comparison, and large-scale data pipelines.
-paragraph3_en: |
-  My curiosity for computer science began with understanding how digital systems work, which led me to explore both software and data. My long-term goal is to build AI systems that are useful, reliable, and accessible, while continuing to grow as both a researcher and an engineer.
+  AI &amp; Big Data engineering student at École Supérieure Polytechnique (ESP), Dakar. I build useful, reliable AI systems with machine learning and data engineering — from real-time fraud detection to customer scoring explained with SHAP.
