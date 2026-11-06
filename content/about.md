@@ -7,5 +7,4 @@ Je suis actuellement en cycle ingénieur en Intelligence Artificielle et Big Dat
 Avant d'intégrer le cycle ingénieur, j'ai suivi une formation de deux ans en informatique à l'ESP, après avoir obtenu une licence en mathématiques à l'Université Cheikh Anta Diop. Ce parcours m'a permis de développer une solide base en raisonnement logique et en rigueur analytique.
 
 En parallèle de mes études, je travaille sur des projets concrets en intelligence artificielle, en ingénierie de données et en développement web : un pipeline de détection de fraude en temps réel, un réseau de neurones à feedforward implémenté avec NumPy, une application de comparaison de documents et des pipelines analytiques à grande échelle.
-
 Ma curiosité pour l'informatique vient de ma volonté de comprendre le fonctionnement des systèmes numériques. Elle m'a conduit à explorer à la fois le logiciel et les données, puis à me spécialiser en Intelligence Artificielle et Big Data. Mon objectif à long terme est de développer des systèmes intelligents utiles, fiables et accessibles, avec une forte motivation pour la recherche, la science et l'apprentissage continu.
