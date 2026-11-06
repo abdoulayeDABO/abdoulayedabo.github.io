@@ -595,10 +595,10 @@ a:focus-visible {
 }
 
 .see-all {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  margin-top: 14px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 22px;
   font-family: "Inter", system-ui, sans-serif;
   font-size: 14.5px;
   font-weight: 600;
