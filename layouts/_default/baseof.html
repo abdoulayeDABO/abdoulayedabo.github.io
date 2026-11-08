@@ -11,6 +11,7 @@
     <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Params.name }} — {{ T "portfolio" }}{{ else }}{{ .Title }} — {{ .Site.Params.name }}{{ end }}">
     <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta name="theme-color" id="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="{{ "css/hamburgers.min.css" | relURL }}">
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,53 +21,42 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">{{ T "main_content" }}</a>
     <div class="paper-container">
       <header class="site-header" role="banner">
-        <div class="wrapper">
-          <div class="site-identity">
-            <a href="{{ site.Home.RelPermalink }}"><img src="{{ .Site.Params.avatar | relURL }}" alt="{{ .Site.Params.name }}"></a>
-            <div class="site-identity-text">
-              <a class="site-title" href="{{ site.Home.RelPermalink }}">{{ .Site.Params.name }}</a>
-              <p>{{ .Site.Params.tagline }}</p>
-              <div class="site-social">
-                <a href="mailto:{{ .Site.Params.email }}"><i class="fas fa-envelope" aria-hidden="true"></i><span>{{ T "email" }}</span></a>
-                {{ if .Site.Params.github }}<a href="{{ .Site.Params.github }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><span>{{ T "github" }}</span></a>{{ end }}
-                {{ if .Site.Params.linkedin }}<a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i><span>{{ T "linkedin" }}</span></a>{{ end }}
-                {{ if .Site.Params.scholar }}<a href="{{ .Site.Params.scholar }}" target="_blank" rel="noopener"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>{{ T "google_scholar" }}</span></a>{{ end }}
-                {{ if .Site.Params.cv }}<a href="{{ .Site.Params.cv | relURL }}"><i class="fas fa-file-pdf" aria-hidden="true"></i><span>{{ T "cv" }}</span></a>{{ end }}
-              </div>
-              <div class="site-nav-row">
-                <nav class="site-nav" aria-label="{{ T "primary_navigation" }}">
-                  <a class="page-link" href="{{ relLangURL "/" }}"{{ if .IsHome }} aria-current="page"{{ end }}>{{ T "nav_home" }}</a>
-                  <a class="page-link{{ if eq .Section "about" }} active{{ end }}" href="{{ relLangURL "/about/" }}"{{ if eq .Section "about" }} aria-current="page"{{ end }}>{{ T "education_path" }}</a>
-                  <a class="page-link{{ if eq .Section "projects" }} active{{ end }}" href="{{ relLangURL "/projects/" }}"{{ if eq .Section "projects" }} aria-current="page"{{ end }}>{{ T "nav_projects" }}</a>
-                  <a class="page-link{{ if eq .Section "ressources" }} active{{ end }}" href="{{ relLangURL "/ressources/" }}"{{ if eq .Section "ressources" }} aria-current="page"{{ end }}>{{ T "nav_resources" }}</a>
-                </nav>
-                <div class="site-actions">
-                  {{ range .Translations }}
-                  <a class="language-switch" href="{{ .RelPermalink }}" hreflang="{{ .Language.Locale }}" lang="{{ .Language.Locale }}">{{ .Language.Label }}</a>
-                  {{ end }}
-                </div>
-              </div>
+        <div class="wrapper site-header__inner">
+          <a class="site-brand" href="{{ site.Home.RelPermalink }}">{{ .Site.Params.name }}</a>
+          <button class="hamburger hamburger--squeeze nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Menu">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+          <div class="site-menu" id="site-menu">
+            <nav class="site-nav" aria-label="{{ T "primary_navigation" }}">
+              <a class="page-link" href="{{ relLangURL "/" }}"{{ if .IsHome }} aria-current="page"{{ end }}>{{ T "nav_home" }}</a>
+              <a class="page-link{{ if eq .Section "about" }} active{{ end }}" href="{{ relLangURL "/about/" }}"{{ if eq .Section "about" }} aria-current="page"{{ end }}>{{ T "education_path" }}</a>
+              <a class="page-link{{ if eq .Section "projects" }} active{{ end }}" href="{{ relLangURL "/projects/" }}"{{ if eq .Section "projects" }} aria-current="page"{{ end }}>{{ T "nav_projects" }}</a>
+              <a class="page-link{{ if eq .Section "ressources" }} active{{ end }}" href="{{ relLangURL "/ressources/" }}"{{ if eq .Section "ressources" }} aria-current="page"{{ end }}>{{ T "nav_resources" }}</a>
+            </nav>
+            <div class="site-actions">
+              {{ range .Translations }}
+              <a class="language-switch" href="{{ .RelPermalink }}" hreflang="{{ .Language.Locale }}" lang="{{ .Language.Locale }}">{{ .Language.Label }}</a>
+              {{ end }}
             </div>
           </div>
         </div>
       </header>
 
-      <main class="page-content" aria-label="{{ T "main_content" }}">
+      <main class="page-content" id="main-content" aria-label="{{ T "main_content" }}">
         <div class="wrapper">
           {{ block "main" . }}{{ end }}
         </div>
       </main>
 
       <footer class="site-footer">
-        <div class="wrapper">
-          <hr>
-          <p class="footer-copyright">
-            Copyright &copy; {{ now.Format "2006" }} {{ .Site.Params.copyright_name }}
-            <br>
-            {{ T "built_with_hugo" }}
-          </p>
+        <div class="wrapper site-footer__inner">
+          <p class="footer-copyright">&copy; {{ now.Format "2006" }} {{ .Site.Params.copyright_name }}</p>
+          <p class="footer-built">{{ T "built_with_hugo" }}</p>
         </div>
       </footer>
     </div>
@@ -76,6 +66,36 @@
     </button>
 
     <script>
+      (function () {
+        var toggle = document.querySelector(".nav-toggle");
+        var header = document.querySelector(".site-header");
+        if (!toggle || !header) return;
+
+        var setMenu = function (open) {
+          header.classList.toggle("menu-open", open);
+          toggle.classList.toggle("is-active", open);
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        };
+
+        toggle.addEventListener("click", function () {
+          setMenu(toggle.getAttribute("aria-expanded") !== "true");
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") setMenu(false);
+        });
+
+        document.querySelectorAll("#site-menu a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            setMenu(false);
+          });
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 760) setMenu(false);
+        });
+      })();
+
       (function () {
         var btn = document.querySelector(".back-to-top");
         if (!btn) return;

@@ -33,5 +33,5 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
   twitter   = ""
   scholar   = ""
   email     = "abdoulayedabo@esp.sn"
-  avatar    = "/img/avatar.jpg"
+  avatar    = "/img/avatar.png"
   cv        = "/cv.pdf"
