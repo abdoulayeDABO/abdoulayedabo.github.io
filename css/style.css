@@ -1181,6 +1181,18 @@ summary:focus-visible {
   .home-copy {
     font-size: 16px;
   }
+
+  .project-tab-label-full {
+    display: none;
+  }
+
+  .project-tab-label-short {
+    display: inline;
+  }
+
+  .project-tab {
+    padding: 9px 12px;
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -1237,18 +1249,6 @@ summary:focus-visible {
     grid-template-columns: 1fr;
     gap: 2px;
     padding: 14px 0;
-  }
-
-  .project-tab-label-full {
-    display: none;
-  }
-
-  .project-tab-label-short {
-    display: inline;
-  }
-
-  .project-tab {
-    padding: 9px 12px;
   }
 
   .project-row-title,
