@@ -644,6 +644,10 @@ summary:focus-visible {
   color: var(--text-strong);
 }
 
+.project-tab-label-short {
+  display: none;
+}
+
 .project-tab-panel {
   display: none;
 }
@@ -1233,6 +1237,18 @@ summary:focus-visible {
     grid-template-columns: 1fr;
     gap: 2px;
     padding: 14px 0;
+  }
+
+  .project-tab-label-full {
+    display: none;
+  }
+
+  .project-tab-label-short {
+    display: inline;
+  }
+
+  .project-tab {
+    padding: 9px 12px;
   }
 
   .project-row-title,
