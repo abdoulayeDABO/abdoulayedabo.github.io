@@ -4,8 +4,8 @@
   <div class="page-intro">{{ .Content }}</div>
 
   {{ $groups := slice
-    (dict "key" "ai" "title" (T "projects_ai_ml"))
-    (dict "key" "data" "title" (T "projects_data"))
+    (dict "key" "ai" "title" (T "projects_ai_ml") "short" (T "projects_ai_ml_short"))
+    (dict "key" "data" "title" (T "projects_data") "short" (T "projects_data_short"))
   }}
 
   <div class="project-tabs">
@@ -18,7 +18,9 @@
         {{ $items := where hugo.Data.projects "category" .key }}
         {{ if $items }}
         <label class="project-tab" for="tab-{{ .key }}" role="tab">
-          {{ .title }}<span class="project-group-count">{{ len $items }}</span>
+          <span class="project-tab-label-full">{{ .title }}</span>
+          <span class="project-tab-label-short">{{ .short }}</span>
+          <span class="project-group-count">{{ len $items }}</span>
         </label>
         {{ end }}
       {{ end }}
