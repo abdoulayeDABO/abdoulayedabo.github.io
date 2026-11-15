@@ -5,30 +5,7 @@
     {{ .Content }}
   </div>
 
-  <div class="edu-timeline">
-  {{ range hugo.Data.timeline }}
-  {{ $year := .year }}
-  {{ $school := .school }}
-  {{ $city := .city }}
-  {{ $country := .country }}
-  {{ $diploma := .diploma }}
-  {{ $learned := .learned }}
-  {{ if $isEnglish }}
-    {{ $year = .year_en }}
-    {{ $school = .school_en }}
-    {{ $city = .city_en }}
-    {{ $country = .country_en }}
-    {{ $diploma = .diploma_en }}
-    {{ $learned = .learned_en }}
-  {{ end }}
-  <article class="edu-event">
-    <div class="edu-head">
-      <span class="edu-year">{{ $year }}</span>
-      {{ with $diploma }}<span class="edu-diploma">{{ . }}</span>{{ end }}
-    </div>
-    <p class="edu-school">{{ $school }}{{ if or $city $country }}{{ if $city }}, {{ $city }}{{ end }}{{ if and $city $country }}, {{ end }}{{ if $country }}{{ $country }}{{ end }}{{ end }}</p>
-    {{ with $learned }}<p class="edu-learned">{{ . }}</p>{{ end }}
-  </article>
-  {{ end }}
-  </div>
+  {{ partial "timeline.html" (dict "type" "experience" "title" (T "experience") "isEnglish" $isEnglish) }}
+  {{ partial "timeline.html" (dict "type" "education" "title" (T "education") "isEnglish" $isEnglish) }}
+  {{ partial "timeline.html" (dict "type" "certification" "title" (T "certifications") "isEnglish" $isEnglish) }}
 {{ end }}

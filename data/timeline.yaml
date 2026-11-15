@@ -1,4 +1,29 @@
-- year: "2024 – PRESENT"
+- type: "experience"
+  year: "2024"
+  year_en: "2024"
+  school: "Systech Smart Services"
+  school_en: "Systech Smart Services"
+  city: "Dakar"
+  city_en: "Dakar"
+  country: "Sénégal"
+  country_en: "Senegal"
+  diploma: "Développeur Mobile (Stage) — stage de fin d'études"
+  diploma_en: "Mobile Developer (Internship) — end-of-studies internship"
+  learned: |
+    Application éducative **iOS/Android** développée en équipe.
+
+    - Développement avec **React Native** pour iOS et Android à partir d'une seule base de code.
+    - Conception des interfaces : consultation des cours par classe et niveau, entraînement par quiz.
+    - Intégration d'API REST (JSON) pour connecter l'application aux services back-end.
+  learned_en: |
+    **iOS/Android** educational app built as part of a team.
+
+    - Developed with **React Native** for iOS and Android from a single codebase.
+    - Designed the interfaces: browsing courses by class and level, quiz-based practice.
+    - Integrated REST APIs (JSON) to connect the app to back-end services.
+
+- type: "education"
+  year: "2024 – PRESENT"
   year_en: "2024 – PRESENT"
   school: "École Supérieure Polytechnique"
   school_en: "École Supérieure Polytechnique"
@@ -11,7 +36,8 @@
   learned: "J'y ai appris le machine learning, le deep learning, le Big Data avec Spark, les bases de données, les probabilités et statistiques, l'algorithmique, le génie logiciel, ainsi que Docker et le cloud."
   learned_en: "There I learned machine learning, deep learning, Big Data with Spark, databases, probability and statistics, algorithms, software engineering, plus Docker and cloud."
 
-- year: "2024"
+- type: "education"
+  year: "2024"
   year_en: "2024"
   school: "École Supérieure Polytechnique"
   school_en: "École Supérieure Polytechnique"
@@ -24,7 +50,8 @@
   learned: "J'y ai appris l'algorithmique et les structures de données, la programmation en Python, C et Java, les bases de données SQL, les systèmes d'exploitation, les réseaux, le génie logiciel et les mathématiques discrètes."
   learned_en: "There I learned algorithms and data structures, programming in Python, C and Java, SQL databases, operating systems, networks, software engineering, and discrete mathematics."
 
-- year: "2021"
+- type: "education"
+  year: "2021"
   year_en: "2021"
   school: "Université Cheikh Anta Diop"
   school_en: "Cheikh Anta Diop University"
@@ -36,3 +63,14 @@
   diploma_en: "Bachelor's Degree in Mathematics"
   learned: "J'y ai appris l'analyse et la dérivation, l'algèbre linéaire, les probabilités et statistiques, les équations différentielles, l'analyse numérique, la topologie et la logique."
   learned_en: "There I learned analysis and differentiation, linear algebra, probability and statistics, differential equations, numerical analysis, topology, and logic."
+
+- type: "certification"
+  year: "2023"
+  year_en: "2023"
+  school: "Udemy"
+  school_en: "Udemy"
+  diploma: "Développeur Python Complet"
+  diploma_en: "Complete Python Developer"
+  learned: "Python, tests unitaires, programmation orientée objet (POO), Django, développement web, API et Flask."
+  learned_en: "Python, unit testing, object-oriented programming (OOP), Django, web development, APIs, and Flask."
+  url: "https://www.udemy.com/certificate/UC-daea9658-50ac-41d4-9b8b-5acdc22a5866/"

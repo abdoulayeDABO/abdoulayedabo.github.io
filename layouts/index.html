@@ -33,15 +33,12 @@
         {{ range hugo.Data.projects }}
           {{ if .featured }}
           {{ $name := .name }}
-          {{ $date := .date }}
           {{ $description := .short }}
           {{ if $isEnglish }}
             {{ $name = .name_en }}
-            {{ $date = .date_en }}
             {{ $description = .short_en | default .desc_en }}
           {{ end }}
           <div class="project-row">
-            <span class="project-row-date">{{ $date }}</span>
             <span class="project-row-title">
               <a href="{{ with .url }}{{ . }}{{ else }}{{ relLangURL "/projects/" }}{{ end }}" target="_blank" rel="noopener">{{ $name }}</a>
             </span>

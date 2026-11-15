@@ -1,0 +1,39 @@
+{{ $isEnglish := .isEnglish }}
+{{ $entries := where hugo.Data.timeline "type" .type }}
+{{ if $entries }}
+<section class="timeline-section">
+  <h2 class="page-heading">{{ .title }}</h2>
+  <div class="edu-timeline">
+  {{ range $entries }}
+  {{ $year := .year }}
+  {{ $school := .school }}
+  {{ $city := .city }}
+  {{ $country := .country }}
+  {{ $diploma := .diploma }}
+  {{ $learned := .learned }}
+  {{ if $isEnglish }}
+    {{ $year = .year_en }}
+    {{ $school = .school_en }}
+    {{ $city = .city_en }}
+    {{ $country = .country_en }}
+    {{ $diploma = .diploma_en }}
+    {{ $learned = .learned_en }}
+  {{ end }}
+  <article class="edu-event">
+    <div class="edu-head">
+      <span class="edu-year">{{ $year }}</span>
+      {{ with $diploma }}<span class="edu-diploma">{{ . }}</span>{{ end }}
+      {{ if eq $.type "certification" }}
+        {{ with $school }}<span class="edu-sep" aria-hidden="true">|</span><span class="edu-school edu-school-inline">{{ . }}</span>{{ end }}
+      {{ end }}
+    </div>
+    {{ if ne $.type "certification" }}
+    <p class="edu-school">{{ $school }}{{ if or $city $country }}{{ if $city }}, {{ $city }}{{ end }}{{ if and $city $country }}, {{ end }}{{ if $country }}{{ $country }}{{ end }}{{ end }}</p>
+    {{ end }}
+    {{ with $learned }}<div class="edu-learned">{{ . | markdownify }}</div>{{ end }}
+    {{ with .url }}<p class="edu-link"><a href="{{ . }}" target="_blank" rel="noopener">{{ T "view_certificate" }}</a></p>{{ end }}
+  </article>
+  {{ end }}
+  </div>
+</section>
+{{ end }}

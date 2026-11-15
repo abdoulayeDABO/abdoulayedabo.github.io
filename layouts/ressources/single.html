@@ -3,25 +3,8 @@
   <h1 class="page-title">{{ .Title }}</h1>
   <div class="page-intro">{{ .Content }}</div>
 
-  {{ $books := where hugo.Data.resources "kind" "book" }}
-  {{ $courses := where hugo.Data.resources "kind" "course" }}
-
-  <h2 class="column-title">{{ T "resources_books" }}</h2>
   <div class="resource-list">
-    {{ range $books }}
-    <article class="resource-item">
-      <div class="resource-head">
-        <h3 class="resource-title"><a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="resource-link-icon" aria-hidden="true" focusable="false"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></h3>
-        <span class="resource-author">{{ .author }}</span>
-      </div>
-      <p class="resource-note">{{ .note }}</p>
-    </article>
-    {{ end }}
-  </div>
-
-  <h2 class="column-title">{{ T "resources_courses" }}</h2>
-  <div class="resource-list">
-    {{ range $courses }}
+    {{ range hugo.Data.resources }}
     <article class="resource-item">
       <div class="resource-head">
         <h3 class="resource-title"><a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="resource-link-icon" aria-hidden="true" focusable="false"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></h3>

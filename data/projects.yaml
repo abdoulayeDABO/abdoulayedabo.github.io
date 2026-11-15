@@ -2,8 +2,7 @@
   name_en: "Customer Churn Prediction with SHAP"
   url: "https://github.com/abdoulayeDABO/customer-churn-prediction"
   url_label: "GitHub"
-  date: "Novembre 2026"
-  date_en: "November 2026"
+  category: "ai"
   featured: true
   short: "Modèle Scikit-learn sur le dataset Telco, seuil décisionnel économique, explications SHAP et une application Gradio interactive."
   short_en: "A Scikit-learn model on the Telco dataset with an economic decision threshold, SHAP explanations, and an interactive Gradio app."
@@ -11,14 +10,15 @@
     Projet ML `production-ready` : modèle de prédiction du churn sur le dataset Telco, seuil de décision économique, explications locales et globales avec **SHAP**, scoring de masse par CSV, tests **pytest**, Docker et application interactive **Gradio**.
   desc_en: |
     A `production-ready` ML project: customer churn prediction on the Telco dataset, an economic decision threshold, local and global explanations with **SHAP**, batch scoring from CSV, **pytest** tests, Docker, and an interactive **Gradio** app.
+  skills: ["Ingénierie de features", "Seuil de décision économique", "Explicabilité (SHAP)", "Tests pytest", "Packaging Docker", "Application Gradio"]
+  skills_en: ["Feature engineering", "Economic decision threshold", "Explainability (SHAP)", "pytest testing", "Docker packaging", "Gradio application"]
   tags: ["Scikit-learn", "SHAP", "Gradio", "Docker", "pytest", "uv"]
 
 - name: "Pipeline de détection de fraude en temps réel"
   name_en: "Real-Time Fraud Detection Pipeline"
   url: "https://github.com/abdoulayeDABO/realtime-fraud-detection-pipeline"
   url_label: "GitHub"
-  date: "Octobre 2026"
-  date_en: "October 2026"
+  category: "ai"
   featured: true
   short: "Pipeline Kafka/Spark qui prédit les transactions frauduleuses en temps réel, les stocke dans PostgreSQL et déclenche des alertes Grafana et e-mail."
   short_en: "A Kafka/Spark pipeline that predicts fraudulent bank transactions in real time, stores results in PostgreSQL, and triggers Grafana and email alerts."
@@ -26,14 +26,15 @@
     Pipeline de streaming qui analyse les transactions bancaires en temps réel, prédit les transactions frauduleuses avec un modèle de machine learning, stocke les résultats dans PostgreSQL, les affiche dans Grafana et déclenche des alertes par e-mail.
   desc_en: |
     A streaming pipeline that analyzes banking transactions in real time, predicts fraudulent transactions with a machine-learning model, stores the results in PostgreSQL, displays them in Grafana, and triggers automated email alerts.
+  skills: ["Streaming temps réel (Kafka)", "Traitement distribué (Spark Streaming)", "Modélisation XGBoost", "Alerting (Grafana, e-mail)", "Orchestration Docker Compose"]
+  skills_en: ["Real-time streaming (Kafka)", "Distributed processing (Spark Streaming)", "XGBoost modelling", "Alerting (Grafana, email)", "Docker Compose orchestration"]
   tags: ["Kafka", "Spark Streaming", "XGBoost", "PostgreSQL", "Grafana", "Docker Compose"]
 
 - name: "Réseau de neurones à feedforward"
   name_en: "Feedforward Neural Network"
   url: "https://colab.research.google.com/drive/1nQG1k1LyWxwSyr8B2UxhrUqTgzc4gKIq?usp=sharing"
   url_label: "Colab"
-  date: "Octobre 2026"
-  date_en: "October 2026"
+  category: "ai"
   featured: true
   short: "Réseau de neurones NumPy atteignant plus de 80 % de précision sur MNIST."
   short_en: "A NumPy feedforward neural network achieving over 80% accuracy on MNIST."
@@ -41,30 +42,16 @@
     Implémentation simple d'un réseau de neurones à feedforward en Python avec NumPy. Le réseau peut résoudre différents problèmes de classification et de prédiction, avec **plus de 80 % de précision** sur le jeu de données MNIST.
   desc_en: |
     A simple implementation of a feedforward neural network using Python and NumPy. The network can solve multiple classification and prediction problems, achieving **over 80% accuracy** on the MNIST dataset.
+  skills: ["Rétropropagation", "Calcul matriciel avec NumPy", "Descente de gradient", "Classification d'images"]
+  skills_en: ["Backpropagation", "NumPy matrix computation", "Gradient descent", "Image classification"]
   tags: ["Python", "NumPy", "Neural Networks", "MNIST"]
-
-- name: "Analyse des courses de taxis à New York"
-  name_en: "NYC Taxi Analytics"
-  url: "https://github.com/abdoulayeDABO/nyc-taxi-analytics-jan-2025"
-  url_label: "GitHub"
-  date: "Septembre 2026"
-  date_en: "September 2026"
-  featured: false
-  short: "Analyse Spark/PostgreSQL des courses de taxis jaunes de New York en janvier 2025, avec des tableaux de bord Apache Superset."
-  short_en: "Spark/PostgreSQL analysis of New York yellow taxi trips from January 2025, with interactive Apache Superset dashboards."
-  desc: |
-    Analyse des courses des taxis jaunes de New York en janvier 2025 à partir des données officielles de la TLC, avec Apache Spark, PostgreSQL, des tableaux de bord interactifs Apache Superset et Docker Compose.
-  desc_en: |
-    Analysis of New York yellow taxi trips from January 2025 using official TLC data, with Apache Spark, PostgreSQL, interactive Apache Superset dashboards, and Docker Compose.
-  tags: ["Spark", "Superset", "PostgreSQL", "Docker", "Data Engineering"]
 
 - name: "DocSim"
   name_en: "DocSim"
   url: "https://github.com/abdoulayeDABO/DocSim"
   url_label: "GitHub"
   demo: "https://docsim.onrender.com/"
-  date: "Septembre 2026"
-  date_en: "September 2026"
+  category: "ai"
   featured: false
   short: "Outil web qui détecte les similarités entre documents (texte, PDF, Markdown, DOCX) grâce au NLP."
   short_en: "A web tool that detects similarities between documents (text, PDF, Markdown, DOCX) using NLP."
@@ -72,65 +59,84 @@
     Outil web de **comparaison de documents** (texte, PDF, Markdown et DOCX) permettant de détecter les similarités grâce à des algorithmes de NLP et de correspondance de texte.
   desc_en: |
     A web-based **document comparison** tool for text, PDF, Markdown, and DOCX files that detects similarities with NLP and text-matching algorithms.
+  skills: ["NLP et similarité textuelle", "Extraction de texte (PDF, DOCX)", "Développement d'application web", "Déploiement (Render)"]
+  skills_en: ["NLP and text similarity", "Text extraction (PDF, DOCX)", "Web application development", "Deployment (Render)"]
   tags: ["NLP", "Python", "Web"]
-
-- name: "Tableau de bord RGPH Sénégal"
-  name_en: "Senegal RGPH Dashboard"
-  url: "https://github.com/abdoulayeDABO/rgph-senegal-dashboard"
-  url_label: "GitHub"
-  demo: "https://abdoulayedabo.shinyapps.io/demographie_sn/"
-  date: "Septembre 2026"
-  date_en: "September 2026"
-  desc: |
-    Tableau de bord interactif pour visualiser les données démographiques du Sénégal par année de recensement, de 1976 à 2023.
-  desc_en: |
-    An interactive dashboard for exploring Senegal's demographic data by census year, from 1976 to 2023.
-  tags: ["R", "Shiny", "Data Visualization"]
-
-- name: "Analyse des données COVID-19"
-  name_en: "COVID-19 Data Analytics"
-  url: "https://github.com/abdoulayeDABO/covid-19-data-analytics"
-  url_label: "GitHub"
-  date: "Août 2026"
-  date_en: "August 2026"
-  desc: |
-    Pipeline analytique de bout en bout pour le jeu de données COVID-19 de Kaggle : DuckDB comme entrepôt de données, dbt pour les transformations et Metabase pour la visualisation.
-  desc_en: |
-    An end-to-end analytics pipeline for the Kaggle COVID-19 dataset: DuckDB as the data warehouse, dbt for transformations, and Metabase for visualization.
-  tags: ["dbt", "DuckDB", "Metabase", "Data Engineering"]
 
 - name: "RAG serverless avec DuckDB"
   name_en: "Serverless RAG with DuckDB"
   url: "https://github.com/abdoulayeDABO/serveless_rag_with_DuckDB"
   url_label: "GitHub"
-  date: "Juillet 2026"
-  date_en: "July 2026"
+  category: "ai"
   desc: |
     Pipeline **RAG serverless avec DuckDB** : chargement de documents, découpage en fragments, génération d'embeddings BGE-M3 et recherche vectorielle sans serveur.
   desc_en: |
     A **serverless RAG pipeline with DuckDB**: document loading, chunking, BGE-M3 embeddings, and serverless vector search.
+  skills: ["Embeddings (BGE-M3)", "Recherche vectorielle", "Découpage de documents (chunking)", "Architecture RAG serverless"]
+  skills_en: ["Embeddings (BGE-M3)", "Vector search", "Document chunking", "Serverless RAG architecture"]
   tags: ["RAG", "DuckDB", "LLM", "Python"]
-
-- name: "Analyse des ventes Superstore"
-  name_en: "Superstore Sales Analytics"
-  url: "https://github.com/abdoulayeDABO/superstore-sales-bi"
-  url_label: "GitHub"
-  date: "Juin 2026"
-  date_en: "June 2026"
-  desc: |
-    Pipeline **ETL** et tableau de bord interactif (**Streamlit + Plotly**) pour analyser les ventes et les bénéfices du jeu de données Superstore.
-  desc_en: |
-    An **ETL pipeline** and interactive dashboard (**Streamlit + Plotly**) for analyzing sales and profit across the Superstore dataset.
-  tags: ["Python", "Pandas", "Streamlit", "Plotly", "BI"]
 
 - name: "Prédiction des prix immobiliers"
   name_en: "House Price Prediction"
   url: "https://github.com/abdoulayeDABO/house_price_prediction"
   url_label: "GitHub"
-  date: "Juin 2026"
-  date_en: "June 2026"
+  category: "ai"
   desc: |
     Prédiction des prix immobiliers en Californie avec un **Random Forest Regressor** sur le jeu de données California Housing et une interface **Streamlit**.
   desc_en: |
     House-price prediction in California with a **Random Forest Regressor** trained on the California Housing dataset and a **Streamlit** interface.
+  skills: ["Régression (Random Forest)", "Évaluation de modèles", "Ingénierie de features", "Interface Streamlit"]
+  skills_en: ["Regression (Random Forest)", "Model evaluation", "Feature engineering", "Streamlit interface"]
   tags: ["Python", "Scikit-learn", "Machine Learning", "Streamlit"]
+
+- name: "Pipeline météo orchestré avec Airflow"
+  name_en: "Weather Data Pipeline with Airflow"
+  url: "https://github.com/abdoulayeDABO/weather-data-pipeline-airflow"
+  url_label: "GitHub"
+  category: "data"
+  desc: |
+    **Projet en cours.** Pipeline de données orchestré par **Airflow** : une tâche planifiée interroge l'API **Open-Meteo** pour récupérer les prévisions horaires de Dakar (température, humidité, précipitations, vent) et charge les résultats dans **PostgreSQL**, le tout conteneurisé avec Docker Compose.
+  desc_en: |
+    **Work in progress.** A data pipeline orchestrated with **Airflow**: a scheduled task calls the **Open-Meteo** API to fetch hourly forecasts for Dakar (temperature, humidity, precipitation, wind) and loads the results into **PostgreSQL**, all containerized with Docker Compose.
+  skills: ["Orchestration de DAG (Airflow)", "Ingestion d'API REST", "Planification de tâches", "PostgreSQL sous Docker", "Configuration d'environnements"]
+  skills_en: ["DAG orchestration (Airflow)", "REST API ingestion", "Task scheduling", "PostgreSQL with Docker", "Environment configuration"]
+  tags: ["Airflow", "PostgreSQL", "Docker Compose", "Python", "API REST"]
+
+- name: "ETL Superstore vers PostgreSQL"
+  name_en: "Superstore ETL to PostgreSQL"
+  url: "https://github.com/abdoulayeDABO/superstore-etl-postgres"
+  url_label: "GitHub"
+  category: "data"
+  desc: |
+    Pipeline **ETL** en Python qui charge le jeu de données Superstore dans **PostgreSQL** (Docker), puis un tableau de bord interactif **Streamlit** transforme les données en indicateurs métier.
+  desc_en: |
+    A Python **ETL pipeline** that loads the Superstore dataset into **PostgreSQL** (Docker), with an interactive **Streamlit** dashboard turning the data into business insights.
+  skills: ["Conception d'un ETL (extract, transform, load)", "Chargement idempotent et transactionnel", "SQL d'agrégation", "PostgreSQL en Docker", "Tableaux de bord Streamlit", "Gestion de dépendances (uv)"]
+  skills_en: ["ETL design (extract, transform, load)", "Idempotent transactional loading", "SQL aggregation", "PostgreSQL in Docker", "Streamlit dashboards", "Dependency management (uv)"]
+  tags: ["Python", "pandas", "PostgreSQL", "SQLAlchemy", "Streamlit", "Docker"]
+
+- name: "Analyse des données COVID-19"
+  name_en: "COVID-19 Data Analytics"
+  url: "https://github.com/abdoulayeDABO/covid-19-data-analytics"
+  url_label: "GitHub"
+  category: "data"
+  desc: |
+    Pipeline analytique de bout en bout pour le jeu de données COVID-19 de Kaggle : DuckDB comme entrepôt de données, dbt pour les transformations et Metabase pour la visualisation.
+  desc_en: |
+    An end-to-end analytics pipeline for the Kaggle COVID-19 dataset: DuckDB as the data warehouse, dbt for transformations, and Metabase for visualization.
+  skills: ["Modélisation dbt (staging → marts)", "Tests de données (dbt test)", "Modèle en étoile (dimensions et faits)", "Entrepôt DuckDB", "Tableaux de bord Metabase"]
+  skills_en: ["dbt modelling (staging → marts)", "Data testing (dbt test)", "Star schema (dimensions and facts)", "DuckDB warehouse", "Metabase dashboards"]
+  tags: ["dbt", "DuckDB", "Metabase", "Data Engineering"]
+
+- name: "Analyse des courses de taxis à New York"
+  name_en: "NYC Taxi Analytics"
+  url: "https://github.com/abdoulayeDABO/nyc-taxi-analytics-jan-2025"
+  url_label: "GitHub"
+  category: "data"
+  desc: |
+    Analyse des courses des taxis jaunes de New York en janvier 2025 à partir des données officielles de la TLC, avec Apache Spark, PostgreSQL, des tableaux de bord interactifs Apache Superset et Docker Compose.
+  desc_en: |
+    Analysis of New York yellow taxi trips from January 2025 using official TLC data, with Apache Spark, PostgreSQL, interactive Apache Superset dashboards, and Docker Compose.
+  skills: ["Traitement distribué (Spark)", "Chargement JDBC vers PostgreSQL", "Jointures géographiques (zones)", "Tableaux de bord Superset", "Orchestration Docker Compose"]
+  skills_en: ["Distributed processing (Spark)", "JDBC loading into PostgreSQL", "Geographic joins (zones)", "Superset dashboards", "Docker Compose orchestration"]
+  tags: ["Spark", "Superset", "PostgreSQL", "Docker", "Data Engineering"]

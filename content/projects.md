@@ -2,4 +2,4 @@
 title: "Projets"
 ---
 
-Une sélection de projets en intelligence artificielle, en ingénierie de données et en développement logiciel. Chaque projet propose une implémentation fonctionnelle, une expérience reproductible ou une application déployable.
+Une sélection de projets organisée en deux groupes : **IA & Machine Learning** et **Data Engineering & Analytics**. Chaque projet met en avant les compétences acquises, une implémentation fonctionnelle et une expérience reproductible.

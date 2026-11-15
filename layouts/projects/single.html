@@ -3,39 +3,76 @@
   <h1 class="page-title">{{ .Title }}</h1>
   <div class="page-intro">{{ .Content }}</div>
 
-  <div class="project-entries">
-  {{ range hugo.Data.projects }}
-    {{ $project := . }}
-    {{ $name := .name }}
-    {{ $date := .date }}
-    {{ $description := .desc }}
-    {{ if $isEnglish }}
-      {{ $name = .name_en }}
-      {{ $date = .date_en }}
-      {{ $description = .desc_en }}
+  {{ $groups := slice
+    (dict "key" "ai" "title" (T "projects_ai_ml"))
+    (dict "key" "data" "title" (T "projects_data"))
+  }}
+
+  <div class="project-tabs">
+    {{ range $index, $group := $groups }}
+    <input class="project-tab-input" type="radio" name="projects-tab" id="tab-{{ $group.key }}"{{ if eq $index 0 }} checked{{ end }}>
     {{ end }}
-    <article class="project-entry">
-      <div class="project-entry-head">
-        <span class="project-row-date">{{ $date }}</span>
-        <span class="project-row-title">
-          <a href="{{ with .url }}{{ . }}{{ else }}{{ relLangURL "/projects/" }}{{ end }}" target="_blank" rel="noopener">{{ $name }}</a>
-        </span>
-        <span class="project-entry-links">
-          {{ with .url }}
-          <a href="{{ . }}" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-          {{ end }}
-          {{ with .demo }}
-          <a href="{{ . }}" target="_blank" rel="noopener" aria-label="{{ T "demo" }}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-external" aria-hidden="true" focusable="false"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
-          {{ end }}
-        </span>
-      </div>
-      <div class="project-entry-desc">{{ $description | markdownify }}</div>
-      {{ with .tags }}
-      <div class="project-tags">
-        {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
-      </div>
+
+    <div class="project-tab-list" role="tablist" aria-label="{{ T "projects_groups" }}">
+      {{ range $groups }}
+        {{ $items := where hugo.Data.projects "category" .key }}
+        {{ if $items }}
+        <label class="project-tab" for="tab-{{ .key }}" role="tab">
+          {{ .title }}<span class="project-group-count">{{ len $items }}</span>
+        </label>
+        {{ end }}
       {{ end }}
-    </article>
-  {{ end }}
+    </div>
+
+    <div class="project-tab-panels">
+      {{ range $groups }}
+        {{ $items := where hugo.Data.projects "category" .key }}
+        {{ if $items }}
+        <div class="project-tab-panel" id="panel-{{ .key }}" role="tabpanel">
+          <div class="project-entries">
+          {{ range $items }}
+            {{ $name := .name }}
+            {{ $description := .desc }}
+            {{ $skills := .skills }}
+            {{ if $isEnglish }}
+              {{ $name = .name_en }}
+              {{ $description = .desc_en }}
+              {{ $skills = .skills_en | default .skills }}
+            {{ end }}
+            <article class="project-entry">
+              <div class="project-entry-head">
+                <span class="project-row-title">
+                  <a href="{{ with .url }}{{ . }}{{ else }}{{ relLangURL "/projects/" }}{{ end }}" target="_blank" rel="noopener">{{ $name }}</a>
+                </span>
+                <span class="project-entry-links">
+                  {{ with .url }}
+                  <a href="{{ . }}" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                  {{ end }}
+                  {{ with .demo }}
+                  <a href="{{ . }}" target="_blank" rel="noopener" aria-label="{{ T "demo" }}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-external" aria-hidden="true" focusable="false"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+                  {{ end }}
+                </span>
+              </div>
+              <div class="project-entry-desc">{{ $description | markdownify }}</div>
+              {{ with $skills }}
+              <div class="project-skills">
+                <span class="project-skills-label">{{ T "skills_acquired" }}</span>
+                <ul class="project-skills-list">
+                  {{ range . }}<li>{{ . }}</li>{{ end }}
+                </ul>
+              </div>
+              {{ end }}
+              {{ with .tags }}
+              <div class="project-tags">
+                {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+              </div>
+              {{ end }}
+            </article>
+          {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      {{ end }}
+    </div>
   </div>
 {{ end }}
