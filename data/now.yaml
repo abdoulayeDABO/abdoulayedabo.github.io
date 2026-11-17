@@ -1,0 +1,5 @@
+- name: "Django + Next.js Full-stack Template"
+  name_en: "Django + Next.js Full-stack Template"
+  url: "https://github.com/abdoulayeDABO/django-nextjs-fullstack"
+  description: "Template open source full-stack qui associe Django REST Framework et Next.js."
+  description_en: "An open-source full-stack template pairing Django REST Framework and Next.js."

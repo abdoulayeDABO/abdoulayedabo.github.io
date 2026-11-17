@@ -26,30 +26,55 @@
     </div>
   </section>
 
-  <section class="home-sections" aria-labelledby="featured-projects">
-    <div class="column">
-      <h2 class="column-title" id="featured-projects">{{ T "featured_projects" }}</h2>
-      <div class="project-rows">
-        {{ range hugo.Data.projects }}
-          {{ if .featured }}
-          {{ $name := .name }}
-          {{ $description := .short }}
-          {{ if $isEnglish }}
-            {{ $name = .name_en }}
-            {{ $description = .short_en | default .desc_en }}
+  <div class="home-columns">
+    <section class="home-sections" aria-labelledby="featured-projects">
+      <div class="column">
+        <h2 class="column-title" id="featured-projects">{{ T "featured_projects" }}</h2>
+        <div class="project-rows">
+          {{ range hugo.Data.projects }}
+            {{ if .featured }}
+            {{ $name := .name }}
+            {{ $description := .short }}
+            {{ if $isEnglish }}
+              {{ $name = .name_en }}
+              {{ $description = .short_en | default .desc_en }}
+            {{ end }}
+            <div class="project-row">
+              <span class="project-row-title">
+                <a href="{{ with .url }}{{ . }}{{ else }}{{ relLangURL "/projects/" }}{{ end }}" target="_blank" rel="noopener">{{ $name }}</a>
+              </span>
+              <span class="project-row-desc">{{ $description }}</span>
+            </div>
+            {{ end }}
           {{ end }}
-          <div class="project-row">
-            <span class="project-row-title">
-              <a href="{{ with .url }}{{ . }}{{ else }}{{ relLangURL "/projects/" }}{{ end }}" target="_blank" rel="noopener">{{ $name }}</a>
-            </span>
-            <span class="project-row-desc">{{ $description }}</span>
-          </div>
-          {{ end }}
+        </div>
+        <a class="see-all" href="{{ relLangURL "/projects/" }}">{{ T "see_all_projects" }}</a>
+      </div>
+    </section>
+
+    {{ with hugo.Data.now }}
+    <section class="home-now" aria-labelledby="currently-building">
+      <h2 class="column-title" id="currently-building">{{ T "currently_building" }}</h2>
+      <p class="now-intro">{{ T "currently_building_intro" }}</p>
+      <div class="now-list">
+        {{ range . }}
+        {{ $name := .name }}
+        {{ $description := .description }}
+        {{ if $isEnglish }}
+          {{ $name = .name_en | default .name }}
+          {{ $description = .description_en | default .description }}
+        {{ end }}
+        <article class="now-item">
+          <h3 class="now-item-title">
+            <a href="{{ .url }}" target="_blank" rel="noopener">{{ $name }}</a>
+          </h3>
+          <p class="now-item-desc">{{ $description }}</p>
+        </article>
         {{ end }}
       </div>
-      <a class="see-all" href="{{ relLangURL "/projects/" }}">{{ T "see_all_projects" }}</a>
-    </div>
-  </section>
+    </section>
+    {{ end }}
+  </div>
 
 </div>
 {{ end }}

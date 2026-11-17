@@ -95,9 +95,9 @@
   url_label: "GitHub"
   category: "data"
   desc: |
-    **Projet en cours.** Pipeline de données orchestré par **Airflow** : une tâche planifiée interroge l'API **Open-Meteo** pour récupérer les prévisions horaires de Dakar (température, humidité, précipitations, vent) et charge les résultats dans **PostgreSQL**, le tout conteneurisé avec Docker Compose.
+    Pipeline de données orchestré par **Airflow** : une tâche planifiée interroge l'API **Open-Meteo** pour récupérer les prévisions horaires de Dakar (température, humidité, précipitations, vent) et charge les résultats dans **PostgreSQL**, le tout conteneurisé avec Docker Compose.
   desc_en: |
-    **Work in progress.** A data pipeline orchestrated with **Airflow**: a scheduled task calls the **Open-Meteo** API to fetch hourly forecasts for Dakar (temperature, humidity, precipitation, wind) and loads the results into **PostgreSQL**, all containerized with Docker Compose.
+    A data pipeline orchestrated with **Airflow**: a scheduled task calls the **Open-Meteo** API to fetch hourly forecasts for Dakar (temperature, humidity, precipitation, wind) and loads the results into **PostgreSQL**, all containerized with Docker Compose.
   skills: ["Orchestration de DAG (Airflow)", "Ingestion d'API REST", "Planification de tâches", "PostgreSQL sous Docker", "Configuration d'environnements"]
   skills_en: ["DAG orchestration (Airflow)", "REST API ingestion", "Task scheduling", "PostgreSQL with Docker", "Environment configuration"]
   tags: ["Airflow", "PostgreSQL", "Docker Compose", "Python", "API REST"]
