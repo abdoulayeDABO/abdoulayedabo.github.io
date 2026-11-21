@@ -140,3 +140,16 @@
   skills: ["Traitement distribué (Spark)", "Chargement JDBC vers PostgreSQL", "Jointures géographiques (zones)", "Tableaux de bord Superset", "Orchestration Docker Compose"]
   skills_en: ["Distributed processing (Spark)", "JDBC loading into PostgreSQL", "Geographic joins (zones)", "Superset dashboards", "Docker Compose orchestration"]
   tags: ["Spark", "Superset", "PostgreSQL", "Docker", "Data Engineering"]
+
+- name: "Full-stack Django Template"
+  name_en: "Full-stack Django Template"
+  url: "https://github.com/abdoulayeDABO/Full-stack-django-template"
+  url_label: "GitHub"
+  category: "software"
+  desc: |
+    Template open source **full-stack basé sur Django** pour démarrer rapidement des applications web robustes : structure de projet prête à l'emploi, configuration de développement et bonnes pratiques pour gagner du temps sur chaque nouveau projet.
+  desc_en: |
+    An open-source **full-stack Django template** for quickly bootstrapping robust web applications: ready-to-use project structure, development configuration, and best practices to save time on every new project.
+  skills: ["Architecture Django", "Développement full-stack", "Structure de projet réutilisable", "Configuration de développement"]
+  skills_en: ["Django architecture", "Full-stack development", "Reusable project structure", "Development configuration"]
+  tags: ["Django", "Python", "Full-stack", "Template"]
